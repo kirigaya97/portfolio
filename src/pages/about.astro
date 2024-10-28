@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+	title="About | Jeanine White"
+	description="About Jeanine White Lorem Ipsum"
+>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/pixelart.png"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Rodrigo Camino is a seasoned web designer and developer
+						specializing in creating visually impactful,
+						user-centered websites and digital platforms. With
+						expertise in branding, digital marketing strategies, and
+						UX/UI design, Rodrigo combines a creative approach with
+						data-driven insights to deliver functional, engaging
+						digital experiences. 
+						<br><br>
+						<p>His background spans a range of
+						sectors, providing tailored solutions that align with
+						client needs and business goals. Rodrigo is also
+						experienced in business strategy, especially for bar
+						consulting, and has a strong command of technology in
+						both design and backend processes.</p>
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>System analist specialist - ORT Argentina <span class="date">(2023 - present)</span></p>
+					<p>Wordpress development - Udemy <span class="date">(2021 - 2022)</span></p>
+					<p>Back-end developer - CoderHouse <span class="date">(2020 - 2021)</span></p>
+					<p>Front-end developer - EducacionIT <span class="date">(2019 - 2020)</span></p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<ul>
+						<li>Web Development - WordPress, HTML, CSS, JavaScript, PHP</li>
+						<li>Design - Photoshop (Advanced), Adobe Premiere (Intermediate), Illustrator (Basic)</li>
+						<li>Marketing - Email Marketing (MailChimp), Social Media Strategies, SEO</li>
+						<li>Project Management - Business Strategy, Client Collaboration, Process Automation</li>
+						<li>Soft Skills - Proactive, Teamwork, Adaptable, Client-Oriented</li>
+					</ul>
+				</div>
+				
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.date {
+		color: var(--gray-500);
+		font-size: var(--text-sm);
+	}
+
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
