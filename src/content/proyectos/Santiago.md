@@ -21,11 +21,11 @@ video: /assets/santi/1.mp4
 ---
 
 ### Resumen del Proyecto
-El sitio web de Santiago Fernández es una página de aterrizaje dinámica diseñada para presentar a Santiago, un destacado mago, y atraer audiencias para diversos eventos: corporativos, privados y teatrales. Construido como una plataforma de alta conversión, el sitio aprovecha los embudos de redes sociales para involucrar a los visitantes y generar consultas de reservas.
+El sitio web de Santiago Fernández es una landing page dinámica diseñada para presentar a Santiago, un destacado mago, y atraer audiencias para diversos eventos: corporativos, privados y teatrales. Construido como una plataforma de alta conversión, el sitio aprovecha los embudos de redes sociales para involucrar a los visitantes y generar consultas de reservas.
 
 #### Objetivos
 - **Presencia Digital**: Posicionar a Santiago como un mago de primer nivel en Argentina y España.
-- **Optimización de Conversión**: Crear una página de aterrizaje optimizada para convertir el tráfico de redes sociales y aumentar las reservas de eventos.
+- **Optimización de Conversión**: Crear una landing page optimizada para convertir el tráfico de redes sociales y aumentar las reservas de eventos.
 - **Rendimiento y Accesibilidad**: Asegurar tiempos de carga rápidos y una interfaz accesible y fácil de usar.
 - **Flexibilidad de Contenido**: Permitir que Santiago actualice fácilmente eventos recientes y testimonios para mantenerse al día con sus actuaciones.
 
@@ -34,7 +34,7 @@ El sitio web de Santiago Fernández es una página de aterrizaje dinámica dise�
 - **Diseño UX/UI**: Se estructuró el contenido en secciones claras para servicios, galerías y testimonios para construir confianza y participación de los visitantes.
 - **Estrategia de Contenido**: Se centró en la experiencia única de Santiago y los comentarios reales de los clientes para cautivar y convertir a los visitantes del sitio.
 - **Elementos Interactivos**: Se integró una galería de medios, varias categorías de eventos y funciones de redes sociales para una mayor participación.
-- **Pruebas y Optimización**: Se realizaron pruebas de usabilidad y velocidad para garantizar un rendimiento óptimo como página de aterrizaje para redes sociales.
+- **Pruebas y Optimización**: Se realizaron pruebas de usabilidad y velocidad para garantizar un rendimiento óptimo como landing page para redes sociales.
 
 #### Tecnologías Utilizadas
 - **WordPress**: Para una gestión de contenido eficiente y actualizaciones fáciles.
@@ -42,7 +42,7 @@ El sitio web de Santiago Fernández es una página de aterrizaje dinámica dise�
 - **HTML/CSS/JavaScript**: Se aplicó código personalizado para elementos interactivos, minimizando la carga de plugins para un mejor rendimiento.
 
 #### Resultados e Impacto
-- **Aumento de Reservas**: La página de aterrizaje optimizada impulsa efectivamente la participación, convirtiendo a los visitantes de redes sociales en clientes.
+- **Aumento de Reservas**: La landing page optimizada impulsa efectivamente la participación, convirtiendo a los visitantes de redes sociales en clientes.
 - **Fortalecimiento de la Autoridad de Marca**: El sitio pulido y profesional refuerza la posición de Santiago como un mago líder.
 - **Empoderamiento del Cliente**: Santiago puede actualizar su sitio de manera independiente para reflejar eventos recientes y añadir testimonios, manteniendo el interés de los usuarios.
 

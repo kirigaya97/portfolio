@@ -28,7 +28,7 @@ screenshots: [
 
 #### Objetivos  
 - **Optimización de E-Commerce:** Desarrollar una tienda fácil de usar que enfatice la dedicación de Larry Props a la calidad y singularidad.  
-- **Embudo de Conversión:** Crear una página de destino que convierta eficientemente a los visitantes de redes sociales en clientes.  
+- **Embudo de Conversión:** Crear una landing page que convierta eficientemente a los visitantes de redes sociales en clientes.  
 - **SEO y Rendimiento:** Mejorar la visibilidad en búsquedas y reducir los tiempos de carga para una experiencia de usuario fluida.  
 - **Independencia del Cliente:** Empoderar a Larry Props para actualizar contenido y gestionar inventario con facilidad.  
 
@@ -43,6 +43,6 @@ screenshots: [
 - **HTML/CSS/JavaScript Personalizados:** Funcionalidades interactivas optimizadas para e-commerce sin plugins pesados.  
 
 #### Resultados e Impacto  
-- **Aumento de Conversión:** La página de destino optimizada llevó a un mayor compromiso de usuarios y aumentó las conversiones de ventas.  
+- **Aumento de Conversión:** La landing page optimizada llevó a una mayor participación de usuarios y aumentó las conversiones de ventas.  
 - **Crecimiento de Marca:** Mayor credibilidad y reconocimiento como proveedor premium en la comunidad de mentalismo.  
 - **Flexibilidad del Cliente:** Larry Props ahora gestiona fácilmente las listas de productos e inventario, apoyando una línea de productos dinámica y en evolución.  

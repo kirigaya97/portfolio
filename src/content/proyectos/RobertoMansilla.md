@@ -4,7 +4,7 @@ publishDate: 2024-09-08 00:00:00
 img: /assets/mansilla/1.webp
 img_alt: Screenshot del sitio de Roberto.
 description: |
-  Roberto Mansilla, un destacado mentalista argentino, necesitaba un sitio web que resalte sus espectáculos únicos y funcione como una página de aterrizaje de alta conversión para el tráfico de redes sociales.
+  Roberto Mansilla, un destacado mentalista argentino, necesitaba un sitio web que resalte sus espectáculos únicos y funcione como una landing page de alta conversión para el tráfico de redes sociales.
 tags:
   - Design
   - Dev
@@ -31,7 +31,7 @@ Roberto Mansilla requería un sitio que mostrara sus shows y facilitara conversi
 2. **Diseño UI/UX**: Creación de una interfaz interactiva con navegación "tipo plato" para shows, testimonios y un tráiler en video.
 3. **Estrategia de Contenido**: Organización de contenido para resaltar categorías principales de shows y testimonios del público.
 4. **Elementos Interactivos**: Incorporación de animaciones en JavaScript que aportan intriga y mejoran la participación sin afectar el rendimiento del sitio.
-5. **Pruebas y Optimización**: Optimización para SEO y reducción de tiempos de carga para asegurar que el sitio funcione eficazmente como una página de aterrizaje enfocada en la conversión.
+5. **Pruebas y Optimización**: Optimización para SEO y reducción de tiempos de carga para asegurar que el sitio funcione eficazmente como una landing page enfocada en la conversión.
 
 ### Tecnologías Utilizadas
 - **WordPress**: Seleccionado por su gestión de contenido flexible y fácil de usar.
@@ -39,6 +39,6 @@ Roberto Mansilla requería un sitio que mostrara sus shows y facilitara conversi
 - **HTML/CSS/JS**: Animaciones elaboradas para una UX atractiva sin afectar los tiempos de carga.
 
 ### Resultados e Impacto
-- **Mayor Participación y Conversión**: La página de aterrizaje estructurada aumenta las reservas desde redes sociales.
+- **Mayor Participación y Conversión**: La landing page estructurada aumenta las reservas desde redes sociales.
 - **Mejora en la Presencia de Marca**: Un diseño pulido y dinámico establece la autoridad de Roberto en el campo del mentalismo.
 - **Facilidad de Gestión**: Roberto ahora puede gestionar el contenido de forma independiente, manteniendo su sitio actualizado con shows y testimonios recientes.

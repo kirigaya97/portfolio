@@ -23,7 +23,7 @@ screenshots: [
 ---
 
 ### Resumen del Proyecto
-Este sitio de portafolio es mi vitrina profesional, fusionando mis habilidades en desarrollo web y mi lado creativo como mago en Buenos Aires, destacando tanto mi experiencia técnica como mi enfoque estratégico e imaginativo a través de elementos interactivos y un diseño visual atractivo.
+Este sitio de portafolio es mi vitrina profesional, fusionando mis habilidades en desarrollo web y mi lado creativo como diseñador, destacando tanto mi experiencia técnica como mi enfoque estratégico e imaginativo a través de elementos interactivos y un diseño visual atractivo.
 
 ### Objetivos
 - **Presencia Digital**: Establecer un sitio pulido y moderno que refleje mis fortalezas técnicas y creativas.

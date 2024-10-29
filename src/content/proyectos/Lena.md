@@ -21,7 +21,7 @@ screenshots: [
 ---
 
 ### **Resumen del Proyecto**
-El sitio web de Estudio Lena actúa como un recurso legal y un centro de contacto para casos de accidentes y lesiones. Este sitio también funciona como una página de aterrizaje para la conversión de usuarios, diseñada estratégicamente para canalizar tráfico desde redes sociales hacia una iniciación de “pre-caso” en línea, simplificando tanto la incorporación de clientes como la gestión de casos para el bufete de abogados.
+El sitio web de Estudio Lena actúa como un recurso legal y un centro de contacto para casos de accidentes y lesiones. Este sitio también funciona como una landing page para la conversión de usuarios, diseñada estratégicamente para canalizar tráfico desde redes sociales hacia una iniciación de “pre-caso” en línea, simplificando tanto la incorporación de clientes como la gestión de casos para el bufete de abogados.
 
 #### **Objetivos**
 - **Presencia Digital**: Reforzar la reputación de Estudio Lena en lesiones personales y derecho de accidentes.
@@ -42,6 +42,6 @@ El sitio web de Estudio Lena actúa como un recurso legal y un centro de contact
 - **HTML/CSS/JS Personalizados**: Funciones dinámicas adaptadas e interacciones de formulario optimizadas para una experiencia de usuario más fluida.
 
 #### **Resultados e Impacto**
-- **Mejora en la Tasa de Conversión**: El diseño de la página de aterrizaje optimizada para redes sociales aumentó las consultas y conversiones de clientes.
+- **Mejora en la Tasa de Conversión**: El diseño de la landing page optimizada para redes sociales aumentó las consultas y conversiones de clientes.
 - **Flujo de Trabajo Mejorado**: El sistema automatizado de iniciación de “pre-caso” mejoró la eficiencia de ingreso y la colaboración del equipo.
 - **Autoridad de Marca**: Un sitio web profesional y funcional establece a Estudio Lena como un líder en el derecho de lesiones personales, brindando credibilidad y conveniencia.

@@ -7,7 +7,7 @@ description: |
   ¡Diseñado para funcionar como un portafolio y una Landing page enfocada en la conversión!
 
 tags:
-  - Design
+  - Frontend
   - Dev
   - Marketing
 screenshots: [
@@ -33,7 +33,7 @@ El sitio web de Michel Mentalista promociona a Michel, un destacado mentalista e
 - **Diseño UX/UI:** Desarrollo de un diseño claro con secciones como “Shows”, “Trailer”, “Bio” y “Contacto” para mejorar la navegación y el compromiso.
 - **Estrategia de Contenido:** Organización del contenido en torno a la experiencia y testimonios de Michel para generar credibilidad.
 - **Elementos Interactivos:** Adición de características atractivas como un “Trailer” y una “Galería” para aumentar la interacción en la página.
-- **Pruebas y Optimización:** Realización de pruebas de velocidad y usabilidad para garantizar una experiencia de usuario fluida y efectividad como página de aterrizaje para el tráfico de redes sociales.
+- **Pruebas y Optimización:** Realización de pruebas de velocidad y usabilidad para garantizar una experiencia de usuario fluida y efectividad como landing page para el tráfico de redes sociales.
 
 ##### Tecnologías Utilizadas
 - **WordPress:** Elegido para la gestión de contenido que permite actualizaciones sencillas.
@@ -41,6 +41,6 @@ El sitio web de Michel Mentalista promociona a Michel, un destacado mentalista e
 - **HTML/CSS/JS Personalizados:** Integración de elementos interactivos para mejorar la experiencia del usuario sin afectar los tiempos de carga.
 
 ##### Resultados e Impacto
-- **Mayores Conversiones:** La página de aterrizaje optimizada llevó a un aumento en el compromiso y las reservas.
+- **Mayores Conversiones:** La landing page optimizada llevó a un aumento en el compromiso y las reservas.
 - **Identidad de Marca Mejorada:** El sitio profesional y atractivo establece a Michel como un mentalista líder.
 - **Empoderamiento del Cliente:** Michel ahora puede gestionar actualizaciones de forma independiente, mostrando consistentemente su trabajo más reciente.
