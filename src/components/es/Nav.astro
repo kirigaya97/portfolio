@@ -7,7 +7,7 @@ import LangToggle from '../LangToggle.astro';
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Inicio', href: '/es/' },
-	{ label: 'Proyectos', href: '/es/work/' },
+	{ label: 'Proyectos', href: '/es/proyectos/' },
 	{ label: 'Sobre mí', href: '/es/about/' },
 ];
 
@@ -99,7 +99,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			<div class="lang-toggle">
 				<LangToggle />
 			</div>
-			
+
 			<div class="socials">
 				{
 					iconLinks.map(({ href, icon, label }) => (
