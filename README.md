@@ -1,7 +1,3 @@
-Here’s a suggested README file for your portfolio website on GitHub:
-
----
-
 # Portfolio Website
 
 Welcome to my portfolio website repository! This site showcases my web development and creative skills, featuring various projects I've completed over the years. The website is designed for fast performance, easy updates, and an engaging user experience.
@@ -50,6 +46,7 @@ Feel free to open issues or submit pull requests for improvements and suggestion
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
----
+## Credits
 
-Feel free to customize any sections to better reflect your personal style or additional features of your website!
+Big shoutout to the Astro.build team! Not only for the amazing framwork but also for the template files which made everything faster and easier! :)
+
