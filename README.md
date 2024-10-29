@@ -46,3 +46,7 @@ Feel free to open issues or submit pull requests for improvements and suggestion
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+## Credits
+
+Big shoutout to the Astro.build team! Not only for the amazing framwork but also for the template files which made everything faster and easier! :)
+
