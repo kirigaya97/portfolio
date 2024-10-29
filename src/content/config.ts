@@ -11,6 +11,7 @@ export const collections = {
 			img: z.string(),
 			img_alt: z.string().optional(),
 			screenshots: z.array(z.string()).optional(),
+			video: z.string().optional(),
 		}),
 	}),
 };
