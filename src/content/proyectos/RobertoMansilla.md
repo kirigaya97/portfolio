@@ -1,10 +1,10 @@
 ---
-title: Roberto Mansilla’s Mentalist Website Redign
+title: Roberto Mansilla’s Mentalist Website Redesign
 publishDate: 2020-03-02 00:00:00
 img: /assets/mansilla/1.webp
 img_alt: Screenshot of Roberto Mansilla's website.
 description: |
-  Roberto Mansilla, a distinguished mentalist from Argentina, required a website that both spotlights his unique shows and serves as a high-conversion landing page for social media trafic.
+  Roberto Mansilla, a distinguished mentalist from Argentina, required a website that both spotlights his unique shows and serves as a high-conversion landing page for social media traffic.
 tags:
   - Design
   - Dev
