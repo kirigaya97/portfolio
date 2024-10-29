@@ -1,6 +1,6 @@
 ---
 title: Larry Props Interactive E-Commerce Website
-publishDate: 2019-10-02 00:00:00
+publishDate: 2019-02-02 00:00:00
 img: /assets/Larry/1.png
 img_alt: Screenshot of SDI Web
 description: |

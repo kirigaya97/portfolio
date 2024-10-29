@@ -9,6 +9,7 @@ tags:
   - Dev
   - Branding
   - Frontend
+
 screenshots: [
   /assets/capfa/1.png,
   /assets/capfa/2.png,
