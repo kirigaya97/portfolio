@@ -97,25 +97,34 @@ class LanguageToggle extends HTMLElement {
 	constructor() {
 		super();
 
-		const button = this.querySelector('button')!;
+		const button = this.querySelector('button');
 		const currentLang = this.getCurrentLanguage();
 
 		/** Set the language */
 		const setLanguage = (lang) => {
 			const baseUrl = window.location.origin;
+			let path = window.location.pathname;
 
+			// Adjust both language prefix and section path on a single click
 			if (lang === 'es') {
-				// If it's not already in Spanish, add '/es' after the domain
-				if (!window.location.pathname.startsWith('/es')) {
-					window.location.href = `${baseUrl}/es${window.location.pathname}`;
+				// If English and in "work" section, switch to "proyectos" with "/es" prefix
+				if (path.includes('/work')) {
+					path = `/es${path.replace('/work', '/proyectos')}`;
+				} else if (!path.startsWith('/es')) {
+					// Add '/es' prefix if it's a non-work English path
+					path = `/es${path}`;
 				}
 			} else {
-				// If it's in Spanish, remove '/es'
-				if (window.location.pathname.startsWith('/es')) {
-					const newPath = window.location.pathname.replace(/^\/es/, '');
-					window.location.href = `${baseUrl}${newPath}`;
+				// If Spanish and in "proyectos" section, switch to "work" and remove "/es" prefix
+				if (path.includes('/proyectos')) {
+					path = path.replace('/es/proyectos', '/work');
+				} else if (path.startsWith('/es')) {
+					// Remove '/es' prefix for other Spanish paths
+					path = path.replace(/^\/es/, '');
 				}
 			}
+
+			window.location.href = `${baseUrl}${path}`;
 		};
 
 		// Set initial button state
@@ -132,7 +141,10 @@ class LanguageToggle extends HTMLElement {
 		return window.location.pathname.startsWith('/es') ? 'es' : 'en';
 	}
 }
+
 customElements.define('language-toggle', LanguageToggle);
+
+
 
 
 

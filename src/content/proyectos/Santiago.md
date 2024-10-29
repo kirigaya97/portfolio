@@ -1,10 +1,10 @@
 ---
-title: Santiago Ilusionista Website
-publishDate: 2020-03-02 00:00:00
+title: Santiago Ilusionista Sitio web
+publishDate: 2024-06-29 00:00:00
 img: /assets/santi/1.webp
-img_alt: Screenshot of Santiago Ilusionista website.
+img_alt: Screenshot del sitio web de Santiago.
 description: |
-  Designed to function as both a portfolio and a conversion-focused landing page!
+  Creado para servir como un portafolio y una landing page enfocada en la conversión.
 tags:
   - Design
   - Dev
@@ -20,29 +20,30 @@ screenshots: [
 video: /assets/santi/1.mp4
 ---
 
-### Project Overview
-The Santiago Fernández website is a dynamic landing page crafted to showcase Santiago, a leading magician, and draw audiences for various events—corporate, private, and theater. Built as a high-conversion platform, the site leverages social media funnels to engage visitors and drive booking inquiries.
+### Resumen del Proyecto
+El sitio web de Santiago Fernández es una página de aterrizaje dinámica diseñada para presentar a Santiago, un destacado mago, y atraer audiencias para diversos eventos: corporativos, privados y teatrales. Construido como una plataforma de alta conversión, el sitio aprovecha los embudos de redes sociales para involucrar a los visitantes y generar consultas de reservas.
 
-#### Objectives
-- **Digital Presence**: Position Santiago as a top-tier magician across Argentina and Spain.
-- **Conversion Optimization**: Build a landing page optimized to convert social media traffic, boosting event bookings.
-- **Performance & Accessibility**: Ensure fast load times and an accessible, user-friendly interface.
-- **Content Flexibility**: Allow Santiago to easily update recent events and testimonials to stay current with his performances.
+#### Objetivos
+- **Presencia Digital**: Posicionar a Santiago como un mago de primer nivel en Argentina y España.
+- **Optimización de Conversión**: Crear una página de aterrizaje optimizada para convertir el tráfico de redes sociales y aumentar las reservas de eventos.
+- **Rendimiento y Accesibilidad**: Asegurar tiempos de carga rápidos y una interfaz accesible y fácil de usar.
+- **Flexibilidad de Contenido**: Permitir que Santiago actualice fácilmente eventos recientes y testimonios para mantenerse al día con sus actuaciones.
 
-#### Project Workflow
-- **Discovery & Planning**: Established a brand-centric site with a modern, interactive design approach.
-- **UX/UI Design**: Structured content in clear sections for services, galleries, and testimonials to build visitor trust and engagement.
-- **Content Strategy**: Focused on Santiago’s unique expertise and real-life client feedback to captivate and convert site visitors.
-- **Interactive Elements**: Integrated a media gallery, various event categories, and social media features for higher engagement.
-- **Testing & Optimization**: Ran usability and speed tests to ensure optimal performance as a social media landing page.
+#### Flujo de Trabajo del Proyecto
+- **Descubrimiento y Planificación**: Se estableció un sitio centrado en la marca con un enfoque de diseño moderno e interactivo.
+- **Diseño UX/UI**: Se estructuró el contenido en secciones claras para servicios, galerías y testimonios para construir confianza y participación de los visitantes.
+- **Estrategia de Contenido**: Se centró en la experiencia única de Santiago y los comentarios reales de los clientes para cautivar y convertir a los visitantes del sitio.
+- **Elementos Interactivos**: Se integró una galería de medios, varias categorías de eventos y funciones de redes sociales para una mayor participación.
+- **Pruebas y Optimización**: Se realizaron pruebas de usabilidad y velocidad para garantizar un rendimiento óptimo como página de aterrizaje para redes sociales.
 
-#### Technologies Used
-- **WordPress**: For efficient content management and easy updates.
-- **DIVI Builder**: Enabled a modular design and customizable layout for enhanced engagement.
-- **HTML/CSS/JavaScript**: Applied custom code for interactive elements, minimizing plugin load for better performance.
+#### Tecnologías Utilizadas
+- **WordPress**: Para una gestión de contenido eficiente y actualizaciones fáciles.
+- **DIVI Builder**: Permite un diseño modular y un layout personalizable para mejorar la participación.
+- **HTML/CSS/JavaScript**: Se aplicó código personalizado para elementos interactivos, minimizando la carga de plugins para un mejor rendimiento.
 
-#### Results and Impact
-- **Increased Bookings**: The optimized landing page effectively drives engagement, converting social media visitors into clients.
-- **Strengthened Brand Authority**: The polished, professional site reinforces Santiago’s position as a leading magician.
-- **Empowered Client**: Santiago can independently update his site to reflect recent events and add testimonials, keeping user interest high.
+#### Resultados e Impacto
+- **Aumento de Reservas**: La página de aterrizaje optimizada impulsa efectivamente la participación, convirtiendo a los visitantes de redes sociales en clientes.
+- **Fortalecimiento de la Autoridad de Marca**: El sitio pulido y profesional refuerza la posición de Santiago como un mago líder.
+- **Empoderamiento del Cliente**: Santiago puede actualizar su sitio de manera independiente para reflejar eventos recientes y añadir testimonios, manteniendo el interés de los usuarios.
+
 

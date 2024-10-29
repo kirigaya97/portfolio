@@ -1,10 +1,10 @@
 ---
-title: Roberto Mansilla’s Mentalist Website Redesign
-publishDate: 2020-03-02 00:00:00
+title: Roberto Mansilla sitio web.
+publishDate: 2024-09-08 00:00:00
 img: /assets/mansilla/1.webp
-img_alt: Screenshot of Roberto Mansilla's website.
+img_alt: Screenshot del sitio de Roberto.
 description: |
-  Roberto Mansilla, a distinguished mentalist from Argentina, required a website that both spotlights his unique shows and serves as a high-conversion landing page for social media traffic.
+  Roberto Mansilla, un destacado mentalista argentino, necesitaba un sitio web que resalte sus espectáculos únicos y funcione como una página de aterrizaje de alta conversión para el tráfico de redes sociales.
 tags:
   - Design
   - Dev
@@ -17,29 +17,28 @@ screenshots: [
 ]
 ---
 
+### Resumen del Proyecto
+Roberto Mansilla requería un sitio que mostrara sus shows y facilitara conversiones desde redes sociales, con un diseño que presenta una navegación "tipo plato" y animaciones atractivas que capturan la esencia de su estilo de actuación.
 
-### **Project Overview**
-Roberto Mansilla, a distinguished mentalist from Argentina, required a website that both spotlights his unique shows and serves as a high-conversion landing page for social media traffic. The design features immersive “plate”-style navigation with engaging animations that capture the essence of his performance style and draw users in for bookings.
+### Objetivos
+- **Autoridad de Marca**: Posicionar a Roberto como un mentalista líder con un sitio visualmente memorable.
+- **Embudo de Participación del Usuario**: Facilitar la transición de visitantes de redes sociales al sitio, enfocándose en la conversión de reservas.
+- **Diseño UX Interactivo**: Integrar animaciones que mejoren la experiencia y reflejen el misticismo de las actuaciones de Roberto.
+- **Capacidad de Autogestión**: Permitir que Roberto actualice de manera independiente shows y testimonios.
 
-### **Objectives**
-- **Brand Authority**: Position Roberto as a leading mentalist through a visually memorable site.
-- **User Engagement Funnel**: Smoothly transition visitors from social media to the website, focusing on booking conversion.
-- **Interactive UX Design**: Integrate animations and visual effects to enhance the experience and reflect the mystique of Roberto’s performances.
-- **Self-Management Capability**: Empower Roberto to independently update shows, testimonials, and other dynamic content.
+### Flujo de Trabajo del Proyecto
+1. **Descubrimiento y Estrategia**: Definición de la marca digital de Roberto con un diseño único que refuerza su presencia escénica.
+2. **Diseño UI/UX**: Creación de una interfaz interactiva con navegación "tipo plato" para shows, testimonios y un tráiler en video.
+3. **Estrategia de Contenido**: Organización de contenido para resaltar categorías principales de shows y testimonios del público.
+4. **Elementos Interactivos**: Incorporación de animaciones en JavaScript que aportan intriga y mejoran la participación sin afectar el rendimiento del sitio.
+5. **Pruebas y Optimización**: Optimización para SEO y reducción de tiempos de carga para asegurar que el sitio funcione eficazmente como una página de aterrizaje enfocada en la conversión.
 
-### **Project Workflow**
-1. **Discovery & Strategy**: Established Roberto’s digital brand with a unique layout that reinforces his charismatic stage presence.
-2. **UI/UX Design**: Designed an interactive interface with “plate” navigation for shows, testimonials, and a video trailer, creating an immersive journey for users.
-3. **Content Strategy**: Organized content to highlight core show categories and audience testimonials for credibility.
-4. **Interactive Elements**: Incorporated JavaScript animations that bring an air of intrigue, enhancing engagement while maintaining site performance.
-5. **Testing & Optimization**: Optimized for SEO and streamlined load times to ensure the site functions effectively as a conversion-focused landing page.
+### Tecnologías Utilizadas
+- **WordPress**: Seleccionado por su gestión de contenido flexible y fácil de usar.
+- **DIVI Builder**: Permite un diseño modular adecuado para mostrar los servicios de Roberto.
+- **HTML/CSS/JS**: Animaciones elaboradas para una UX atractiva sin afectar los tiempos de carga.
 
-### **Technologies Used**
-- **WordPress**: Selected for flexible, user-friendly content management.
-- **DIVI Builder**: Enabled a modular design suited to showcasing Roberto’s services.
-- **HTML/CSS/JS**: Crafted animations for an engaging UX without affecting load times.
-
-### **Results and Impact**
-- **Higher Engagement and Conversion**: The structured landing page boosts bookings from social media sources.
-- **Improved Brand Presence**: A polished, dynamic design establishes Roberto’s authority in the mentalist field.
-- **Ease of Management**: Roberto can now independently manage content, keeping his site fresh with recent shows and testimonials.
+### Resultados e Impacto
+- **Mayor Participación y Conversión**: La página de aterrizaje estructurada aumenta las reservas desde redes sociales.
+- **Mejora en la Presencia de Marca**: Un diseño pulido y dinámico establece la autoridad de Roberto en el campo del mentalismo.
+- **Facilidad de Gestión**: Roberto ahora puede gestionar el contenido de forma independiente, manteniendo su sitio actualizado con shows y testimonios recientes.

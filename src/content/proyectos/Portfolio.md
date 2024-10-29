@@ -1,10 +1,10 @@
 ---
-title: Rodrigo Camino Portfolio Website
+title: Rodrigo Camino Sitio Web de Portafolio
 publishDate: 2024-29-10 00:00:00
 img: /assets/portfolio/1.png
-img_alt: Screenshot of Rodrigo Camino's portfolio
+img_alt: Screenshot del sitio web de Rodrigo
 description: |
-  This article describes my portfolio website, built to showcase my web development and creative skills. Using Astro, Tailwind CSS, HTML, and JavaScript, the site focuses on fast performance, easy updates, and engaging design to enhance my brand and keep content current.
+  Este artículo describe mi sitio web de portafolio, diseñado para mostrar mis habilidades en desarrollo web y creatividad. Usando Astro, Tailwind CSS, HTML y JavaScript, el sitio se centra en un rendimiento rápido, actualizaciones sencillas y un diseño atractivo para mejorar mi marca y mantener el contenido actualizado.
 tags:
   - Dev
   - Branding
@@ -22,29 +22,29 @@ screenshots: [
 ]
 ---
 
-### Project Overview
-This portfolio site serves as my professional showcase, merging my skills in web development and my creative side as a magician based in Buenos Aires. It’s crafted to highlight both my technical expertise and my strategic, imaginative approach through interactive elements and a visually engaging design.
+### Resumen del Proyecto
+Este sitio de portafolio es mi vitrina profesional, fusionando mis habilidades en desarrollo web y mi lado creativo como mago en Buenos Aires, destacando tanto mi experiencia técnica como mi enfoque estratégico e imaginativo a través de elementos interactivos y un diseño visual atractivo.
 
-### Objectives
-- **Digital Presence**: Establish a polished, modern site that reflects my technical and creative strengths.
-- **User Engagement**: Provide an interactive experience that showcases my projects effectively.
-- **Performance**: Achieve a fast-loading, optimized site by leveraging Astro and Tailwind CSS.
-- **Maintainability**: Ensure I can easily update the site with new projects and content as they develop.
+### Objetivos
+- **Presencia Digital**: Establecer un sitio pulido y moderno que refleje mis fortalezas técnicas y creativas.
+- **Interacción del Usuario**: Proporcionar una experiencia interactiva que muestre mis proyectos de manera efectiva.
+- **Rendimiento**: Lograr un sitio optimizado y de carga rápida aprovechando Astro y Tailwind CSS.
+- **Mantenibilidad**: Asegurarme de que puedo actualizar fácilmente el sitio con nuevos proyectos y contenido a medida que se desarrollen.
 
-### Project Workflow
-- **Planning & Discovery**: Focused on defining my brand, ensuring that user flow was both inviting and practical.
-- **Design & Development**:
-  - **UI/UX Design**: Built a minimalist, clean design with intuitive navigation.
-  - **Component-Driven Structure**: Used Astro and Tailwind CSS to create modular components, enhancing load times and responsiveness.
-- **Content Structuring**: Organized sections such as “About,” “Work,” and “Contact” to display expertise and projects efficiently.
-- **Testing & Optimization**: Conducted performance testing, ensuring smooth loading and cross-device compatibility.
+### Flujo de Trabajo del Proyecto
+- **Planificación y Descubrimiento**: Centrado en definir mi marca, asegurando que el flujo de usuarios sea acogedor y práctico.
+- **Diseño y Desarrollo**:
+  - **Diseño UI/UX**: Construí un diseño minimalista y limpio con navegación intuitiva.
+  - **Estructura Basada en Componentes**: Utilicé Astro y Tailwind CSS para crear componentes modulares, mejorando los tiempos de carga y la capacidad de respuesta.
+- **Estructuración del Contenido**: Organicé secciones como "Acerca de", "Trabajo" y "Contacto" para mostrar experiencia y proyectos de manera eficiente.
+- **Pruebas y Optimización**: Realicé pruebas de rendimiento, asegurando una carga suave y compatibilidad entre dispositivos.
 
-### Technologies Used
-- **Astro**: Used to create a static site with excellent performance.
-- **Tailwind CSS**: Enabled rapid, flexible styling adjustments.
-- **HTML & JavaScript**: Integrated for dynamic elements, enhancing interactivity without slowing performance.
+### Tecnologías Utilizadas
+- **Astro**: Utilizado para crear un sitio estático con un rendimiento excelente.
+- **Tailwind CSS**: Permite ajustes de estilo rápidos y flexibles.
+- **HTML y JavaScript**: Integrados para elementos dinámicos, mejorando la interactividad sin ralentizar el rendimiento.
 
-### Results and Impact
-- **Enhanced Brand Image**: Created a professional, sleek design that highlights my unique blend of technical and creative skills.
-- **Increased Engagement**: The interactive layout encourages visitors to explore my projects and skills, increasing engagement.
-- **Client Empowerment**: With an easily maintainable structure, I can keep my site up to date and reflective of my latest work.
+### Resultados e Impacto
+- **Imagen de Marca Mejorada**: Creé un diseño profesional y elegante que destaca mi combinación única de habilidades técnicas y creativas.
+- **Mayor Participación**: El diseño interactivo anima a los visitantes a explorar mis proyectos y habilidades, aumentando la participación.
+- **Empoderamiento del Cliente**: Con una estructura fácilmente mantenible, puedo mantener mi sitio actualizado y reflejar mi trabajo más reciente.

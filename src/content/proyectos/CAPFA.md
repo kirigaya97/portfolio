@@ -1,10 +1,10 @@
 ---
-title: CAPFA Constructora Website Revamp
+title: CAPFA Constructora actualización de sitio.
 publishDate: 2019-12-01 00:00:00
 img: /assets/capfaArticleImg.webp
 img_alt: Screenshot of CAPFA Website Revamp
 description: |
-  CAPFA Constructora sought a comprehensive digital transformation to improve performance, SEO, and user experience. Their previous website, with a 45% performance score, felt outdated and lacked engagement. 
+  CAPFA Constructora buscaba una transformación digital integral para mejorar el rendimiento, SEO y la experiencia de usuario. Su sitio anterior, con un puntaje de rendimiento de 45%, se sentía anticuado y carecía de interacción efectiva con el usuario.
 tags:
   - Dev
   - Branding
@@ -19,48 +19,34 @@ screenshots: [
 ]
 ---
 
-### Project Overview
+### Descripción del Proyecto
 
-Our goals were to enhance speed, optimize SEO, modernize the UX/UI, and introduce a component-driven structure for higher software quality and maintainability.
+Nuestros objetivos eran mejorar la velocidad, optimizar el SEO, modernizar la UX/UI y aplicar una estructura basada en componentes para una mayor calidad y mantenimiento del software.
 
-##### Objectives
-- <b>Performance and Accessibility:</b> Raise Google Lighthouse scores.
-###
-- <b>Usability and Engagement:</b> Redesign UX/UI to reflect CAPFA’s brand.
-###
-- <b>Ease of Updates:</b> Enable CAPFA to update the site regularly via WordPress and DIVI.
-###
-- <b> Digital Presence:</b> Increase engagement through social media integration and a user-focused design.
-###
-#### Project Workflow
-<b>Discovery and Planning:</b> Established CAPFA’s brand identity with a custom color palette, typography, and wireframes to boost user engagement.
-###
-##### Design and Development:
-- <b>Page Structuring:</b> Developed templates for pages like "Contact," "About Us," and "Projects."
+#### Objetivos
+- **Rendimiento y Accesibilidad**: Elevar los puntajes de Google Lighthouse.
+- **Usabilidad e Interacción**: Rediseñar la UX/UI para reflejar la identidad de CAPFA.
+- **Facilidad de Actualización**: Permitir que CAPFA actualice el sitio regularmente mediante WordPress y DIVI.
+- **Presencia Digital**: Aumentar la interacción a través de la integración de redes sociales y un diseño centrado en el usuario.
 
-- <b>SEO and Accessibility:</b> Utilized DIVI’s native tools for optimized SEO and accessibility.
+#### Flujo de Trabajo del Proyecto
+**Descubrimiento y Planificación**: Establecimos la identidad de marca de CAPFA con una paleta de colores personalizada, tipografía y wireframes para aumentar la interacción.
 
-- <b>Component-Driven Structure:</b> Incorporated custom PHP functions and DIVI’s modular tools for streamlined backend management.
+#### Diseño y Desarrollo
+- **Estructuración de Páginas**: Desarrollamos plantillas para secciones como "Contacto", "Nosotros" y "Proyectos".
+- **SEO y Accesibilidad**: Usamos herramientas nativas de DIVI para una SEO y accesibilidad optimizados.
+- **Estructura Basada en Componentes**: Incorporamos funciones PHP personalizadas y herramientas modulares de DIVI para mejorar la gestión del backend.
+- **Funcionalidades Dinámicas**: Implementamos un botón de WhatsApp interactivo con JavaScript, evitando plugins que afecten el rendimiento.
+- **Pruebas y Optimización**: Logramos una puntuación del 94% en Google Lighthouse y validamos con Google Analytics y otras herramientas de pruebas.
+- **Cronograma de Ejecución**: Seguimos una planificación semanal estructurada para asegurar la finalización del proyecto a tiempo.
 
-- <b>Dynamic Features:</b> Implemented JavaScript for an interactive WhatsApp button without performance-impacting plugins.
+#### Tecnologías Utilizadas
+- **WordPress**: Para facilitar las actualizaciones del cliente.
+- **DIVI**: Por su modularidad y capacidades de SEO.
+- **PHP, JavaScript, HTML, CSS**: Aplicados para funcionalidades personalizadas, estilos y optimización de interactividad sin cargar plugins adicionales.
 
-- <b>Testing and Optimization:</b> Achieved a 94% Google Lighthouse performance score with further validation through Google Analytics and additional testing tools.
+#### Resultados e Impacto
 
-- <b>Execution Timeline:</b> Followed a structured weekly timeline to ensure project completion on schedule.
-###
-##### Technologies Used
-><b>WordPress:</b> For easy client updates.
-###
-><b>DIVI:</b> For modularity and SEO capabilities.
-###
-><b>PHP, JavaScript, HTML, CSS:</b> 
-#####
->Applied for custom functionality, styling, and optimized interactivity without added plugin loads.
-
-##### Results and Impact
-
-- <b>Performance:</b> Boosted Lighthouse score from 45% to 94%, delivering faster load times and enhanced user retention.
-
-- <b>Usability and Engagement:</b> Improved user interaction and accessibility, enabling seamless connections between CAPFA’s social media and website.
-
-- <b>Client Empowerment:</b> CAPFA now manages content updates independently, solidifying its digital presence and engagement strategy.
+- **Rendimiento**: Mejoramos la puntuación de Lighthouse del 45% al 94%, logrando tiempos de carga más rápidos y una mayor retención de usuarios.
+- **Usabilidad e Interacción**: Mejoramos la interacción y accesibilidad, facilitando la conexión entre las redes sociales y el sitio web de CAPFA.
+- **Empoderamiento del Cliente**: CAPFA ahora gestiona actualizaciones de contenido de forma independiente, fortaleciendo su presencia digital y estrategia de interacción.
