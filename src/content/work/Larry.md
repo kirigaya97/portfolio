@@ -1,7 +1,7 @@
 ---
 title: Larry Props Interactive E-Commerce Website
 publishDate: 2019-02-02 00:00:00
-img: /assets/Larry/1.png
+img: /assets/Larry/1.webp
 img_alt: Screenshot of SDI Web
 description: |
   The Larry Props website serves a niche market in high-quality mentalism props, offering professional tools tailored for performers.

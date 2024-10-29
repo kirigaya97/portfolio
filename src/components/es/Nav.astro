@@ -2,18 +2,18 @@
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
-import LangToggle from './LangToggle.astro';
+import LangToggle from '../LangToggle.astro';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
+	{ label: 'Inicio', href: '/es/' },
+	{ label: 'Proyectos', href: '/es/work/' },
+	{ label: 'Sobre mí', href: '/es/about/' },
 ];
 
 /** Icon links to social media */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'Twitter', href: 'https://x.com/RodrigoCamino8', icon: 'X-logo' },
+	{ label: 'X', href: 'https://x.com/RodrigoCamino8', icon: 'X-logo' },
 	{ label: 'GitHub', href: 'https://github.com/kirigaya97', icon: 'github-logo' },
 	{ label: 'Instagram', href: 'https://instagram.com/rodri.camino', icon: 'instagram' },
 ];
@@ -28,7 +28,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
-					<span class="sr-only">Menu</span>
+					<span class="sr-only">Menú</span>
 					<Icon icon="list" />
 				</button>
 			</template>
@@ -46,7 +46,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== '/es/' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
@@ -84,7 +84,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== '/es/' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
@@ -99,6 +99,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			<div class="lang-toggle">
 				<LangToggle />
 			</div>
+			
 			<div class="socials">
 				{
 					iconLinks.map(({ href, icon, label }) => (
@@ -273,12 +274,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	}
 
 	.theme-toggle {
-		display: flex;
-		align-items: center;
-		height: calc(var(--icon-size) + 2 * var(--icon-padding));
-	}
-
-	.lang-toggle {
 		display: flex;
 		align-items: center;
 		height: calc(var(--icon-size) + 2 * var(--icon-padding));

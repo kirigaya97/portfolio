@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../layouts/es/BaseLayout.astro";
+
+import ContactCTA from "../../components/es/ContactCTA.astro";
+import Hero from "../../components/es/Hero.astro";
+---
+
+<BaseLayout
+	title="Sobre mí | Rodrigo Camino"
+	description="Sobre Rodrigo Camino: Desarrollo experiencias web únicas."
+>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Sobre mi"
+				tagline="Gracias por pasar po acá. Pasá, ponete cómodo y veamos un poco de mis experiencias pasadas."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/pixelart.png"
+					alt="Rodrigo Camino Pixel art"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Rodrigo Camino es un experimentado diseñador y desarrollador web especializado en la creación de sitios web y plataformas digitales visualmente impactantes y centradas en el usuario. Con experiencia en branding, estrategias de marketing digital y diseño UX/UI, Rodrigo combina un enfoque creativo con análisis de datos para ofrecer experiencias digitales funcionales y atractivas.
+						<br><br>
+						<p>Su experiencia abarca diversos sectores, brindando soluciones personalizadas que se alinean con las necesidades y objetivos comerciales de los clientes. Rodrigo también tiene experiencia en estrategia empresarial, especialmente en consultoría para bares, y posee un sólido dominio tecnológico tanto en diseño como en procesos de backend.</p>
+					</p>
+					</div>
+					</section>
+					<section>
+						<h2 class="section-title">Educación</h2>
+						<div class="content">
+							<p>Especialista en Análisis de Sistemas - ORT Argentina <span class="date">(2023 - presente)</span></p>
+							<p>Desarrollo en WordPress - Udemy <span class="date">(2021 - 2022)</span></p>
+							<p>Desarrollador Backend - CoderHouse <span class="date">(2020 - 2021)</span></p>
+							<p>Desarrollador Frontend - EducacionIT <span class="date">(2019 - 2020)</span></p>
+						</div>
+					</section>
+					<section>
+						<h2 class="section-title">Habilidades</h2>
+						<div class="content">
+							<ul>
+								<li>Desarrollo Web - WordPress, HTML, CSS, JavaScript, PHP</li>
+								<li>Diseño - Photoshop (Avanzado), Adobe Premiere (Intermedio), Illustrator (Básico)</li>
+								<li>Marketing - Email Marketing (MailChimp), Estrategias en Redes Sociales, SEO</li>
+								<li>Gestión de Proyectos - Estrategia Empresarial, Colaboración con Clientes, Automatización de Procesos</li>
+								<li>Habilidades Blandas - Proactividad, Trabajo en Equipo, Adaptabilidad, Orientación al Cliente</li>
+							</ul>
+						</div>					
+				
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.date {
+		color: var(--gray-500);
+		font-size: var(--text-sm);
+	}
+
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

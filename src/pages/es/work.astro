@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../../layouts/es/BaseLayout.astro';
+
+import ContactCTA from '../../components/es/ContactCTA.astro';
+import PortfolioPreview from '../../components/es/PortfolioPreview.astro';
+import Hero from '../../components/es/Hero.astro';
+import Grid from '../../components/es/Grid.astro';
+
+const projects = (await getCollection('work')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+---
+
+<BaseLayout
+	title="Mi Trabajo | Rodrigo Camino"
+	description="Mis proyectos más recientes."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Mi Trabajo"
+				tagline="Mira mis proyectos recientes para darte una idea de mi experiencia."
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					projects.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

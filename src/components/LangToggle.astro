@@ -1,0 +1,140 @@
+---
+import Icon from './Icon.astro';
+---
+
+<language-toggle>
+	<button>
+		<span class="sr-only">Switch Language</span>
+	</button>
+</language-toggle>
+
+  
+  
+
+<style>
+	
+	button {
+		display: flex;
+		border: 0;
+		border-radius: 6px;
+		padding: 5px;
+		background-color: var(--accent-text-over);
+		box-shadow: inset 0 0 0 1px var(--accent-overlay);
+		cursor: pointer;
+	}
+
+	:global(.theme-dark) button {
+		display: flex;
+		border: 0;
+		border-radius: 6px;
+		padding: 5px;
+		background-color: var(--accent-regular);
+		box-shadow: inset 0 0 0 1px var(--accent-overlay);
+		cursor: pointer;
+	}
+
+	:global(.theme-dark) button:hover {
+		background-color: #ffffff;
+		box-shadow: inset 0 0 0 1px var(--accent-overlay);
+		color: var(--accent-regular);
+	}
+
+	button:hover {
+		background-color: var(--accent-regular);
+		box-shadow: inset 0 0 0 1px var(--accent-overlay);
+		color: var(--accent-text-over);
+	}
+
+
+	.icon {
+		z-index: 1;
+		position: relative;
+		display: flex;
+		padding: 0.5rem;
+		width: 2rem;
+		height: 2rem;
+		font-size: 1rem;
+		color: var(--accent-overlay);
+	}
+
+	.icon.light::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		inset: 0;
+		background-color: var(--accent-regular);
+		border-radius: 999rem;
+	}
+
+	:global(.theme-dark) .icon.light::before {
+		transform: translateX(100%);
+	}
+
+	:global(.theme-dark) .icon.dark,
+	:global(html:not(.theme-dark)) .icon.light,
+	button[aria-pressed='false'] .icon.light {
+		color: var(--accent-text-over);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.icon,
+		.icon.light::before {
+			transition:
+				transform var(--theme-transition),
+				color var(--theme-transition);
+		}
+	}
+
+	@media (forced-colors: active) {
+		.icon.light::before {
+			background-color: SelectedItem;
+		}
+	}
+</style>
+
+<script>
+class LanguageToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		const button = this.querySelector('button')!;
+		const currentLang = this.getCurrentLanguage();
+
+		/** Set the language */
+		const setLanguage = (lang) => {
+			const baseUrl = window.location.origin;
+
+			if (lang === 'es') {
+				// If it's not already in Spanish, add '/es' after the domain
+				if (!window.location.pathname.startsWith('/es')) {
+					window.location.href = `${baseUrl}/es${window.location.pathname}`;
+				}
+			} else {
+				// If it's in Spanish, remove '/es'
+				if (window.location.pathname.startsWith('/es')) {
+					const newPath = window.location.pathname.replace(/^\/es/, '');
+					window.location.href = `${baseUrl}${newPath}`;
+				}
+			}
+		};
+
+		// Set initial button state
+		button.textContent = currentLang === 'es' ? 'English' : 'Español';
+
+		// Toggle language when the button is clicked
+		button.addEventListener('click', () => {
+			const newLang = currentLang === 'es' ? 'en' : 'es';
+			setLanguage(newLang);
+		});
+	}
+
+	getCurrentLanguage() {
+		return window.location.pathname.startsWith('/es') ? 'es' : 'en';
+	}
+}
+customElements.define('language-toggle', LanguageToggle);
+
+
+
+
+</script>

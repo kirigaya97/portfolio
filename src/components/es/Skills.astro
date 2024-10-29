@@ -1,0 +1,68 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Desarrollo Wordpress</h2>
+		<p>Con más de 3 años de experiencia, desarrollo experiencias Web únicas</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="wordpress-logo" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Marketing y Diseño</h2>
+		<p>Con un ojo audáz para el diseño y pensamiento tangencial para Marketing, he hecho triunfar muchos de mis proyectos.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Enfoque Estratégico</h2>
+		<p>Guiado por una visión estratégica, sobresalgo en alinear acciones a corto plazo con objetivos a largo plazo para optimizar resultados, anticipar desafíos y fomentar un crecimiento e innovación sostenidos.</p>
+	</div>
+	
+</section>
+
+<style>
+
+	icon:icon['wordpress-logo'] {
+		transform: scale(1.5);
+	}
+
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
