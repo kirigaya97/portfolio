@@ -6,25 +6,29 @@
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 import '../styles/tailwind.css';
+import { getLangFromUrl } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
 
 interface Props {
-	title?: string | undefined;
-	description?: string | undefined;
+	title?: string;
+	description?: string;
 }
 
 const { title, description } = Astro.props;
+const lang: Lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang="en">
+<html lang={lang}>
 	<head>
-		<MainHead title={title} description={description} />
+		<MainHead lang={lang} title={title} description={description} />
 	</head>
 	<body>
 		<div class="stack backgrounds">
-			<Nav />
+			<Nav lang={lang} />
 			<slot />
-			<Footer />
+			<Footer lang={lang} />
 		</div>
 
 		<script>
