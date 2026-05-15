@@ -1,0 +1,12 @@
+---
+import type { Lang } from '../../i18n/ui';
+import Hero from '../Hero.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Hero title="Page Not Found" tagline="Not found" />
