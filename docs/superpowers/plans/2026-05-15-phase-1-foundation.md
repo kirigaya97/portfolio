@@ -1,6 +1,8 @@
 # Phase 1 — Foundation Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+>
+> **Orchestration hub:** `docs/superpowers/ROADMAP.md` holds the live status across all 4 phases. After completing each task below, check its boxes here **and** update the Live status table + Task progress log in the roadmap, then commit. At the end of this plan, stop — do not start Phase 2; its plan is written separately against the finished code.
 
 **Goal:** Modernize the portfolio's technical base — upgrade Astro 4→6, migrate Tailwind 3→4 and the Vercel adapter, move to the Content Layer API, and refactor the i18n system from a fully-duplicated `es/` tree to one unified component set driven by translation dictionaries — without changing the visual design.
 
