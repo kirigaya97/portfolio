@@ -1,14 +1,18 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/ui';
+import { getRoutePath } from '../i18n/utils';
 
 interface Props {
-	project: CollectionEntry<'work'>;
+	project: CollectionEntry<'work'> | CollectionEntry<'proyectos'>;
+	lang: Lang;
 }
 
-const { data, slug } = Astro.props.project;
+const { project, lang } = Astro.props;
+const { data, id } = project;
 ---
 
-<a class="card" href={`/work/${slug}`}>
+<a class="card" href={`${getRoutePath('work', lang)}/${id}`}>
 	<span class="title">{data.title}</span>
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>

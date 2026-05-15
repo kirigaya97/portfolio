@@ -1,12 +1,18 @@
 ---
 import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <aside>
-	<h2>Interested in working together?</h2>
+	<h2>{t('contactCta.heading')}</h2>
 	<CallToAction href="https://wa.me/+5491132125484">
-		Shoot Me a Message
+		{t('contactCta.button')}
 		<Icon icon="whatsapp" size="1.2em" />
 	</CallToAction>
 </aside>

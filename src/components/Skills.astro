@@ -1,28 +1,29 @@
 ---
 import Icon from './Icon.astro';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Wordpress development</h2>
-		<p>With 3+ years of experience, I develop unique Wordpress online experiences.</p>
+		<h2>{t('skills.card1.title')}</h2>
+		<p>{t('skills.card1.body')}</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="wordpress-logo" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Design and Marketing</h2>
-		<p>Having a keen eye for desing and out of the box marketing strategies have led many of my projects to success.</p>
+		<h2>{t('skills.card2.title')}</h2>
+		<p>{t('skills.card2.body')}</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Strategy-Minded</h2>
-		<p>Driven by a strategic vision, I excel in aligning short-term actions with long-term objectives to optimize outcomes, anticipate challenges, and support sustained growth and innovation.</p>
+		<h2>{t('skills.card3.title')}</h2>
+		<p>{t('skills.card3.body')}</p>
 	</div>
-	<!--<div class="stack gap-2 lg:gap-4">
-		<Icon icon="layout" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Modern Frameworks</h2>
-		<p>Incorporating modern frameworks and new technologies. i.E: Astro.</p>
-	</div> -->
 </section>
 
 <style>

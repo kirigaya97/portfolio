@@ -1,18 +1,28 @@
 ---
-import Icon from './Icon.astro';
+import type { Lang } from '../i18n/ui';
+import { languages } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const otherLang: Lang = lang === 'en' ? 'es' : 'en';
+const otherLangLabel = languages[otherLang];
 ---
 
-<language-toggle>
+<language-toggle data-lang={lang}>
 	<button>
-		<span class="sr-only">Switch Language</span>
+		<span class="sr-only">{t('lang.switch')}</span>
+		{otherLangLabel}
 	</button>
 </language-toggle>
 
-  
-  
+
+
 
 <style>
-	
+
 	button {
 		display: flex;
 		border: 0;
@@ -98,55 +108,39 @@ class LanguageToggle extends HTMLElement {
 		super();
 
 		const button = this.querySelector('button');
-		const currentLang = this.getCurrentLanguage();
+		const currentLang = this.dataset.lang as 'en' | 'es';
 
-		/** Set the language */
-		const setLanguage = (lang) => {
+		/** Navigate to the equivalent page in the target language */
+		const setLanguage = (targetLang: 'en' | 'es') => {
 			const baseUrl = window.location.origin;
 			let path = window.location.pathname;
 
-			// Adjust both language prefix and section path on a single click
-			if (lang === 'es') {
-				// If English and in "work" section, switch to "proyectos" with "/es" prefix
+			if (targetLang === 'es') {
+				// Switching EN → ES
 				if (path.includes('/work')) {
 					path = `/es${path.replace('/work', '/proyectos')}`;
 				} else if (!path.startsWith('/es')) {
-					// Add '/es' prefix if it's a non-work English path
 					path = `/es${path}`;
 				}
 			} else {
-				// If Spanish and in "proyectos" section, switch to "work" and remove "/es" prefix
+				// Switching ES → EN
 				if (path.includes('/proyectos')) {
 					path = path.replace('/es/proyectos', '/work');
 				} else if (path.startsWith('/es')) {
-					// Remove '/es' prefix for other Spanish paths
-					path = path.replace(/^\/es/, '');
+					path = path.replace(/^\/es/, '') || '/';
 				}
 			}
 
 			window.location.href = `${baseUrl}${path}`;
 		};
 
-		// Set initial button state
-		button.textContent = currentLang === 'es' ? 'English' : 'Español';
-
 		// Toggle language when the button is clicked
-		button.addEventListener('click', () => {
+		button!.addEventListener('click', () => {
 			const newLang = currentLang === 'es' ? 'en' : 'es';
 			setLanguage(newLang);
 		});
 	}
-
-	getCurrentLanguage() {
-		return window.location.pathname.startsWith('/es') ? 'es' : 'en';
-	}
 }
 
 customElements.define('language-toggle', LanguageToggle);
-
-
-
-
-
-
 </script>

@@ -1,23 +1,26 @@
 ---
 import '../styles/global.css';
 import SpeedInsights from '@vercel/speed-insights/astro';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
 
 interface Props {
+	lang: Lang;
 	title?: string | undefined;
 	description?: string | undefined;
 }
 
-const {
-	title = 'Rodrigo Camino: Web developer',
-	description = '3+ years of experience in web design and development. I develop unique Web experiences.',
-} = Astro.props;
+const { lang, title, description } = Astro.props;
+const t = useTranslations(lang);
+const resolvedTitle = title ?? t('meta.defaultTitle');
+const resolvedDescription = description ?? t('meta.defaultDescription');
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
+<meta name="description" property="og:description" content={resolvedDescription} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
-<title>{title}</title>
+<title>{resolvedTitle}</title>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
