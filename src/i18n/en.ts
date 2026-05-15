@@ -33,7 +33,7 @@ export const en = {
   'home.pill.developer': 'Developer',
   'home.pill.creative': 'Creative',
   'home.pill.illusionist': 'Ilusionist',
-  'home.portrait.alt': 'Rodrigo Camino sonriendo con un fondo degrade celeste y púrpura.',
+  'home.portrait.alt': 'Rodrigo Camino smiling against a blue and purple gradient background.',
   'home.work.heading': 'Selected Work',
   'home.work.body':
     'Take a look below at some of my featured work for clients from the past few years.',
