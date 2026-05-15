@@ -26,22 +26,22 @@
 
 **Files:** none (git + environment only)
 
-- [ ] **Step 1: Confirm Node.js version**
+- [x] **Step 1: Confirm Node.js version**
 
 Run: `node --version`
 Expected: `v22.12.0` or higher. Astro 6 requires Node 22.12.0+. If lower, stop and tell the user to upgrade Node before continuing.
 
-- [ ] **Step 2: Create the working branch**
+- [x] **Step 2: Create the working branch**
 
 Run: `git checkout -b redesign`
 Expected: `Switched to a new branch 'redesign'`
 
-- [ ] **Step 3: Capture a baseline build**
+- [x] **Step 3: Capture a baseline build**
 
 Run: `pnpm install && pnpm build`
 Expected: build succeeds. If it fails, record the error — the baseline is broken and that must be understood before upgrading.
 
-- [ ] **Step 4: Commit the baseline checkpoint**
+- [x] **Step 4: Commit the baseline checkpoint**
 
 ```bash
 git commit --allow-empty -m "chore: start Phase 1 foundation work on redesign branch"
@@ -56,7 +56,7 @@ git commit --allow-empty -m "chore: start Phase 1 foundation work on redesign br
 **Files:**
 - Modify: `package.json`
 
-- [ ] **Step 1: Update dependency versions in `package.json`**
+- [x] **Step 1: Update dependency versions in `package.json`**
 
 Set these versions in `dependencies` (leave `name`/`type`/`version`/`scripts` as-is):
 
@@ -71,12 +71,12 @@ Set these versions in `dependencies` (leave `name`/`type`/`version`/`scripts` as
 
 Remove `@astrojs/tailwind` and `tailwindcss` from `dependencies` — they are replaced in Task 5. Leave `@tailwindcss/typography` in `devDependencies` for now (re-pinned in Task 5).
 
-- [ ] **Step 2: Install and let the resolver pick the matching adapter**
+- [x] **Step 2: Install and let the resolver pick the matching adapter**
 
 Run: `pnpm install`
 Expected: install completes. `@astrojs/vercel` resolves to the version compatible with Astro 6. If pnpm reports a peer-dependency conflict on `@astrojs/vercel`, run `pnpm view @astrojs/vercel versions --json | tail -5`, pick the highest version whose peer range includes `astro@6`, set that exact version, and re-install.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add package.json pnpm-lock.yaml
@@ -94,7 +94,7 @@ Note: the build will not pass yet — config and content changes in Tasks 3–5 
 **Files:**
 - Modify: `astro.config.mjs`
 
-- [ ] **Step 1: Rewrite `astro.config.mjs`**
+- [x] **Step 1: Rewrite `astro.config.mjs`**
 
 The v6 adapter import path drops the `/serverless` subpath. Replace the entire file with:
 
@@ -123,7 +123,7 @@ export default defineConfig({
 
 The `tailwind()` integration is intentionally gone — it is re-added as a Vite plugin in Task 5. `integrations: []` is omitted because it is now empty.
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add astro.config.mjs
@@ -147,7 +147,7 @@ git commit -m "chore: update vercel adapter import path for astro v6"
 
 **Context:** Astro 6 removed automatic legacy collections. The current `src/content/config.ts` registers only `work`; the `proyectos/` folder works today only via removed auto-detection. Both collections must be explicitly registered with a `glob()` loader.
 
-- [ ] **Step 1: Create `src/content.config.ts`**
+- [x] **Step 1: Create `src/content.config.ts`**
 
 ```ts
 import { defineCollection } from 'astro:content';
@@ -178,7 +178,7 @@ const proyectos = defineCollection({
 export const collections = { work, proyectos };
 ```
 
-- [ ] **Step 2: Delete the old config and `env.d.ts`**
+- [x] **Step 2: Delete the old config and `env.d.ts`**
 
 ```bash
 git rm src/content/config.ts src/env.d.ts
@@ -186,7 +186,7 @@ git rm src/content/config.ts src/env.d.ts
 
 `src/env.d.ts` is no longer auto-generated or required in Astro 6; types come from `.astro/types.d.ts` via `tsconfig.json`.
 
-- [ ] **Step 3: Update `tsconfig.json`**
+- [x] **Step 3: Update `tsconfig.json`**
 
 Replace the file contents with:
 
@@ -198,7 +198,7 @@ Replace the file contents with:
 }
 ```
 
-- [ ] **Step 4: Fix the invalid date in `src/content/work/Portfolio.md`**
+- [x] **Step 4: Fix the invalid date in `src/content/work/Portfolio.md`**
 
 The frontmatter has `publishDate: 2024-29-10 00:00:00` — month `29` is invalid and produces an `Invalid Date`. Change that line to:
 
@@ -208,7 +208,7 @@ publishDate: 2024-10-29 00:00:00
 
 Then check the matching ES file `src/content/proyectos/Portfolio.md` for the same error and apply the identical fix if present.
 
-- [ ] **Step 5: Update `src/pages/work/[...slug].astro` for the Content Layer API**
+- [x] **Step 5: Update `src/pages/work/[...slug].astro` for the Content Layer API**
 
 In Astro 6, `entry.slug` becomes `entry.id` and `entry.render()` becomes `render(entry)`. Apply these changes:
 - Add `render` to the `astro:content` import: `import { getCollection, render } from 'astro:content';`
@@ -217,16 +217,16 @@ In Astro 6, `entry.slug` becomes `entry.id` and `entry.render()` becomes `render
 
 Open the file first to confirm the exact current lines, then apply each replacement.
 
-- [ ] **Step 6: Apply the identical changes to `src/pages/es/proyectos/[...slug].astro`**
+- [x] **Step 6: Apply the identical changes to `src/pages/es/proyectos/[...slug].astro`**
 
 Same three changes as Step 5, on the ES project-detail route.
 
-- [ ] **Step 7: Verify content types compile**
+- [x] **Step 7: Verify content types compile**
 
 Run: `pnpm astro sync && pnpm astro check`
 Expected: no content-collection errors. If `astro check` reports unrelated component type errors, that is acceptable at this stage — only collection/schema errors block this task.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add -A
@@ -248,7 +248,7 @@ git commit -m "feat: migrate content collections to Content Layer API"
 
 **Context:** The `@astrojs/tailwind` integration is deprecated. Tailwind 4 uses the `@tailwindcss/vite` plugin and CSS-first config. The project uses very few Tailwind utility classes directly (layout uses custom `.stack`/`.gap-*` utilities in `global.css`); the main Tailwind consumer is `@tailwindcss/typography` via `prose.astro`.
 
-- [ ] **Step 1: Update `package.json` dependencies**
+- [x] **Step 1: Update `package.json` dependencies**
 
 Add to `dependencies`:
 
@@ -261,7 +261,7 @@ Set `@tailwindcss/typography` in `devDependencies` to `^0.5.16` (the v4-compatib
 
 Run: `pnpm install`
 
-- [ ] **Step 2: Add the Tailwind Vite plugin to `astro.config.mjs`**
+- [x] **Step 2: Add the Tailwind Vite plugin to `astro.config.mjs`**
 
 Add the import and a `vite.plugins` entry:
 
@@ -293,14 +293,14 @@ export default defineConfig({
 });
 ```
 
-- [ ] **Step 3: Create `src/styles/tailwind.css`**
+- [x] **Step 3: Create `src/styles/tailwind.css`**
 
 ```css
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 ```
 
-- [ ] **Step 4: Delete the JavaScript Tailwind config**
+- [x] **Step 4: Delete the JavaScript Tailwind config**
 
 ```bash
 git rm tailwind.config.mjs
@@ -308,16 +308,16 @@ git rm tailwind.config.mjs
 
 Tailwind 4 no longer auto-detects `tailwind.config.*`; content scanning is automatic.
 
-- [ ] **Step 5: Import the Tailwind stylesheet in both layouts**
+- [x] **Step 5: Import the Tailwind stylesheet in both layouts**
 
 In `src/layouts/BaseLayout.astro` and `src/layouts/es/BaseLayout.astro`, add an import for `../styles/tailwind.css` alongside the existing `global.css` import (open each file to confirm the exact existing import line and path depth — `es/BaseLayout.astro` is one directory deeper, so it uses `../../styles/tailwind.css`).
 
-- [ ] **Step 6: Verify the build**
+- [x] **Step 6: Verify the build**
 
 Run: `pnpm build`
 Expected: build succeeds. Then run `pnpm preview` and confirm a project-detail page (which uses `prose.astro`) still renders typography styles. If `prose` classes are unstyled, confirm the `@plugin` line in Step 3 and that the layout imports `tailwind.css`.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add -A
@@ -332,21 +332,21 @@ git commit -m "chore: migrate to Tailwind CSS v4 with the vite plugin"
 
 **Files:** none
 
-- [ ] **Step 1: Type-check**
+- [x] **Step 1: Type-check**
 
 Run: `pnpm astro check`
 Expected: 0 errors. Record any remaining errors.
 
-- [ ] **Step 2: Production build**
+- [x] **Step 2: Production build**
 
 Run: `pnpm build`
 Expected: build succeeds with no errors.
 
-- [ ] **Step 3: Dev smoke test**
+- [x] **Step 3: Dev smoke test**
 
 Run: `pnpm dev`, then visit `/`, `/work/`, `/about/`, `/es/`, `/es/proyectos/`, `/es/about/`, and one project-detail page in each language. Confirm every page renders without console errors. Stop the dev server.
 
-- [ ] **Step 4: Commit the checkpoint**
+- [x] **Step 4: Commit the checkpoint**
 
 ```bash
 git commit --allow-empty -m "chore: Phase 1 upgrade checkpoint — astro 6, tailwind 4, content layer green"
@@ -364,11 +364,11 @@ If any step fails, fix it before proceeding — the i18n refactor assumes a gree
 - Modify: `package.json`
 - Create: `vitest.config.ts`
 
-- [ ] **Step 1: Add Vitest**
+- [x] **Step 1: Add Vitest**
 
 Add `"vitest": "^3.0.0"` to `devDependencies` and a script `"test": "vitest run"` to `scripts` in `package.json`. Run: `pnpm install`
 
-- [ ] **Step 2: Create `vitest.config.ts`**
+- [x] **Step 2: Create `vitest.config.ts`**
 
 ```ts
 import { defineConfig } from 'vitest/config';
@@ -381,12 +381,12 @@ export default defineConfig({
 });
 ```
 
-- [ ] **Step 3: Verify the runner works**
+- [x] **Step 3: Verify the runner works**
 
 Run: `pnpm test`
 Expected: `No test files found` (acceptable — tests are added in Task 12).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add -A
@@ -402,7 +402,7 @@ git commit -m "chore: add vitest for i18n utility tests"
 **Files:**
 - Create: `src/i18n/ui.ts`
 
-- [ ] **Step 1: Create `src/i18n/ui.ts`**
+- [x] **Step 1: Create `src/i18n/ui.ts`**
 
 ```ts
 export const languages = {
@@ -428,7 +428,7 @@ export const routes = {
 export type RouteKey = keyof typeof routes;
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add src/i18n/ui.ts
@@ -447,7 +447,7 @@ git commit -m "feat: add i18n language and route configuration"
 
 **Context:** Every EN string and its ES equivalent is listed in `docs/agents-logs/2026-05-15-i18n-structure-audit.md` section 2. Transcribe **all** strings from that table into the dictionaries below. The structure and key-naming scheme are fixed here; the engineer fills in every entry from the audit table — do not leave any audit string unmapped.
 
-- [ ] **Step 1: Create `src/i18n/en.ts`**
+- [x] **Step 1: Create `src/i18n/en.ts`**
 
 Use dotted keys grouped by surface (`nav.*`, `footer.*`, `skills.*`, `contactCta.*`, `meta.*`, `home.*`, `about.*`, `work.*`, `project.*`, `lang.*`). Starter structure — extend with every remaining string from audit section 2:
 
@@ -505,7 +505,7 @@ export type UIDict = typeof en;
 export type UIKey = keyof UIDict;
 ```
 
-- [ ] **Step 2: Create `src/i18n/es.ts`**
+- [x] **Step 2: Create `src/i18n/es.ts`**
 
 Mirror **every** key from `en.ts` with the Spanish value from the audit table. Typing it as `Record<UIKey, string>` forces the key sets to match — a missing key is a compile error.
 
@@ -522,12 +522,12 @@ export const es: Record<UIKey, string> = {
 };
 ```
 
-- [ ] **Step 3: Verify key parity**
+- [x] **Step 3: Verify key parity**
 
 Run: `pnpm astro check`
 Expected: no errors in `src/i18n/`. A `Property 'x' is missing` error means `es.ts` is missing a key — add it.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/i18n/en.ts src/i18n/es.ts
@@ -543,7 +543,7 @@ git commit -m "feat: add EN and ES translation dictionaries"
 **Files:**
 - Create: `src/i18n/utils.test.ts`
 
-- [ ] **Step 1: Write the failing test file**
+- [x] **Step 1: Write the failing test file**
 
 ```ts
 import { describe, it, expect } from 'vitest';
@@ -606,12 +606,12 @@ describe('getRoutePath', () => {
 });
 ```
 
-- [ ] **Step 2: Run the tests to confirm they fail**
+- [x] **Step 2: Run the tests to confirm they fail**
 
 Run: `pnpm test`
 Expected: FAIL — `Failed to resolve import "./utils"` (the module does not exist yet).
 
-- [ ] **Step 3: Commit the failing tests**
+- [x] **Step 3: Commit the failing tests**
 
 ```bash
 git add src/i18n/utils.test.ts
@@ -627,7 +627,7 @@ git commit -m "test: add failing tests for i18n utilities"
 **Files:**
 - Create: `src/i18n/utils.ts`
 
-- [ ] **Step 1: Implement `src/i18n/utils.ts`**
+- [x] **Step 1: Implement `src/i18n/utils.ts`**
 
 ```ts
 import { defaultLang, routes, type Lang, type RouteKey } from './ui';
@@ -662,12 +662,12 @@ export function getRoutePath(key: RouteKey, lang: Lang): string {
 }
 ```
 
-- [ ] **Step 2: Run the tests to confirm they pass**
+- [x] **Step 2: Run the tests to confirm they pass**
 
 Run: `pnpm test`
 Expected: PASS — all 14 tests green.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add src/i18n/utils.ts
@@ -685,7 +685,7 @@ git commit -m "feat: implement i18n utility functions"
 
 **Context:** Audit §1 confirms these 6 components (plus `IconPaths.ts`) are byte-identical to their `src/components/` counterparts. They can be deleted now; importers are repointed in Tasks 13–15.
 
-- [ ] **Step 1: Delete the identical ES component files**
+- [x] **Step 1: Delete the identical ES component files**
 
 ```bash
 git rm src/components/es/Hero.astro src/components/es/CallToAction.astro \
@@ -694,7 +694,7 @@ git rm src/components/es/Hero.astro src/components/es/CallToAction.astro \
   src/components/es/IconPaths.ts
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git commit -m "refactor: delete 6 byte-identical duplicated ES components"
@@ -719,7 +719,7 @@ Note: the build is intentionally broken until Tasks 13–15 repoint imports. Do 
 
 **Context:** Each component gains a `lang: Lang` prop and pulls text via `useTranslations`. The ES counterparts are deleted in Task 16. Audit §2 lists every string; audit §3 lists the structural (route/href) differences each component must now resolve dynamically.
 
-- [ ] **Step 1: Refactor `Nav.astro`**
+- [x] **Step 1: Refactor `Nav.astro`**
 
 Add to the frontmatter:
 
@@ -740,31 +740,31 @@ const textLinks = [
 
 Replace the hardcoded `textLinks` array and the menu-button `sr-only` text (`"Menu"`) with `t('nav.menu')`. Fix the bug noted in audit §3: `LangToggle` must be imported from `./LangToggle` (same directory). Pass `lang` to `<LangToggle lang={lang} />` and `<ThemeToggle />`.
 
-- [ ] **Step 2: Refactor `Footer.astro`**
+- [x] **Step 2: Refactor `Footer.astro`**
 
 Add the `lang` prop and `t` translator (same import pattern as Step 1, with `../i18n/...` path). Replace the credit text with `t('footer.credit')`. Social links (`X`, `GitHub`, `Instagram`, `LinkedIn`) and the copyright name stay hardcoded — audit §2 confirms they are language-neutral.
 
-- [ ] **Step 3: Refactor `Skills.astro`**
+- [x] **Step 3: Refactor `Skills.astro`**
 
 Add the `lang` prop and `t` translator. Replace the 3 card `<h2>`/`<p>` pairs with `t('skills.card1.title')` / `t('skills.card1.body')` … `card3`. Delete the dead commented-out block (audit §3.minor).
 
-- [ ] **Step 4: Refactor `ContactCTA.astro`**
+- [x] **Step 4: Refactor `ContactCTA.astro`**
 
 Add the `lang` prop and `t` translator. Replace the `<h2>` with `t('contactCta.heading')` and the button text with `t('contactCta.button')`.
 
-- [ ] **Step 5: Refactor `MainHead.astro`**
+- [x] **Step 5: Refactor `MainHead.astro`**
 
 Add `lang` to `Props`. Replace the hardcoded default `title`/`description` with `t('meta.defaultTitle')` / `t('meta.defaultDescription')`. Set `<html lang={lang}>` is handled in the layout — here ensure the `<meta>` description uses the prop. Add the missing `import SpeedInsights` / `<SpeedInsights />` so ES pages get analytics parity (audit §3 bug).
 
-- [ ] **Step 6: Refactor `PortfolioPreview.astro`**
+- [x] **Step 6: Refactor `PortfolioPreview.astro`**
 
 Add `lang` to `Props`. Replace the hardcoded href template: build it as `` `${getRoutePath('work', lang)}/${project.id}` `` so EN renders `/work/<id>` and ES renders `/es/proyectos/<id>` (audit §3 structural difference). Use `project.id`, not `project.slug`.
 
-- [ ] **Step 7: Refactor `LangToggle.astro`**
+- [x] **Step 7: Refactor `LangToggle.astro`**
 
 Add the `lang` prop. Replace the `sr-only` label with `t('lang.switch')`. Replace the client-side `/work`↔`/proyectos` string-replace logic: the toggle target is the other locale — compute it from `lang` and the route map rather than hardcoded path surgery. The button shows the *other* language's name from `languages` in `ui.ts`.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add src/components/
@@ -781,7 +781,7 @@ git commit -m "refactor: make shared components locale-aware via i18n module"
 - Modify: `src/layouts/BaseLayout.astro`
 - Delete: `src/layouts/es/BaseLayout.astro`
 
-- [ ] **Step 1: Make `BaseLayout.astro` locale-aware**
+- [x] **Step 1: Make `BaseLayout.astro` locale-aware**
 
 Open `src/layouts/BaseLayout.astro`. Derive the locale once at the top of the frontmatter and keep the existing optional `title`/`description` props:
 
@@ -799,13 +799,13 @@ const lang: Lang = getLangFromUrl(Astro.url);
 
 Set `<html lang={lang}>`. Pass `lang`, `title`, and `description` to `<MainHead lang={lang} title={title} description={description} />` (MainHead from Task 13 already falls back to the default meta strings when `title`/`description` are undefined). Pass `lang` to `<Nav lang={lang} />` and `<Footer lang={lang} />`. Confirm both `global.css` and `styles/tailwind.css` are imported (from Task 5).
 
-- [ ] **Step 2: Delete the ES layout**
+- [x] **Step 2: Delete the ES layout**
 
 ```bash
 git rm src/layouts/es/BaseLayout.astro
 ```
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add -A
@@ -828,27 +828,27 @@ git commit -m "refactor: unify BaseLayout into one locale-aware layout"
 
 **Context:** Astro maps files to routes, so per-locale page files must remain — but their bodies become thin. Each page's content moves into a shared `*Content.astro` component that takes `lang` (and, where needed, collection data). EN and ES page files then both render the same component with their locale.
 
-- [ ] **Step 1: Create `src/components/pages/HomeContent.astro`**
+- [x] **Step 1: Create `src/components/pages/HomeContent.astro`**
 
 Move the body of the current `src/pages/index.astro` into this component. Add `interface Props { lang: Lang }`, accept `lang`, build `t = useTranslations(lang)`. Replace every hardcoded string (audit §2 index.astro) with `t(...)` calls. Fetch projects from the locale-correct collection: `getCollection(lang === 'es' ? 'proyectos' : 'work')`. Pass `lang` to `<Skills>`, `<PortfolioPreview>`, `<ContactCTA>`, and `<CallToAction href={getRoutePath('work', lang)}>`.
 
-- [ ] **Step 2: Create `src/components/pages/WorkIndexContent.astro`**
+- [x] **Step 2: Create `src/components/pages/WorkIndexContent.astro`**
 
 Move the body of `src/pages/work.astro`. Same `lang` prop pattern; strings from audit §2 work.astro; collection chosen by `lang`.
 
-- [ ] **Step 3: Create `src/components/pages/AboutContent.astro`**
+- [x] **Step 3: Create `src/components/pages/AboutContent.astro`**
 
 Move the body of `src/pages/about.astro`. Same pattern; strings from audit §2 about.astro (Background, Education, Skills sections — every item).
 
-- [ ] **Step 4: Create `src/components/pages/ProjectDetailContent.astro`**
+- [x] **Step 4: Create `src/components/pages/ProjectDetailContent.astro`**
 
 Move the shared body of the project-detail pages. Props: `{ lang: Lang; entry: CollectionEntry<'work' | 'proyectos'> }`. Render `render(entry)`'s `<Content />`. Build the back-link with `t('project.back')` and `getRoutePath('work', lang)`.
 
-- [ ] **Step 5: Create `src/components/pages/NotFoundContent.astro`**
+- [x] **Step 5: Create `src/components/pages/NotFoundContent.astro`**
 
 Move the body of `src/pages/404.astro`. Same `lang` pattern. This fixes the audit §3 bug where the ES 404 imported EN components.
 
-- [ ] **Step 6: Rewrite the EN page files as thin entrypoints**
+- [x] **Step 6: Rewrite the EN page files as thin entrypoints**
 
 Each thin page passes its locale-specific `<meta>` title/description to `BaseLayout` (computed via `t`), then renders the shared content component. The home page omits `title`/`description` to use the defaults.
 
@@ -880,16 +880,16 @@ const t = useTranslations('en');
 
 Apply the same pattern to `src/pages/about.astro` (using `about.meta.title` / `about.meta.description` keys — add these keys to the dictionaries in Task 9 if not already present) and `src/pages/404.astro` (no `title`/`description` — defaults are fine). For `src/pages/work/[...slug].astro`, keep `getStaticPaths` returning the `work` collection (`params.slug = entry.id`), and pass `title={entry.data.title}` to `BaseLayout` while rendering `<ProjectDetailContent lang="en" entry={entry} />`.
 
-- [ ] **Step 7: Rewrite the ES page files as thin entrypoints**
+- [x] **Step 7: Rewrite the ES page files as thin entrypoints**
 
 Same pattern with `lang="es"` and `useTranslations('es')`: `src/pages/es/index.astro`, `src/pages/es/proyectos.astro`, `src/pages/es/about.astro`, `src/pages/es/404.astro`, and `src/pages/es/proyectos/[...slug].astro` (its `getStaticPaths` uses the `proyectos` collection, `title={entry.data.title}`).
 
-- [ ] **Step 8: Build and verify**
+- [x] **Step 8: Build and verify**
 
 Run: `pnpm build`
 Expected: build succeeds. Run `pnpm preview` and confirm all 10 routes render correctly in both languages with correct translated text.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add -A
@@ -905,27 +905,27 @@ git commit -m "refactor: extract page bodies into shared locale-aware components
 **Files:**
 - Delete: `src/components/es/` (remaining files: `Nav.astro`, `Footer.astro`, `Skills.astro`, `ContactCTA.astro`, `MainHead.astro`, `PortfolioPreview.astro`)
 
-- [ ] **Step 1: Confirm nothing imports from `src/components/es/`**
+- [x] **Step 1: Confirm nothing imports from `src/components/es/`**
 
 Run: `grep -rn "components/es" src/`
 Expected: no output. If any import remains, fix it to point at the unified component before deleting.
 
-- [ ] **Step 2: Delete the ES component directory**
+- [x] **Step 2: Delete the ES component directory**
 
 ```bash
 git rm -r src/components/es
 ```
 
-- [ ] **Step 3: Full verification**
+- [x] **Step 3: Full verification**
 
 Run: `pnpm astro check && pnpm test && pnpm build`
 Expected: 0 type errors, all i18n tests pass, build succeeds.
 
-- [ ] **Step 4: Dev smoke test**
+- [x] **Step 4: Dev smoke test**
 
 Run `pnpm dev` and verify all 10 routes in both languages, the language toggle switches correctly between matched pages, the theme toggle works, and the browser console is clean. Stop the server.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git commit -m "refactor: remove duplicated ES component tree — i18n unified"

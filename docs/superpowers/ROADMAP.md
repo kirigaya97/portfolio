@@ -11,8 +11,8 @@ this project reads this file first. It holds the whole picture and the current s
 |---|---|
 | Current phase | **Phase 1 — Foundation** |
 | Phase 1 plan | `docs/superpowers/plans/2026-05-15-phase-1-foundation.md` |
-| Phase 1 state | **IN PROGRESS** — Tasks 1–11 done (upgrades + i18n module), Tasks 12–16 remaining |
-| Next action | Phase 1, Task 12 |
+| Phase 1 state | **COMPLETE** — 16 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
+| Next action | Write the Phase 2 plan (writing-plans) against the finished code |
 | Working branch | `redesign` (active; `phase1-upgrade` merged in) |
 | Last updated | 2026-05-15 |
 
@@ -39,8 +39,8 @@ references real interfaces from the finished phase rather than guesses.
 
 | Phase | Scope | Plan | State |
 |---|---|---|---|
-| **1 — Foundation** | Astro 4→6, Vercel adapter, Tailwind 3→4, Content Layer API, i18n refactor (kill `es/` duplication), token infrastructure. No visual redesign. | `plans/2026-05-15-phase-1-foundation.md` | NOT STARTED |
-| **2 — Redesign** | Rebuild every page/component in the "Sleight of hand" identity: layouts, Nav, Footer, Hero, Skills, project pages, About, 404, the `Reveal` motion wrapper, dark/light themes, editorial grid. | _not yet written_ | BLOCKED on Phase 1 |
+| **1 — Foundation** | Astro 4→6, Vercel adapter, Tailwind 3→4, Content Layer API, i18n refactor (kill `es/` duplication), token infrastructure. No visual redesign. | `plans/2026-05-15-phase-1-foundation.md` | COMPLETE |
+| **2 — Redesign** | Rebuild every page/component in the "Sleight of hand" identity: layouts, Nav, Footer, Hero, Skills, project pages, About, 404, the `Reveal` motion wrapper, dark/light themes, editorial grid. | _not yet written_ | NEXT — plan to be written |
 | **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | _not yet written_ | BLOCKED on Phase 2 |
 | **4 — Content** | Add new projects, rewritten bio/About, update existing 8 projects. Depends on Rodrigo supplying material. | _not yet written_ | BLOCKED on Phase 3 + content from Rodrigo |
 
@@ -75,11 +75,11 @@ references real interfaces from the finished phase rather than guesses.
 - [x] Task 9 — Translation dictionaries `(sonnet)`
 - [x] Task 10 — i18n utilities: failing tests `(sonnet)`
 - [x] Task 11 — i18n utilities: implementation `(sonnet)`
-- [ ] Task 12 — Delete 6 byte-identical ES components `(haiku)`
-- [ ] Task 13 — Make shared components locale-aware `(sonnet)`
-- [ ] Task 14 — Unify layouts `(sonnet)`
-- [ ] Task 15 — Extract page bodies into shared components `(sonnet)`
-- [ ] Task 16 — Delete ES tree + final verification `(haiku)`
+- [x] Task 12 — Delete 6 byte-identical ES components `(haiku)`
+- [x] Task 13 — Make shared components locale-aware `(sonnet)`
+- [x] Task 14 — Unify layouts `(sonnet)`
+- [x] Task 15 — Extract page bodies into shared components `(sonnet)`
+- [x] Task 16 — Delete ES tree + final verification `(haiku)`
 
 _Phases 2–4 task logs are appended here when their plans are written._
 
