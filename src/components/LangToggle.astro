@@ -1,5 +1,4 @@
 ---
-import Icon from './Icon.astro';
 ---
 
 <language-toggle>
@@ -101,7 +100,7 @@ class LanguageToggle extends HTMLElement {
 		const currentLang = this.getCurrentLanguage();
 
 		/** Set the language */
-		const setLanguage = (lang) => {
+		const setLanguage = (lang: string) => {
 			const baseUrl = window.location.origin;
 			let path = window.location.pathname;
 
@@ -126,6 +125,8 @@ class LanguageToggle extends HTMLElement {
 
 			window.location.href = `${baseUrl}${path}`;
 		};
+
+		if (!button) return;
 
 		// Set initial button state
 		button.textContent = currentLang === 'es' ? 'English' : 'Español';
