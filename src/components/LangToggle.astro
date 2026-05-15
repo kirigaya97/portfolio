@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '../i18n/ui';
-import { languages } from '../i18n/ui';
+import { languages, routes } from '../i18n/ui';
 import { useTranslations } from '../i18n/utils';
 
 interface Props { lang: Lang }
@@ -9,21 +9,60 @@ const t = useTranslations(lang);
 
 const otherLang: Lang = lang === 'en' ? 'es' : 'en';
 const otherLangLabel = languages[otherLang];
+
+/**
+ * Compute the equivalent URL in the target language server-side,
+ * using the route map to swap locale-specific slugs.
+ *
+ * Strategy:
+ * - Strip the leading locale prefix (/es) from the current path to get the
+ *   locale-neutral path segments.
+ * - Replace any locale-specific slug (currently only work/proyectos) with the
+ *   target-locale slug.
+ * - Re-prefix for the target locale (EN = no prefix, ES = /es).
+ */
+const currentPath = Astro.url.pathname;
+
+// Strip locale prefix to get a path that starts with /
+let neutralPath = currentPath;
+if (neutralPath.startsWith('/es')) {
+  neutralPath = neutralPath.slice(3) || '/';
+}
+if (!neutralPath.startsWith('/')) neutralPath = '/' + neutralPath;
+
+// Replace locale-specific slugs for routes that differ between locales.
+// Currently only `work` differs: EN=/work, ES=/proyectos.
+const slugMap: Record<string, string> = {};
+for (const key of Object.keys(routes) as (keyof typeof routes)[]) {
+  const fromSlug = routes[key][lang];
+  const toSlug = routes[key][otherLang];
+  if (fromSlug !== toSlug && fromSlug !== '') {
+    slugMap[fromSlug] = toSlug;
+  }
+}
+
+// Apply slug swaps: replace the first path segment if it matches.
+const segments = neutralPath.split('/'); // ['', 'work', ...]
+if (segments.length >= 2 && segments[1] in slugMap) {
+  segments[1] = slugMap[segments[1]];
+  neutralPath = segments.join('/') || '/';
+}
+
+// Build the target href with the correct locale prefix.
+const targetHref = otherLang === 'en'
+  ? (neutralPath || '/')
+  : '/es' + (neutralPath === '/' ? '' : neutralPath);
 ---
 
-<language-toggle data-lang={lang}>
-	<button>
-		<span class="sr-only">{t('lang.switch')}</span>
-		{otherLangLabel}
-	</button>
-</language-toggle>
-
-
+<a href={targetHref} class="lang-toggle-link">
+	<span class="sr-only">{t('lang.switch')}</span>
+	{otherLangLabel}
+</a>
 
 
 <style>
 
-	button {
+	.lang-toggle-link {
 		display: flex;
 		border: 0;
 		border-radius: 6px;
@@ -31,9 +70,11 @@ const otherLangLabel = languages[otherLang];
 		background-color: var(--accent-text-over);
 		box-shadow: inset 0 0 0 1px var(--accent-overlay);
 		cursor: pointer;
+		text-decoration: none;
+		color: inherit;
 	}
 
-	:global(.theme-dark) button {
+	:global(.theme-dark) .lang-toggle-link {
 		display: flex;
 		border: 0;
 		border-radius: 6px;
@@ -43,13 +84,13 @@ const otherLangLabel = languages[otherLang];
 		cursor: pointer;
 	}
 
-	:global(.theme-dark) button:hover {
+	:global(.theme-dark) .lang-toggle-link:hover {
 		background-color: #ffffff;
 		box-shadow: inset 0 0 0 1px var(--accent-overlay);
 		color: var(--accent-regular);
 	}
 
-	button:hover {
+	.lang-toggle-link:hover {
 		background-color: var(--accent-regular);
 		box-shadow: inset 0 0 0 1px var(--accent-overlay);
 		color: var(--accent-text-over);
@@ -82,7 +123,7 @@ const otherLangLabel = languages[otherLang];
 
 	:global(.theme-dark) .icon.dark,
 	:global(html:not(.theme-dark)) .icon.light,
-	button[aria-pressed='false'] .icon.light {
+	.lang-toggle-link[aria-pressed='false'] .icon.light {
 		color: var(--accent-text-over);
 	}
 
@@ -101,46 +142,3 @@ const otherLangLabel = languages[otherLang];
 		}
 	}
 </style>
-
-<script>
-class LanguageToggle extends HTMLElement {
-	constructor() {
-		super();
-
-		const button = this.querySelector('button');
-		const currentLang = this.dataset.lang as 'en' | 'es';
-
-		/** Navigate to the equivalent page in the target language */
-		const setLanguage = (targetLang: 'en' | 'es') => {
-			const baseUrl = window.location.origin;
-			let path = window.location.pathname;
-
-			if (targetLang === 'es') {
-				// Switching EN → ES
-				if (path.includes('/work')) {
-					path = `/es${path.replace('/work', '/proyectos')}`;
-				} else if (!path.startsWith('/es')) {
-					path = `/es${path}`;
-				}
-			} else {
-				// Switching ES → EN
-				if (path.includes('/proyectos')) {
-					path = path.replace('/es/proyectos', '/work');
-				} else if (path.startsWith('/es')) {
-					path = path.replace(/^\/es/, '') || '/';
-				}
-			}
-
-			window.location.href = `${baseUrl}${path}`;
-		};
-
-		// Toggle language when the button is clicked
-		button!.addEventListener('click', () => {
-			const newLang = currentLang === 'es' ? 'en' : 'es';
-			setLanguage(newLang);
-		});
-	}
-}
-
-customElements.define('language-toggle', LanguageToggle);
-</script>

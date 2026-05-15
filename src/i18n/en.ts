@@ -6,7 +6,7 @@ export const en = {
   'nav.menu': 'Menu',
 
   // Footer (audit §2 Footer.astro)
-  'footer.credit': 'Designed & Developed in Buenos Aires with Astro',
+  'footer.creditPrefix': 'Designed & Developed in Buenos Aires with ',
 
   // Skills (audit §2 Skills.astro — 3 cards, h2 + p each)
   'skills.card1.title': 'Wordpress development',
@@ -73,6 +73,10 @@ export const en = {
 
   // Project detail back-link (audit §2 work/[...slug].astro)
   'project.back': 'Work',
+
+  // 404 page (audit §2 NotFoundContent.astro)
+  'notFound.title': 'Page Not Found',
+  'notFound.tagline': 'Not found',
 
   // Language toggle (audit §2 LangToggle.astro)
   'lang.switch': 'Switch Language',

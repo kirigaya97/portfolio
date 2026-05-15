@@ -1,5 +1,6 @@
 ---
 import type { Lang } from '../../i18n/ui';
+import { useTranslations } from '../../i18n/utils';
 import Hero from '../Hero.astro';
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
-<Hero title="Page Not Found" tagline="Not found" />
+<Hero title={t('notFound.title')} tagline={t('notFound.tagline')} />

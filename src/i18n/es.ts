@@ -8,7 +8,7 @@ export const es: Record<UIKey, string> = {
   'nav.menu': 'Menú',
 
   // Footer (audit §2 Footer.astro)
-  'footer.credit': 'Diseñado y Desarrollado en Buenos Aires con Astro',
+  'footer.creditPrefix': 'Diseñado y Desarrollado en Buenos Aires con ',
 
   // Skills (audit §2 Skills.astro — 3 cards, h2 + p each)
   'skills.card1.title': 'Desarrollo Wordpress',
@@ -76,6 +76,10 @@ export const es: Record<UIKey, string> = {
 
   // Project detail back-link (audit §2 es/proyectos/[...slug].astro)
   'project.back': 'Proyectos',
+
+  // 404 page (audit §2 NotFoundContent.astro)
+  'notFound.title': 'Página no encontrada',
+  'notFound.tagline': 'No encontrado',
 
   // Language toggle (audit §2 LangToggle.astro)
   'lang.switch': 'Switch Language',
