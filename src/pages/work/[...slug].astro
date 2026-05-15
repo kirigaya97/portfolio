@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -19,9 +19,8 @@ export const prerender = true;
 
 export async function getStaticPaths() {
     const work = await getCollection('work');
-    console.log('Retrieved work collection:', work);
     return work.map((entry) => ({
-        params: { slug: entry.slug },
+        params: { slug: entry.id },
         props: { entry },
     }));
 }
@@ -32,7 +31,7 @@ const { entry } = Astro.props;
 if (!entry) {
     throw new Error("Entry not found. Check if the slug is correctly passed in getStaticPaths.");
 }
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 const height = 300;
 
