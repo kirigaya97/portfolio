@@ -1,6 +1,6 @@
 ---
 title: Rodrigo Camino Portfolio Website
-publishDate: 2024-10-29 00:00:00
+publishDate: 2024-29-10 00:00:00
 img: /assets/portfolio/1.png
 img_alt: Screenshot of Rodrigo Camino's portfolio
 description: |

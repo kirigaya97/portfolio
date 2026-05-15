@@ -11,9 +11,9 @@ this project reads this file first. It holds the whole picture and the current s
 |---|---|
 | Current phase | **Phase 1 — Foundation** |
 | Phase 1 plan | `docs/superpowers/plans/2026-05-15-phase-1-foundation.md` |
-| Phase 1 state | **NOT STARTED** |
-| Next action | Phase 1, Task 1 |
-| Working branch | `redesign` (created by Phase 1 / Task 1; does not exist yet) |
+| Phase 1 state | **IN PROGRESS** — Tasks 1–11 done (upgrades + i18n module), Tasks 12–16 remaining |
+| Next action | Phase 1, Task 12 |
+| Working branch | `redesign` (active; `phase1-upgrade` merged in) |
 | Last updated | 2026-05-15 |
 
 > Orchestrator: update this table and the Task progress log below after **every** task.
@@ -64,17 +64,17 @@ references real interfaces from the finished phase rather than guesses.
 ## Task progress log
 
 ### Phase 1 — Foundation
-- [ ] Task 1 — Branch + baseline + Node check `(haiku)`
-- [ ] Task 2 — Upgrade Astro core + Vercel adapter to v6 `(sonnet)`
-- [ ] Task 3 — Update adapter import + Astro config `(haiku)`
-- [ ] Task 4 — Migrate to Content Layer API `(sonnet)`
-- [ ] Task 5 — Migrate Tailwind 3 → 4 `(sonnet)`
-- [ ] Task 6 — Upgrade verification checkpoint `(haiku)`
-- [ ] Task 7 — Set up Vitest `(haiku)`
-- [ ] Task 8 — i18n config module `(sonnet)`
-- [ ] Task 9 — Translation dictionaries `(sonnet)`
-- [ ] Task 10 — i18n utilities: failing tests `(sonnet)`
-- [ ] Task 11 — i18n utilities: implementation `(sonnet)`
+- [x] Task 1 — Branch + baseline + Node check `(haiku)`
+- [x] Task 2 — Upgrade Astro core + Vercel adapter to v6 `(sonnet)`
+- [x] Task 3 — Update adapter import + Astro config `(haiku)`
+- [x] Task 4 — Migrate to Content Layer API `(sonnet)`
+- [x] Task 5 — Migrate Tailwind 3 → 4 `(sonnet)`
+- [x] Task 6 — Upgrade verification checkpoint `(haiku)`
+- [x] Task 7 — Set up Vitest `(haiku)`
+- [x] Task 8 — i18n config module `(sonnet)`
+- [x] Task 9 — Translation dictionaries `(sonnet)`
+- [x] Task 10 — i18n utilities: failing tests `(sonnet)`
+- [x] Task 11 — i18n utilities: implementation `(sonnet)`
 - [ ] Task 12 — Delete 6 byte-identical ES components `(haiku)`
 - [ ] Task 13 — Make shared components locale-aware `(sonnet)`
 - [ ] Task 14 — Unify layouts `(sonnet)`
