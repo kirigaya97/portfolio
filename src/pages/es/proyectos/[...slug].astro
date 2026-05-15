@@ -19,7 +19,6 @@ export const prerender = true;
 
 export async function getStaticPaths() {
     const work = await getCollection('proyectos');
-    console.log('Retrieved work collection:', work);
     return work.map((entry) => ({
         params: { slug: entry.id },
         props: { entry },
