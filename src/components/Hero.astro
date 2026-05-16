@@ -2,53 +2,60 @@
 interface Props {
 	title: string;
 	tagline?: string;
+	kicker?: string;
 	align?: 'start' | 'center';
+	size?: 'display' | 'page';
 }
 
-const { align = 'center', tagline, title } = Astro.props;
+const { align = 'start', size = 'page', tagline, title, kicker } = Astro.props;
 ---
 
-<div class:list={['hero stack gap-4', align]}>
-	<div class="stack gap-2">
-		<h1 class="title">{title}</h1>
-		{tagline && <p class="tagline">{tagline}</p>}
-	</div>
+<div class:list={['hero', align, size]}>
+	{kicker && <p class="kicker">{kicker}</p>}
+	<h1 class="title">{title}</h1>
+	{tagline && <p class="tagline">{tagline}</p>}
 	<slot />
 </div>
 
 <style>
 	.hero {
-		font-size: var(--text-lg);
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.hero.center {
+		align-items: center;
 		text-align: center;
 	}
 
-	.title,
-	.tagline {
-		max-width: 37ch;
-		margin-inline: auto;
+	.kicker {
+		margin-bottom: -0.4rem;
 	}
 
 	.title {
+		max-width: 20ch;
+		text-wrap: balance;
+	}
+	.page .title {
 		font-size: var(--text-3xl);
-		color: var(--gray-0);
+	}
+	.display .title {
+		font-size: var(--text-display);
+		max-width: 16ch;
+	}
+	.center .title {
+		max-width: 26ch;
+		margin-inline: auto;
 	}
 
-	@media (min-width: 50em) {
-		.hero {
-			font-size: var(--text-xl);
-		}
-
-		.start {
-			text-align: start;
-		}
-
-		.start .title,
-		.start .tagline {
-			margin-inline: unset;
-		}
-
-		.title {
-			font-size: var(--text-5xl);
-		}
+	.tagline {
+		max-width: 48ch;
+		font-size: var(--text-lg);
+		line-height: 1.5;
+		color: var(--text-dim);
+	}
+	.center .tagline {
+		margin-inline: auto;
 	}
 </style>
