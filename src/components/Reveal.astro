@@ -1,0 +1,72 @@
+---
+interface Props {
+	/** Tag to render. Default 'div'. */
+	as?: keyof HTMLElementTagNameMap;
+	/** Stagger delay in ms (for sequenced groups). */
+	delay?: number;
+	class?: string;
+}
+
+const { as = 'div', delay = 0, class: className } = Astro.props;
+const Tag = as as any;
+---
+
+<Tag class:list={['reveal', className]} style={`--reveal-delay:${delay}ms`}>
+	<slot />
+</Tag>
+
+<style>
+	.reveal {
+		opacity: 0;
+		transform: translateY(1.75rem);
+		transition:
+			opacity var(--dur-reveal) var(--ease-reveal),
+			transform var(--dur-reveal) var(--ease-reveal);
+		transition-delay: var(--reveal-delay, 0ms);
+		will-change: opacity, transform;
+	}
+
+	.reveal.is-visible {
+		opacity: 1;
+		transform: none;
+	}
+
+	/* No-JS fallback: if the script never runs, content must still be visible. */
+	@media (scripting: none) {
+		.reveal {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+	}
+</style>
+
+<script>
+	const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	const reveal = (el: Element) => el.classList.add('is-visible');
+
+	if (reduce) {
+		document.querySelectorAll('.reveal').forEach(reveal);
+	} else {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) {
+						reveal(entry.target);
+						observer.unobserve(entry.target);
+					}
+				}
+			},
+			{ threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+		);
+		document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+	}
+</script>
