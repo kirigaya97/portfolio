@@ -23,6 +23,7 @@ export const es: Record<UIKey, string> = {
   // Contact CTA (audit §2 ContactCTA.astro)
   'contactCta.heading': 'Querés que trabajemos juntos?',
   'contactCta.button': 'Enviame un mensaje',
+  'contactCta.kicker': 'Conversemos',
 
   // Default meta (audit §2 MainHead.astro)
   'meta.defaultTitle': 'Rodrigo Camino: Desarrollador web',
@@ -32,6 +33,7 @@ export const es: Record<UIKey, string> = {
   // Home page (audit §2 es/index.astro)
   'home.hero.title': '¡Hola! Mi nombre es Rodrigo Camino :)',
   'home.hero.tagline': 'Soy un Desarrollador Web Creativo, actualmente en Buenos Aires, Argentina.',
+  'home.hero.kicker': 'Desarrollador Web Creativo',
   'home.pill.developer': 'Desarrollador',
   'home.pill.creative': 'Creativo',
   'home.pill.illusionist': 'Ilusionista',
@@ -80,6 +82,7 @@ export const es: Record<UIKey, string> = {
   // 404 page (audit §2 NotFoundContent.astro)
   'notFound.title': 'Página no encontrada',
   'notFound.tagline': 'No encontrado',
+  'notFound.home': 'Volver al inicio',
 
   // Language toggle (audit §2 LangToggle.astro)
   'lang.switch': 'Switch Language',

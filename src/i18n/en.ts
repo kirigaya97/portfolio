@@ -21,6 +21,7 @@ export const en = {
   // Contact CTA (audit §2 ContactCTA.astro)
   'contactCta.heading': 'Interested in working together?',
   'contactCta.button': 'Shoot Me a Message',
+  'contactCta.kicker': "Let's talk",
 
   // Default meta (audit §2 MainHead.astro)
   'meta.defaultTitle': 'Rodrigo Camino: Web developer',
@@ -30,6 +31,7 @@ export const en = {
   // Home page (audit §2 index.astro)
   'home.hero.title': 'Hello! my name is Rodrigo Camino :)',
   'home.hero.tagline': "I'm a Creative Web Developer, now based in Buenos Aires, Argentina.",
+  'home.hero.kicker': 'Creative Web Developer',
   'home.pill.developer': 'Developer',
   'home.pill.creative': 'Creative',
   'home.pill.illusionist': 'Ilusionist',
@@ -77,6 +79,7 @@ export const en = {
   // 404 page (audit §2 NotFoundContent.astro)
   'notFound.title': 'Page Not Found',
   'notFound.tagline': 'Not found',
+  'notFound.home': 'Back to home',
 
   // Language toggle (audit §2 LangToggle.astro)
   'lang.switch': 'Switch Language',
