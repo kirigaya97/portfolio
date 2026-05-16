@@ -1,73 +1,73 @@
 ---
-import Icon from './Icon.astro';
 import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/utils';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+const cards = [
+	{ index: '01', title: t('skills.card1.title'), body: t('skills.card1.body') },
+	{ index: '02', title: t('skills.card2.title'), body: t('skills.card2.body') },
+	{ index: '03', title: t('skills.card3.title'), body: t('skills.card3.body') },
+];
 ---
 
-<section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>{t('skills.card1.title')}</h2>
-		<p>{t('skills.card1.body')}</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="wordpress-logo" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>{t('skills.card2.title')}</h2>
-		<p>{t('skills.card2.body')}</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>{t('skills.card3.title')}</h2>
-		<p>{t('skills.card3.body')}</p>
-	</div>
+<section class="skills">
+	<ul class="list">
+		{
+			cards.map((card) => (
+				<li class="item">
+					<span class="index">{card.index}</span>
+					<h3 class="title">{card.title}</h3>
+					<p class="body">{card.body}</p>
+				</li>
+			))
+		}
+	</ul>
 </section>
 
 <style>
-
-	icon:icon['wordpress-logo'] {
-		transform: scale(1.5);
+	.list {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0;
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
 
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
-
-	.skills {
+	.item {
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		gap: 0.75rem;
+		padding-block: 2rem;
+		border-top: 1px solid var(--border);
 	}
 
-	.skills h2 {
+	.index {
+		font-family: var(--font-mono);
+		font-size: var(--text-xs);
+		letter-spacing: 0.1em;
+		color: var(--accent);
+	}
+
+	.title {
 		font-size: var(--text-lg);
 	}
 
-	.skills p {
-		color: var(--gray-400);
+	.body {
+		max-width: 38ch;
+		color: var(--text-dim);
 	}
 
 	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
-
-		.skills {
-			display: grid;
+		.list {
 			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			column-gap: 3rem;
 		}
-
-		.skills h2 {
-			font-size: var(--text-2xl);
+		.item {
+			padding-block: 2.5rem 0;
 		}
 	}
 </style>
