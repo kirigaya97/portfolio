@@ -1,14 +1,43 @@
 ---
 import type { Lang } from '../../i18n/ui';
-import { useTranslations } from '../../i18n/utils';
+import { useTranslations, getRoutePath } from '../../i18n/utils';
 import Hero from '../Hero.astro';
+import Icon from '../Icon.astro';
 
 interface Props {
-  lang: Lang;
+	lang: Lang;
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<Hero title={t('notFound.title')} tagline={t('notFound.tagline')} />
+<section class="not-found wrapper">
+	<Hero align="center" title={t('notFound.title')} tagline={t('notFound.tagline')}>
+		<a class="home-link" href={getRoutePath('home', lang)}>
+			<Icon icon="arrow-left" size="1em" /> {t('notFound.home')}
+		</a>
+	</Hero>
+</section>
+
+<style>
+	.not-found {
+		display: flex;
+		justify-content: center;
+		padding-block: clamp(5rem, 3rem + 10vw, 12rem);
+	}
+
+	.home-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		margin-top: 1rem;
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		color: var(--text-dim);
+		text-decoration: none;
+	}
+	.home-link:hover {
+		color: var(--accent);
+	}
+</style>
