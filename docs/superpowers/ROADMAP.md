@@ -9,12 +9,14 @@ this project reads this file first. It holds the whole picture and the current s
 
 | Field | Value |
 |---|---|
-| Current phase | **Phase 1 — Foundation** |
+| Current phase | **Phase 2 — Redesign** |
 | Phase 1 plan | `docs/superpowers/plans/2026-05-15-phase-1-foundation.md` |
 | Phase 1 state | **COMPLETE** — 16 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
-| Next action | Write the Phase 2 plan (writing-plans) against the finished code |
+| Phase 2 plan | `docs/superpowers/plans/2026-05-16-phase-2-redesign.md` |
+| Phase 2 state | **COMPLETE** — 18 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
+| Next action | Write the Phase 3 plan (writing-plans) against the finished code |
 | Working branch | `redesign` (active; `phase1-upgrade` merged in) |
-| Last updated | 2026-05-15 |
+| Last updated | 2026-05-16 |
 
 > Orchestrator: update this table and the Task progress log below after **every** task.
 
@@ -40,8 +42,8 @@ references real interfaces from the finished phase rather than guesses.
 | Phase | Scope | Plan | State |
 |---|---|---|---|
 | **1 — Foundation** | Astro 4→6, Vercel adapter, Tailwind 3→4, Content Layer API, i18n refactor (kill `es/` duplication), token infrastructure. No visual redesign. | `plans/2026-05-15-phase-1-foundation.md` | COMPLETE |
-| **2 — Redesign** | Rebuild every page/component in the "Sleight of hand" identity: layouts, Nav, Footer, Hero, Skills, project pages, About, 404, the `Reveal` motion wrapper, dark/light themes, editorial grid. | _not yet written_ | NEXT — plan to be written |
-| **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | _not yet written_ | BLOCKED on Phase 2 |
+| **2 — Redesign** | Rebuild every page/component in the "Sleight of hand" identity: layouts, Nav, Footer, Hero, Skills, project pages, About, 404, the `Reveal` motion wrapper, dark/light themes, editorial grid. | `plans/2026-05-16-phase-2-redesign.md` | COMPLETE |
+| **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | _not yet written_ | NEXT — plan to be written |
 | **4 — Content** | Add new projects, rewritten bio/About, update existing 8 projects. Depends on Rodrigo supplying material. | _not yet written_ | BLOCKED on Phase 3 + content from Rodrigo |
 
 ---
@@ -81,7 +83,27 @@ references real interfaces from the finished phase rather than guesses.
 - [x] Task 15 — Extract page bodies into shared components `(sonnet)`
 - [x] Task 16 — Delete ES tree + final verification `(haiku)`
 
-_Phases 2–4 task logs are appended here when their plans are written._
+### Phase 2 — Redesign
+- [x] Task 1 — Phase 2 kickoff checkpoint `(haiku)`
+- [x] Task 2 — Build the design-token system in `global.css` `(sonnet)`
+- [x] Task 3 — Load new fonts, default to dark, bridge tokens to Tailwind `(sonnet)`
+- [x] Task 4 — Strip stock background system, add film grain in `BaseLayout` `(sonnet)`
+- [x] Task 5 — Build the `Reveal` scroll-motion wrapper `(sonnet)`
+- [x] Task 6 — Redesign the `Pill` and `CallToAction` primitives `(sonnet)`
+- [x] Task 7 — Redesign the `ThemeToggle` and `LangToggle` `(sonnet)`
+- [x] Task 8 — Redesign the `Nav` `(sonnet)`
+- [x] Task 9 — Redesign the `Footer` `(sonnet)`
+- [x] Task 10 — Redesign the `Hero` `(sonnet)`
+- [x] Task 11 — Redesign the `Grid` and project card `(sonnet)`
+- [x] Task 12 — Redesign the `Skills` and `ContactCTA` `(sonnet)`
+- [x] Task 13 — Rebuild `HomeContent` `(sonnet)`
+- [x] Task 14 — Rebuild `WorkIndexContent` `(sonnet)`
+- [x] Task 15 — Rebuild `AboutContent` `(sonnet)`
+- [x] Task 16 — Rebuild `ProjectDetailContent` and article styling `(sonnet)`
+- [x] Task 17 — Rebuild `NotFoundContent` (404) `(haiku)`
+- [x] Task 18 — Final verification and roadmap update `(haiku)`
+
+_Phases 3–4 task logs are appended here when their plans are written._
 
 ---
 
@@ -106,3 +128,6 @@ Append-only record of choices that shape the project. Newest last.
 - **2026-05-15** — Upgrade target: Astro 6.3.x (current stable; Astro 7 only in alpha).
 - **2026-05-15** — Contact form: Astro Actions + Resend (built in Phase 3).
 - **2026-05-15** — New features: project tag-filtering, working contact form, blog. (Magician angle expressed through the design language, not a separate feature.)
+- **2026-05-16** — Typography: Space Grotesk (headings/display), Inter (body), JetBrains Mono (metadata/tags/dates). Deliberate override of the spec's "editorial display face / serif" wording — chose the geometric sans Space Grotesk for a modern-editorial rather than magazine-serif feel.
+- **2026-05-16** — Default theme: dark, always, on first visit (the designed canvas). `:root` holds the dark tokens; `.theme-light` is the opt-in override, reached via the toggle and persisted in `localStorage`. Inverts Phase 1's `.theme-dark`-on-light-default scheme.
+- **2026-05-16** — Canvas: flat near-black (`#0a0a0b`) plus a faint CSS film-grain overlay. The stock template's background-image system (curve SVGs, gradient JPGs, lazy-loaded subtle backgrounds) is removed entirely.
