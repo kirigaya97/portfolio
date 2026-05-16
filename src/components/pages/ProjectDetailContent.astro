@@ -7,191 +7,220 @@ import ContactCTA from '../ContactCTA.astro';
 import Hero from '../Hero.astro';
 import Icon from '../Icon.astro';
 import Pill from '../Pill.astro';
+import Reveal from '../Reveal.astro';
 
 interface Props {
-  lang: Lang;
-  entry: CollectionEntry<'work'> | CollectionEntry<'proyectos'>;
+	lang: Lang;
+	entry: CollectionEntry<'work'> | CollectionEntry<'proyectos'>;
 }
 
 const { lang, entry } = Astro.props;
 const t = useTranslations(lang);
 const { Content } = await render(entry);
+const year = entry.data.publishDate.getFullYear();
 ---
 
-<div class="stack gap-20">
-  <div class="stack gap-15">
-    <header>
-      <div class="wrapper stack gap-2">
-        <a class="back-link" href={`${getRoutePath('work', lang)}/`}>
-          <Icon icon="arrow-left" /> {t('project.back')}
-        </a>
-        <Hero title={entry.data.title} align="start">
-          <div class="details">
-            <div class="tags">
-              {entry.data.tags.map((tag) => <Pill>{tag}</Pill>)}
-            </div>
-            <p class="description">{entry.data.description}</p>
-          </div>
-        </Hero>
-      </div>
-    </header>
-    <main class="wrapper">
-      <div class="stack gap-10 content">
-        {entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
-        <div class="content">
-          <Content />
-        </div>
-      </div>
+<div class="project stack">
+	<header class="wrapper project-header">
+		<a class="back-link" href={`${getRoutePath('work', lang)}/`}>
+			<Icon icon="arrow-left" size="1em" /> {t('project.back')}
+		</a>
+		<Reveal>
+			<Hero kicker={String(year)} title={entry.data.title}>
+				<div class="details">
+					<div class="tags">
+						{entry.data.tags.map((tag) => <Pill>{tag}</Pill>)}
+					</div>
+					<p class="description">{entry.data.description}</p>
+				</div>
+			</Hero>
+		</Reveal>
+	</header>
 
-      <div class="screenshots">
-        {entry.data.screenshots?.map((s) => <img src={s} alt="" />)}
-      </div>
-      {entry.data.video && (
-        <div class="video">
-          <iframe
-            class="responsive-iframe"
-            src={entry.data.video}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      )}
-    </main>
-  </div>
-  <ContactCTA lang={lang} />
+	<main class="wrapper project-main">
+		{
+			entry.data.img && (
+				<Reveal>
+					<img class="lead" src={entry.data.img} alt={entry.data.img_alt || ''} />
+				</Reveal>
+			)
+		}
+
+		<Reveal class="article">
+			<Content />
+		</Reveal>
+
+		{
+			entry.data.screenshots && (
+				<div class="shots">
+					{entry.data.screenshots.map((s) => (
+						<Reveal>
+							<img src={s} alt="" loading="lazy" />
+						</Reveal>
+					))}
+				</div>
+			)
+		}
+
+		{
+			entry.data.video && (
+				<Reveal class="video">
+					<iframe
+						src={entry.data.video}
+						title="Project video"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				</Reveal>
+			)
+		}
+	</main>
+
+	<Reveal as="section">
+		<ContactCTA lang={lang} />
+	</Reveal>
 </div>
 
 <style>
-  .screenshots {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 5vh;
-  }
+	.project {
+		gap: clamp(4rem, 3rem + 6vw, 7rem);
+		padding-top: clamp(2rem, 1rem + 3vw, 4rem);
+	}
 
-  .video {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    margin-top: 5vh;
-    border-radius: 1.5rem;
-  }
+	.project-header {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		padding-bottom: 3rem;
+		border-bottom: 1px solid var(--border);
+	}
 
-  .responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 1.5rem;
-  }
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		color: var(--text-dim);
+		text-decoration: none;
+	}
+	.back-link:hover {
+		color: var(--accent);
+	}
 
-  .screenshots img {
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-sm);
-    background: var(--gradient-subtle);
-    border: 1px solid var(--gray-800);
-  }
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-top: 0.5rem;
+	}
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	.description {
+		max-width: var(--measure);
+		font-size: var(--text-lg);
+		color: var(--text-dim);
+	}
 
-  .screenshots img:hover {
-    transform: scale(1.01);
-    transition: transform 0.2s ease-in-out;
-  }
+	.project-main {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
 
-  header {
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--gray-800);
-  }
+	.lead,
+	.shots img {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+	}
 
-  .back-link {
-    display: none;
-  }
+	.shots {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
 
-  .details {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    gap: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-  }
+	.video {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		border-radius: var(--radius-lg);
+	}
+	.video :global(iframe) {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
 
-  .tags {
-    display: flex;
-    gap: 0.5rem;
-  }
+	/* ---------- Rendered markdown article ---------- */
+	.article {
+		max-width: var(--measure);
+		margin-inline: auto;
+		color: var(--text);
+	}
 
-  .description {
-    font-size: var(--text-lg);
-    max-width: 54ch;
-  }
+	.article :global(> * + *) {
+		margin-top: 1.15rem;
+	}
 
-  .content {
-    max-width: 65ch;
-    margin-inline: auto;
-  }
+	.article :global(h1),
+	.article :global(h2),
+	.article :global(h3) {
+		margin-top: 2.5rem;
+		font-size: var(--text-xl);
+	}
+	.article :global(h4),
+	.article :global(h5) {
+		margin-top: 2rem;
+		font-size: var(--text-md);
+		color: var(--accent);
+	}
 
-  .content > :global(* + *) {
-    margin-top: 1rem;
-  }
+	.article :global(b),
+	.article :global(strong) {
+		color: var(--text-strong);
+		font-weight: 600;
+	}
 
-  .content :global(h1),
-  .content :global(h2),
-  .content :global(h3),
-  .content :global(h4),
-  .content :global(h5) {
-    margin: 1.5rem 0;
-  }
+	.article :global(a) {
+		color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
 
-  .content :global(img) {
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-sm);
-    background: var(--gradient-subtle);
-    border: 1px solid var(--gray-800);
-  }
+	.article :global(ul),
+	.article :global(ol) {
+		padding-left: 1.25rem;
+	}
+	.article :global(li) {
+		margin-top: 0.4rem;
+	}
 
-  .content :global(blockquote) {
-    font-size: var(--text-lg);
-    font-family: var(--font-brand);
-    font-weight: 600;
-    line-height: 1.1;
-    padding-inline-start: 1.5rem;
-    border-inline-start: 0.25rem solid var(--accent-dark);
-    color: var(--gray-0);
-  }
+	.article :global(img) {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+	}
 
-  .back-link,
-  .content :global(a) {
-    text-decoration: 1px solid underline transparent;
-    text-underline-offset: 0.25em;
-    transition: text-decoration-color var(--theme-transition);
-  }
+	.article :global(code) {
+		font-family: var(--font-mono);
+		font-size: 0.9em;
+		padding: 0.1em 0.35em;
+		background: var(--surface-2);
+		border-radius: var(--radius-sm);
+	}
 
-  .back-link:hover,
-  .back-link:focus,
-  .content :global(a:hover),
-  .content :global(a:focus) {
-    text-decoration-color: currentColor;
-  }
-
-  @media (min-width: 50em) {
-    .back-link {
-      display: block;
-      align-self: flex-start;
-    }
-
-    .details {
-      flex-direction: row;
-      gap: 2.5rem;
-    }
-
-    .content :global(blockquote) {
-      font-size: var(--text-2xl);
-    }
-  }
+	.article :global(blockquote) {
+		margin-top: 1.5rem;
+		padding: 0.25rem 0 0.25rem 1.5rem;
+		border-left: 2px solid var(--accent);
+		color: var(--text-strong);
+		font-size: var(--text-md);
+	}
 </style>
