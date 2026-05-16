@@ -4,116 +4,130 @@ import { useTranslations } from '../../i18n/utils';
 
 import ContactCTA from '../ContactCTA.astro';
 import Hero from '../Hero.astro';
+import Reveal from '../Reveal.astro';
 
 interface Props {
-  lang: Lang;
+	lang: Lang;
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<div class="stack gap-20">
-  <main class="wrapper about">
-    <Hero
-      title={t('about.hero.title')}
-      tagline={t('about.hero.tagline')}
-    >
-      <img
-        width="1553"
-        height="873"
-        src="/assets/pixelart.webp"
-        alt="Rodrigo Camino Pixel art"
-      />
-    </Hero>
+<div class="about stack">
+	<section class="wrapper">
+		<Reveal>
+			<Hero
+				kicker={t('nav.about')}
+				title={t('about.hero.title')}
+				tagline={t('about.hero.tagline')}
+			/>
+		</Reveal>
+		<Reveal delay={120}>
+			<img
+				class="portrait"
+				width="1553"
+				height="873"
+				src="/assets/pixelart.webp"
+				alt="Rodrigo Camino pixel art"
+			/>
+		</Reveal>
+	</section>
 
-    <section>
-      <h2 class="section-title">{t('about.background.heading')}</h2>
-      <div class="content">
-        <p>{t('about.background.p1')}</p>
-        <p>{t('about.background.p2')}</p>
-      </div>
-    </section>
-    <section>
-      <h2 class="section-title">{t('about.education.heading')}</h2>
-      <div class="content">
-        <p>{t('about.education.item1')}</p>
-        <p>{t('about.education.item2')}</p>
-        <p>{t('about.education.item3')}</p>
-        <p>{t('about.education.item4')}</p>
-      </div>
-    </section>
-    <section>
-      <h2 class="section-title">{t('about.skills.heading')}</h2>
-      <div class="content">
-        <ul>
-          <li>{t('about.skills.item1')}</li>
-          <li>{t('about.skills.item2')}</li>
-          <li>{t('about.skills.item3')}</li>
-          <li>{t('about.skills.item4')}</li>
-          <li>{t('about.skills.item5')}</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+	<div class="wrapper sections">
+		<Reveal as="section" class="row">
+			<h2 class="row-title">{t('about.background.heading')}</h2>
+			<div class="row-body">
+				<p>{t('about.background.p1')}</p>
+				<p>{t('about.background.p2')}</p>
+			</div>
+		</Reveal>
 
-  <ContactCTA lang={lang} />
+		<Reveal as="section" class="row">
+			<h2 class="row-title">{t('about.education.heading')}</h2>
+			<div class="row-body">
+				<p>{t('about.education.item1')}</p>
+				<p>{t('about.education.item2')}</p>
+				<p>{t('about.education.item3')}</p>
+				<p>{t('about.education.item4')}</p>
+			</div>
+		</Reveal>
+
+		<Reveal as="section" class="row">
+			<h2 class="row-title">{t('about.skills.heading')}</h2>
+			<ul class="row-body skills-list">
+				<li>{t('about.skills.item1')}</li>
+				<li>{t('about.skills.item2')}</li>
+				<li>{t('about.skills.item3')}</li>
+				<li>{t('about.skills.item4')}</li>
+				<li>{t('about.skills.item5')}</li>
+			</ul>
+		</Reveal>
+	</div>
+
+	<Reveal as="section">
+		<ContactCTA lang={lang} />
+	</Reveal>
 </div>
 
 <style>
-  .about {
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-  }
+	.about {
+		gap: clamp(4rem, 3rem + 6vw, 8rem);
+		padding-top: clamp(3rem, 2rem + 4vw, 6rem);
+	}
 
-  img {
-    margin-top: 1.5rem;
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-md);
-  }
+	.about > section:first-child {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
 
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: var(--gray-200);
-  }
+	.portrait {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+	}
 
-  .section-title {
-    grid-column-start: 1;
-    font-size: var(--text-xl);
-    color: var(--gray-0);
-  }
+	.sections {
+		display: flex;
+		flex-direction: column;
+	}
 
-  .content {
-    grid-column: 2 / 4;
-  }
+	.row {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding-block: 2.5rem;
+		border-top: 1px solid var(--border);
+	}
 
-  .content :global(a) {
-    text-decoration: 1px solid underline transparent;
-    text-underline-offset: 0.25em;
-    transition: text-decoration-color var(--theme-transition);
-  }
+	.row-title {
+		font-size: var(--text-lg);
+		color: var(--accent);
+	}
 
-  .content :global(a:hover),
-  .content :global(a:focus) {
-    text-decoration-color: currentColor;
-  }
+	.row-body {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		max-width: var(--measure);
+		color: var(--text);
+	}
 
-  @media (min-width: 50em) {
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 60% 1fr;
-    }
+	.skills-list {
+		margin: 0;
+		padding-left: 1.1rem;
+	}
+	.skills-list li {
+		margin-bottom: 0.4rem;
+	}
 
-    .about > :global(:first-child) {
-      grid-column-start: 2;
-    }
-
-    section {
-      display: contents;
-      font-size: var(--text-lg);
-    }
-  }
+	@media (min-width: 50em) {
+		.row {
+			display: grid;
+			grid-template-columns: 1fr 2.4fr;
+			gap: 3rem;
+			padding-block: 3.5rem;
+		}
+	}
 </style>
