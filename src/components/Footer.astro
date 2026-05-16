@@ -1,5 +1,4 @@
 ---
-import Icon from './Icon.astro';
 import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/utils';
 
@@ -7,83 +6,111 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
+
+const socials = [
+	{ label: 'X', href: 'https://x.com/RodrigoCamino8' },
+	{ label: 'GitHub', href: 'https://github.com/kirigaya97' },
+	{ label: 'Instagram', href: 'https://instagram.com/rodri.camino' },
+	{ label: 'LinkedIn', href: 'https://linkedin.com/in/rodrigo-camino' },
+];
 ---
 
 <footer>
-	<div class="group">
-		<p class="credit">
-			{t('footer.creditPrefix')}<a href="https://astro.build/">Astro</a>
-			<Icon icon="rocket-launch" size="1.2em" />
-		</p>
-		<p>&copy; {currentYear} Rodrigo Camino</p>
+	<div class="wrapper inner">
+		<p class="wordmark">Rodrigo&nbsp;Camino<span class="dot" aria-hidden="true">.</span></p>
+		<ul class="socials">
+			{
+				socials.map(({ label, href }) => (
+					<li>
+						<a href={href} target="_blank" rel="noopener">{label}</a>
+					</li>
+				))
+			}
+		</ul>
+		<div class="meta">
+			<p class="credit">{t('footer.creditPrefix')}<a href="https://astro.build/">Astro</a></p>
+			<p>&copy; {currentYear} Rodrigo Camino</p>
+		</div>
 	</div>
-	<p class="socials">
-		<a href="https://x.com/RodrigoCamino8"> X </a>
-		<a href="https://github.com/kirigaya97"> GitHub</a>
-		<a href="https://instagram.com/rodri.camino"> Instagram</a>
-		<a href="https://linkedin.com/in/rodrigo-camino">LinkedIn</a>
-	</p>
 </footer>
+
 <style>
-	.credit {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.credit a {
-		padding-left: 5px;
-	}
 	footer {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
 		margin-top: auto;
-		padding: 3rem 2rem 3rem;
-		text-align: center;
-		color: var(--gray-400);
-		font-size: var(--text-sm);
+		border-top: 1px solid var(--border);
 	}
 
-	footer a {
-		color: var(--gray-400);
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	footer a:hover,
-	footer a:focus {
-		text-decoration-color: currentColor;
-	}
-
-	.group {
+	.inner {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 2.5rem;
+		padding-block: clamp(3rem, 2rem + 4vw, 5rem);
+	}
+
+	.wordmark {
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: var(--text-2xl);
+		letter-spacing: -0.02em;
+		color: var(--text-strong);
+	}
+	.dot {
+		color: var(--accent);
 	}
 
 	.socials {
 		display: flex;
-		justify-content: center;
-		gap: 1rem;
 		flex-wrap: wrap;
+		gap: 1.25rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.socials a {
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		color: var(--text-dim);
+		text-decoration: none;
+		transition: color var(--dur-quick) var(--ease-quick);
+	}
+	.socials a:hover,
+	.socials a:focus-visible {
+		color: var(--accent);
+	}
+
+	.meta {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		font-family: var(--font-mono);
+		font-size: var(--text-xs);
+		color: var(--text-dim);
+	}
+	.meta a {
+		color: var(--text-dim);
+		text-underline-offset: 0.2em;
+	}
+	.meta a:hover {
+		color: var(--accent);
 	}
 
 	@media (min-width: 50em) {
-		footer {
-			flex-direction: row;
-			justify-content: space-between;
-			padding: 2.5rem 5rem;
+		.inner {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			align-items: start;
+			gap: 2rem 4rem;
 		}
-
-		.group {
-			flex-direction: row;
-			gap: 1rem;
-			flex-wrap: wrap;
+		.wordmark {
+			font-size: var(--text-3xl);
 		}
-
 		.socials {
 			justify-content: flex-end;
+		}
+		.meta {
+			grid-column: 1 / -1;
+			border-top: 1px solid var(--border);
+			padding-top: 1.5rem;
 		}
 	}
 </style>
