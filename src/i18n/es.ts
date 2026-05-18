@@ -91,6 +91,7 @@ export const es: Record<UIKey, string> = {
 
   // Project detail back-link (audit §2 es/proyectos/[...slug].astro)
   'project.back': 'Proyectos',
+  'project.tech.heading': 'Tecnologías',
 
   // Blog (Phase 3)
   'blog.meta.title': 'Blog | Rodrigo Camino',
