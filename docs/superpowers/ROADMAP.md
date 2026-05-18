@@ -9,14 +9,16 @@ this project reads this file first. It holds the whole picture and the current s
 
 | Field | Value |
 |---|---|
-| Current phase | **Phase 3 — Features** |
+| Current phase | **Phase 3 complete** — content-normalization side track is next |
 | Phase 1 plan | `docs/superpowers/plans/2026-05-15-phase-1-foundation.md` |
 | Phase 1 state | **COMPLETE** — 16 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
 | Phase 2 plan | `docs/superpowers/plans/2026-05-16-phase-2-redesign.md` |
 | Phase 2 state | **COMPLETE** — 18 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
 | Phase 3 plan | `docs/superpowers/plans/2026-05-16-phase-3-features.md` |
 | Phase 3 state | **COMPLETE** — 18 tasks done, final code review passed, verification green (astro check 0 errors/0 warnings, 32 tests, build OK) |
-| Next action | Phase 4 (content) — blocked on material from Rodrigo |
+| Content normalization | plan `docs/superpowers/plans/2026-05-18-content-normalization.md` · spec `docs/superpowers/specs/2026-05-18-content-normalization-design.md` |
+| Content normalization state | **PLANNED** — 11 tasks, ready to execute (inline) via `docs/prompts/content-normalization-execution-prompt.txt` |
+| Next action | Execute the content-normalization plan — 11 tasks, ready (not blocked). Phase 4 proper stays blocked on material from Rodrigo. |
 | Working branch | `redesign` (active; `phase1-upgrade` merged in) |
 | Last updated | 2026-05-18 |
 
@@ -46,7 +48,23 @@ references real interfaces from the finished phase rather than guesses.
 | **1 — Foundation** | Astro 4→6, Vercel adapter, Tailwind 3→4, Content Layer API, i18n refactor (kill `es/` duplication), token infrastructure. No visual redesign. | `plans/2026-05-15-phase-1-foundation.md` | COMPLETE |
 | **2 — Redesign** | Rebuild every page/component in the "Sleight of hand" identity: layouts, Nav, Footer, Hero, Skills, project pages, About, 404, the `Reveal` motion wrapper, dark/light themes, editorial grid. | `plans/2026-05-16-phase-2-redesign.md` | COMPLETE |
 | **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | `plans/2026-05-16-phase-3-features.md` | COMPLETE |
-| **4 — Content** | Add new projects, rewritten bio/About, update existing 8 projects. Depends on Rodrigo supplying material. | _not yet written_ | BLOCKED on Phase 3 + content from Rodrigo |
+| **4 — Content** | Add new projects, rewritten bio/About, update existing 8 projects. Depends on Rodrigo supplying material. | _not yet written_ | BLOCKED on content from Rodrigo |
+
+---
+
+## Side track — content normalization
+
+Not a redesign phase. A standalone mini-project, planned 2026-05-18, that unifies all
+40 project case-study `.md` files (`work/` + `proyectos/`) to one canonical
+Markdown-native structure and moves each project's technology list into a
+`technologies` frontmatter field rendered as an accessible badge strip.
+
+- Spec: `docs/superpowers/specs/2026-05-18-content-normalization-design.md`
+- Plan: `docs/superpowers/plans/2026-05-18-content-normalization.md` (11 tasks)
+- Execution: `docs/prompts/content-normalization-execution-prompt.txt` — inline,
+  4-wave manual orchestration; does **not** use the agent-driven-dev skills.
+
+Status: **PLANNED**, ready to execute. Independent of Phase 4.
 
 ---
 
@@ -125,6 +143,19 @@ references real interfaces from the finished phase rather than guesses.
 - [x] Task 17 — Blog and contact route pages `(haiku)`
 - [x] Task 18 — Final verification and roadmap update `(haiku)`
 
+### Content normalization (side track)
+- [ ] Task 1 — Kickoff: confirm a green baseline `(haiku)`
+- [ ] Task 2 — Create the `TechBadges` component `(haiku)`
+- [ ] Task 3 — Add the `project.tech.heading` i18n key `(haiku)`
+- [ ] Task 4 — Content batch A: CAPFA, Lena, RobertoMansilla, SDI `(sonnet)`
+- [ ] Task 5 — Content batch B: Larry, Michel, Portfolio, Santiago `(sonnet)`
+- [ ] Task 6 — Content batch C: BlukiStudio, ChapMagic, EcoLanding, Gaudiano `(sonnet)`
+- [ ] Task 7 — Content batch D: Hubbard, Ilusionista, Logistica, MagiaYBurbujas `(sonnet)`
+- [ ] Task 8 — Content batch E: Nub3, Producciones8888, SADA, Vazquez `(sonnet)`
+- [ ] Task 9 — Add `technologies` to the project schema `(haiku)`
+- [ ] Task 10 — Render `TechBadges` on the project detail page `(haiku)`
+- [ ] Task 11 — Final verification and roadmap note `(haiku)`
+
 _Phase 4 task log is appended here when its plan is written._
 
 ---
@@ -137,6 +168,9 @@ _Phase 4 task log is appended here when its plan is written._
 | Phase 1 plan | `docs/superpowers/plans/2026-05-15-phase-1-foundation.md` |
 | i18n structure audit (complete EN/ES string tables) | `docs/agents-logs/2026-05-15-i18n-structure-audit.md` |
 | Subagents delegation directive | `docs/prompts/subagents-directive.md` |
+| Content-normalization spec | `docs/superpowers/specs/2026-05-18-content-normalization-design.md` |
+| Content-normalization plan | `docs/superpowers/plans/2026-05-18-content-normalization.md` |
+| Content-normalization execution prompt | `docs/prompts/content-normalization-execution-prompt.txt` |
 
 ---
 
@@ -158,3 +192,4 @@ Append-only record of choices that shape the project. Newest last.
 - **2026-05-16** — `ContactCTA` keeps its direct WhatsApp link; the new `/contact` page is reached via the nav, not via the CTA (Rodrigo's choice).
 - **2026-05-16** — Work tag filtering: server-side `?tag=` filtering plus a vanilla custom-element progressive enhancement (`<work-filter>`). No UI framework was added — consistent with the `menu-button`/`Reveal` pattern.
 - **2026-05-16** — Blog: a single `blog` content collection with `en/` and `es/` subfolders (ids carry the locale prefix). Phase 3 ships placeholder posts; Phase 4 replaces them with real writing.
+- **2026-05-18** — Content normalization (side track, planned): all 40 project `.md` files to be unified to one Markdown-native structure (4 body sections, `###`/`####` levels, `**bold**`, em-dash bullets). Technologies move from body prose into a `technologies: [{name, note}]` frontmatter field, rendered as an accessible tooltip badge strip (`TechBadges.astro`). Rejected: a flat all-`###` hierarchy; keeping the AI-generated `<b>`/`>`-blockquote source. See the Side track section + `specs/2026-05-18-content-normalization-design.md`.
