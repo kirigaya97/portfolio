@@ -1,0 +1,92 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/ui';
+import { getRoutePath } from '../i18n/utils';
+import { slugOf } from '../lib/blog';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+	lang: Lang;
+}
+
+const { post, lang } = Astro.props;
+const { data } = post;
+const href = `${getRoutePath('blog', lang)}/${slugOf(post.id)}`;
+const date = data.publishDate.toLocaleDateString(lang, {
+	year: 'numeric',
+	month: 'short',
+	day: 'numeric',
+});
+---
+
+<a class="card" href={href}>
+	<div class="meta">
+		<time datetime={data.publishDate.toISOString()}>{date}</time>
+		{data.tags.length > 0 && <span class="tag">{data.tags[0]}</span>}
+	</div>
+	<h3 class="title">{data.title}</h3>
+	<p class="excerpt">{data.description}</p>
+	<span class="more" aria-hidden="true">→</span>
+</a>
+
+<style>
+	.card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		height: 100%;
+		padding: 1.75rem;
+		text-decoration: none;
+		color: inherit;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+		transition:
+			border-color var(--dur-quick) var(--ease-quick),
+			transform var(--dur-quick) var(--ease-quick);
+	}
+
+	.meta {
+		display: flex;
+		gap: 1rem;
+		font-family: var(--font-mono);
+		font-size: var(--text-xs);
+		color: var(--text-dim);
+	}
+	.tag {
+		color: var(--accent);
+	}
+
+	.title {
+		font-size: var(--text-xl);
+		transition: color var(--dur-quick) var(--ease-quick);
+	}
+
+	.excerpt {
+		max-width: 48ch;
+		color: var(--text-dim);
+	}
+
+	.more {
+		margin-top: auto;
+		padding-top: 0.5rem;
+		font-family: var(--font-mono);
+		color: var(--accent);
+	}
+
+	.card:hover,
+	.card:focus-visible {
+		border-color: var(--border-strong);
+	}
+	.card:hover .title,
+	.card:focus-visible .title {
+		color: var(--accent);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.card:hover,
+		.card:focus-visible {
+			transform: translateY(-3px);
+		}
+	}
+</style>
