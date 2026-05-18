@@ -1,0 +1,53 @@
+# Execute the Phase 2 Redesign plan
+
+Orchestrate execution of a finished implementation plan on the `redesign` branch of `~/web/portfolio`. You run the orchestration yourself — delegating file work to parallel subagents — and you commit. Subagents do not.
+
+## Read first
+- Plan: `docs/superpowers/plans/2026-05-16-phase-2-redesign.md` — 18 tasks; each component/page task contains the **complete final file contents**.
+- Orchestration hub: `docs/superpowers/ROADMAP.md`.
+- Delegation rules: `docs/prompts/subagents-directive.md` — apply to every subagent prompt (terse, no preamble, log long output to `docs/agents-logs/`).
+
+## Ground rules
+- **Do NOT invoke the `subagent-driven-development` or `executing-plans` skills.** Orchestrate manually as below.
+- **No browser-based review or verification.** Ignore every "open in browser / `pnpm dev`" step in the plan. Verification is static only: `pnpm astro check` (0 errors), `pnpm build` (succeeds), `pnpm test` (14 tests pass), `grep`.
+- The plan's task code is authoritative — subagents transcribe the shown file contents faithfully; they do not redesign.
+- **Subagents edit files only** (Write/Edit). They do NOT run git, `astro check`, or builds. The orchestrator runs all checks, dispatches reviewers, and commits — sequentially — after each wave.
+- Use each task's model tag (`haiku`/`sonnet`) for its subagent. Pure transcription tasks may use `haiku`.
+- Branch stays `redesign`. Don't push, don't merge.
+
+## Shared-file hazard — do this in Wave 1
+Plan Tasks 12, 13, 17 each append keys to `src/i18n/en.ts` and `src/i18n/es.ts`. Never let agents edit those two files concurrently. In Wave 1, one agent adds all three pairs at once:
+- `en.ts`: `'contactCta.kicker': "Let's talk"`, `'home.hero.kicker': 'Creative Web Developer'`, `'notFound.home': 'Back to home'`
+- `es.ts`: `'contactCta.kicker': 'Conversemos'`, `'home.hero.kicker': 'Desarrollador Web Creativo'`, `'notFound.home': 'Volver al inicio'`
+
+Then the Task 12/13/17 agents **skip their own i18n step** and write only their component/page file.
+
+## Waves
+
+**Wave 0 — you, directly:** Task 1. Confirm branch `redesign`, run `pnpm install`, confirm baseline `pnpm astro check && pnpm build` is green, make the empty checkpoint commit.
+
+**Wave 1 — foundation — 5 subagents in parallel (one message):**
+- Task 2 — `global.css` (sonnet)
+- Task 3 — `MainHead.astro` + `tailwind.css` (sonnet)
+- Task 4 — `BaseLayout.astro` (sonnet)
+- Task 5 — `Reveal.astro` (sonnet)
+- i18n keys — the 6 entries above into `en.ts`/`es.ts` (haiku)
+
+**Wave 2 — components & pages — up to 12 subagents in parallel:** Tasks 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17. Every one of these touches a **distinct file set** (i18n already handled), so they have no write conflicts. Pages (13–17) reference component interfaces defined in the plan — the post-wave `astro check` validates the whole graph. If you prefer lighter review batches, split into Wave 2 = components (6–12) then Wave 3 = pages (13–17); otherwise run all 12 together.
+
+**Wave 3 — you, directly:** Task 18. Run the stale-token grep (`theme-dark`, `--gray-`, `--accent-regular`, `font-brand`, `bg-image-`, `gradient-subtle`), `pnpm astro check && pnpm test && pnpm build`, update `ROADMAP.md` (mark Phase 2 COMPLETE, append the task log + the 3 decision-log entries per Task 18 Step 4), commit.
+
+## After each wave (orchestrator)
+1. `pnpm astro check` — must be 0 errors. After the last component/page wave also run `pnpm build`.
+2. Dispatch `feature-dev:code-reviewer` agents on the wave's `git diff` — parallelize, ~one reviewer per 2–3 tasks. They check transcription fidelity against the plan and obvious correctness/accessibility issues — **code review only, no browser.** Per the directive: long output → `docs/agents-logs/`, else ≤5 bullets.
+3. Fix high-confidence reviewer findings.
+4. Commit each task's files **sequentially** using the plan's commit messages.
+5. Tick that wave's checkboxes in the plan file; update the ROADMAP live-status row.
+
+## Subagent prompt shape (per directive)
+> Objetivo: Implement Task N from `docs/superpowers/plans/2026-05-16-phase-2-redesign.md` — write exactly the file content(s) shown.
+> No git, no builds, no `astro check`. Skip the browser verification step.
+> Output: files written + `done`, or ≤3 bullets if something deviated. Sin preámbulo.
+
+## Definition of done
+All 18 tasks committed on `redesign`; `pnpm astro check && pnpm test && pnpm build` green; stale-token grep empty; `ROADMAP.md` shows Phase 2 COMPLETE. Then stop — Phase 3 is planned separately.

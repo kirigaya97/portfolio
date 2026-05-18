@@ -1,0 +1,49 @@
+# Execute the Phase 3 Features plan
+
+Orchestrate execution of a finished implementation plan on the `redesign` branch of `~/web/portfolio`. You run the orchestration yourself — delegating file work to parallel subagents — and you commit. Subagents do not.
+
+## Read first
+- Plan: `docs/superpowers/plans/2026-05-16-phase-3-features.md` — 18 tasks; each task contains the **complete final file contents** (or an exact find/replace block).
+- Orchestration hub: `docs/superpowers/ROADMAP.md`.
+- Delegation rules: `docs/prompts/subagents-directive.md` — apply to every subagent prompt (terse, no preamble, log long output to `docs/agents-logs/`).
+
+## Ground rules
+- **Do NOT invoke the `subagent-driven-development` or `executing-plans` skills.** Orchestrate manually as below.
+- **No browser-based review or verification.** Ignore any "open in browser / `pnpm dev`" step. Verification is static only: `pnpm astro check` (0 errors), `pnpm build` (succeeds), `pnpm test` (30 tests pass), `grep`.
+- The plan's task code is authoritative — subagents transcribe the shown file contents/edits faithfully; they do not redesign.
+- **Subagents edit files only** (Write/Edit). They do NOT run git, `astro check`, builds, or tests. The orchestrator runs all checks, dispatches reviewers, and commits — sequentially — after each wave.
+- Use each task's model tag (`haiku`/`sonnet`) for its subagent. Pure transcription tasks may use `haiku`.
+- Branch stays `redesign`. Don't push, don't merge.
+
+## No shared-file hazard
+Unlike Phase 2, no two tasks in the same wave touch the same file. Task 3 owns `en.ts`/`es.ts` entirely; every component/page task writes a distinct file set. The only cross-task coupling is the DOM id contract `#work-grid` / `#work-empty` between Task 9 (`WorkFilter`) and Task 14 (`WorkIndexContent`) — both land in Wave 2/3 and are validated by the post-wave `astro check`.
+
+## Waves
+
+**Wave 0 — you, directly:** Task 1. Confirm branch `redesign`, run `pnpm add resend`, confirm baseline `pnpm astro check && pnpm test && pnpm build` is green (14 tests), commit `package.json` + lockfile.
+
+**Wave 1 — config & content — 3 subagents in parallel (one message):**
+- Task 2 — `astro.config.mjs` + `content.config.ts` + `ui.ts` + `.env.example` (haiku)
+- Task 3 — Phase 3 i18n keys into `en.ts` + `es.ts` (haiku)
+- Task 4 — 4 placeholder blog markdown files (haiku)
+
+**Wave 2 — logic & leaf components — 6 subagents in parallel:** Tasks 5, 6, 7, 8, 9, 10. Distinct file sets. Task 8 (`ContactForm`) imports `astro:actions`, defined by Task 7 — the post-wave `astro check` validates the graph; Task 10 (`BlogCard`) imports `src/lib/blog.ts` from Task 6.
+
+**Wave 3 — pages & wiring — 7 subagents in parallel:** Tasks 11, 12, 13, 14, 15, 16, 17. Distinct file sets. Pages (Task 17) reference the page-content components written in this same wave; the post-wave `astro check` + `pnpm build` validate the whole graph.
+
+**Wave 4 — you, directly:** Task 18. Run `pnpm astro check && pnpm test && pnpm build`, the sanity greps (`astro:content` absent from `src/lib/`; `blog`/`contact` in `ui.ts` routes; `work-grid` referenced by both `WorkFilter` and `WorkIndexContent`), update `ROADMAP.md` (mark Phase 3 COMPLETE, append the Phase 3 task log + the 4 decision-log entries per Task 18 Step 3), commit.
+
+## After each wave (orchestrator)
+1. `pnpm astro check` — must be 0 errors. After Wave 3 also run `pnpm build` and `pnpm test`.
+2. Dispatch `feature-dev:code-reviewer` agents on the wave's `git diff` — parallelize, ~one reviewer per 2–3 tasks. They check transcription fidelity against the plan and obvious correctness/accessibility issues — **code review only, no browser.** Per the directive: long output → `docs/agents-logs/`, else ≤5 bullets.
+3. Fix high-confidence reviewer findings.
+4. Commit each task's files **sequentially** using the plan's commit messages.
+5. Tick that wave's checkboxes in the plan file; update the ROADMAP live-status row.
+
+## Subagent prompt shape (per directive)
+> Objetivo: Implement Task N from `docs/superpowers/plans/2026-05-16-phase-3-features.md` — write exactly the file content(s)/edit(s) shown.
+> No git, no builds, no `astro check`, no tests. Skip any browser verification step.
+> Output: files written + `done`, or ≤3 bullets if something deviated. Sin preámbulo.
+
+## Definition of done
+All 18 tasks committed on `redesign`; `pnpm astro check && pnpm test && pnpm build` green (30 tests); sanity greps clean; `ROADMAP.md` shows Phase 3 COMPLETE. Then stop — Phase 4 is content work, blocked on material from Rodrigo (see the plan's "Manual steps for Rodrigo" for the Resend setup that makes the contact form deliver mail).
