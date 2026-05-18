@@ -9,14 +9,16 @@ this project reads this file first. It holds the whole picture and the current s
 
 | Field | Value |
 |---|---|
-| Current phase | **Phase 2 — Redesign** |
+| Current phase | **Phase 3 — Features** |
 | Phase 1 plan | `docs/superpowers/plans/2026-05-15-phase-1-foundation.md` |
 | Phase 1 state | **COMPLETE** — 16 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
 | Phase 2 plan | `docs/superpowers/plans/2026-05-16-phase-2-redesign.md` |
 | Phase 2 state | **COMPLETE** — 18 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
-| Next action | Write the Phase 3 plan (writing-plans) against the finished code |
+| Phase 3 plan | `docs/superpowers/plans/2026-05-16-phase-3-features.md` |
+| Phase 3 state | **IN PROGRESS** — plan written (18 tasks), execution starting at Task 1 |
+| Next action | Execute Phase 3 Task 1 — install Resend, confirm green baseline |
 | Working branch | `redesign` (active; `phase1-upgrade` merged in) |
-| Last updated | 2026-05-16 |
+| Last updated | 2026-05-18 |
 
 > Orchestrator: update this table and the Task progress log below after **every** task.
 
@@ -43,7 +45,7 @@ references real interfaces from the finished phase rather than guesses.
 |---|---|---|---|
 | **1 — Foundation** | Astro 4→6, Vercel adapter, Tailwind 3→4, Content Layer API, i18n refactor (kill `es/` duplication), token infrastructure. No visual redesign. | `plans/2026-05-15-phase-1-foundation.md` | COMPLETE |
 | **2 — Redesign** | Rebuild every page/component in the "Sleight of hand" identity: layouts, Nav, Footer, Hero, Skills, project pages, About, 404, the `Reveal` motion wrapper, dark/light themes, editorial grid. | `plans/2026-05-16-phase-2-redesign.md` | COMPLETE |
-| **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | _not yet written_ | NEXT — plan to be written |
+| **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | `plans/2026-05-16-phase-3-features.md` | IN PROGRESS |
 | **4 — Content** | Add new projects, rewritten bio/About, update existing 8 projects. Depends on Rodrigo supplying material. | _not yet written_ | BLOCKED on Phase 3 + content from Rodrigo |
 
 ---
@@ -103,7 +105,27 @@ references real interfaces from the finished phase rather than guesses.
 - [x] Task 17 — Rebuild `NotFoundContent` (404) `(haiku)`
 - [x] Task 18 — Final verification and roadmap update `(haiku)`
 
-_Phases 3–4 task logs are appended here when their plans are written._
+### Phase 3 — Features
+- [ ] Task 1 — Phase 3 kickoff: install Resend, confirm baseline `(haiku)`
+- [ ] Task 2 — Register the blog collection, contact env schema, and routes `(haiku)`
+- [ ] Task 3 — Add Phase 3 i18n keys `(haiku)`
+- [ ] Task 4 — Add placeholder blog posts `(haiku)`
+- [ ] Task 5 — Project tag utilities `(sonnet)`
+- [ ] Task 6 — Blog collection helpers `(sonnet)`
+- [ ] Task 7 — Contact form server action `(sonnet)`
+- [ ] Task 8 — ContactForm component `(sonnet)`
+- [ ] Task 9 — WorkFilter tag-filtering island `(sonnet)`
+- [ ] Task 10 — BlogCard component `(sonnet)`
+- [ ] Task 11 — Contact page content `(sonnet)`
+- [ ] Task 12 — Blog index content `(sonnet)`
+- [ ] Task 13 — Blog post content `(sonnet)`
+- [ ] Task 14 — Wire tag filtering into the work index `(sonnet)`
+- [ ] Task 15 — Add a blog teaser to the home page `(sonnet)`
+- [ ] Task 16 — Add Blog and Contact links to the nav `(haiku)`
+- [ ] Task 17 — Blog and contact route pages `(haiku)`
+- [ ] Task 18 — Final verification and roadmap update `(haiku)`
+
+_Phase 4 task log is appended here when its plan is written._
 
 ---
 
@@ -131,3 +153,4 @@ Append-only record of choices that shape the project. Newest last.
 - **2026-05-16** — Typography: Space Grotesk (headings/display), Inter (body), JetBrains Mono (metadata/tags/dates). Deliberate override of the spec's "editorial display face / serif" wording — chose the geometric sans Space Grotesk for a modern-editorial rather than magazine-serif feel.
 - **2026-05-16** — Default theme: dark, always, on first visit (the designed canvas). `:root` holds the dark tokens; `.theme-light` is the opt-in override, reached via the toggle and persisted in `localStorage`. Inverts Phase 1's `.theme-dark`-on-light-default scheme.
 - **2026-05-16** — Canvas: flat near-black (`#0a0a0b`) plus a faint CSS film-grain overlay. The stock template's background-image system (curve SVGs, gradient JPGs, lazy-loaded subtle backgrounds) is removed entirely.
+- **2026-05-18** — 12 new bilingual project case studies committed ahead of Phase 4 (generated 2026-05-15, backup in `docs/portfolio-case-studies-generated.md`). Asset folders are `.gitkeep` placeholders — screenshots still pending, so thumbnails 404 until images land. Several entries flagged incomplete; `BlukiStudio` flagged "hold". Phase 3 execution proceeds in parallel.
