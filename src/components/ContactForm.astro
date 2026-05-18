@@ -1,0 +1,193 @@
+---
+import { actions, isInputError } from 'astro:actions';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const result = Astro.getActionResult(actions.contact);
+const succeeded = result !== undefined && result.error === undefined;
+const fieldErrors =
+	result?.error && isInputError(result.error) ? result.error.fields : undefined;
+const generalError =
+	result?.error !== undefined && !isInputError(result.error) ? result.error : undefined;
+const rateLimited = generalError?.code === 'TOO_MANY_REQUESTS';
+---
+
+<form id="contact-form" method="POST" action={actions.contact} class="form">
+	{
+		succeeded && (
+			<p class="banner banner-ok" role="status">
+				{t('contact.form.success')}
+			</p>
+		)
+	}
+	{
+		generalError && (
+			<p class="banner banner-err" role="alert">
+				{rateLimited ? t('contact.form.errorRate') : t('contact.form.error')}
+			</p>
+		)
+	}
+
+	<div class="field">
+		<label for="cf-name">{t('contact.form.name')}</label>
+		<input id="cf-name" name="name" type="text" required maxlength="120" autocomplete="name" />
+		{fieldErrors?.name && <span class="hint">{t('contact.form.errorName')}</span>}
+	</div>
+
+	<div class="field">
+		<label for="cf-email">{t('contact.form.email')}</label>
+		<input
+			id="cf-email"
+			name="email"
+			type="email"
+			required
+			maxlength="200"
+			autocomplete="email"
+		/>
+		{fieldErrors?.email && <span class="hint">{t('contact.form.errorEmail')}</span>}
+	</div>
+
+	<div class="field">
+		<label for="cf-message">{t('contact.form.message')}</label>
+		<textarea id="cf-message" name="message" required minlength="10" maxlength="4000" rows="6"
+		></textarea>
+		{fieldErrors?.message && <span class="hint">{t('contact.form.errorMessage')}</span>}
+	</div>
+
+	{/* Honeypot — hidden from people; a bot fills it and gets a silent no-op. */}
+	<div class="honeypot" aria-hidden="true">
+		<label for="cf-company">Company</label>
+		<input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off" />
+	</div>
+
+	<button type="submit" class="submit" data-sending-label={t('contact.form.sending')}>
+		{t('contact.form.submit')}
+	</button>
+</form>
+
+<script>
+	const form = document.getElementById('contact-form');
+	if (form) {
+		form.addEventListener('submit', () => {
+			const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+			if (btn) {
+				if (btn.dataset.sendingLabel) btn.textContent = btn.dataset.sendingLabel;
+				btn.disabled = true;
+			}
+		});
+	}
+</script>
+
+<style>
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.banner {
+		margin: 0;
+		padding: 0.85rem 1.1rem;
+		font-size: var(--text-sm);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+	}
+	.banner-ok {
+		color: var(--text-strong);
+		background: var(--accent-soft);
+		border-color: var(--accent-line);
+	}
+	.banner-err {
+		color: var(--text-strong);
+		background: var(--surface-2);
+	}
+
+	.field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	label {
+		font-family: var(--font-mono);
+		font-size: var(--text-xs);
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--text-dim);
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		padding: 0.7rem 0.9rem;
+		font-family: var(--font-body);
+		font-size: var(--text-base);
+		color: var(--text);
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		transition: border-color var(--dur-quick) var(--ease-quick);
+	}
+	textarea {
+		resize: vertical;
+		min-height: 8rem;
+	}
+	input:focus-visible,
+	textarea:focus-visible {
+		border-color: var(--accent);
+	}
+
+	.hint {
+		font-family: var(--font-mono);
+		font-size: var(--text-xs);
+		color: var(--accent);
+	}
+
+	/* Honeypot: removed from view and from the a11y tree, still submitted. */
+	.honeypot {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+
+	.submit {
+		align-self: flex-start;
+		padding: 0.85em 1.6em;
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		color: var(--accent-contrast);
+		background: var(--accent);
+		border: 0;
+		border-radius: 999rem;
+		cursor: pointer;
+		transition:
+			background-color var(--dur-quick) var(--ease-quick),
+			transform var(--dur-quick) var(--ease-quick);
+	}
+	.submit:hover,
+	.submit:focus-visible {
+		background: var(--accent-hover);
+	}
+	.submit:disabled {
+		opacity: 0.6;
+		cursor: progress;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.submit:hover,
+		.submit:focus-visible {
+			transform: translateY(-2px);
+		}
+	}
+</style>
