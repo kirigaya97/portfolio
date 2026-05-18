@@ -45,6 +45,8 @@ export const server = {
         });
       }
 
+      // Record the throttle window only on a successful send — a transient
+      // delivery failure should not lock a genuine sender out for 30s.
       lastSubmit.set(ip, now);
       return { ok: true };
     },
