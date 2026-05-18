@@ -1,0 +1,116 @@
+---
+import type { Lang } from '../../i18n/ui';
+import { useTranslations } from '../../i18n/utils';
+
+import ContactForm from '../ContactForm.astro';
+import Hero from '../Hero.astro';
+import Icon from '../Icon.astro';
+import Reveal from '../Reveal.astro';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="contact-page stack">
+	<section class="wrapper">
+		<Reveal>
+			<Hero
+				kicker={t('contact.hero.kicker')}
+				title={t('contact.hero.title')}
+				tagline={t('contact.hero.tagline')}
+			/>
+		</Reveal>
+	</section>
+
+	<section class="wrapper layout">
+		<Reveal class="form-col">
+			<ContactForm lang={lang} />
+		</Reveal>
+		<Reveal class="aside-col" delay={120}>
+			<aside class="direct">
+				<h2>{t('contact.aside.heading')}</h2>
+				<p>{t('contact.aside.body')}</p>
+				<ul>
+					<li>
+						<a href="https://wa.me/+5491132125484" target="_blank" rel="noopener">
+							<Icon icon="whatsapp" size="1.2em" />
+							{t('contact.aside.whatsapp')}
+						</a>
+					</li>
+					<li>
+						<a href="mailto:rodrigo.camino97@gmail.com">
+							<Icon icon="paper-plane-tilt" size="1.2em" />
+							{t('contact.aside.email')}
+						</a>
+					</li>
+				</ul>
+			</aside>
+		</Reveal>
+	</section>
+</div>
+
+<style>
+	.contact-page {
+		gap: clamp(3rem, 2rem + 5vw, 5rem);
+		padding-top: clamp(3rem, 2rem + 4vw, 6rem);
+		padding-bottom: clamp(4rem, 3rem + 5vw, 7rem);
+	}
+
+	.layout {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.direct {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1.75rem;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+	}
+	.direct h2 {
+		font-size: var(--text-lg);
+		color: var(--accent);
+	}
+	.direct p {
+		color: var(--text-dim);
+	}
+	.direct ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin: 0.5rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+	.direct a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		color: var(--text);
+		text-decoration: none;
+		transition: color var(--dur-quick) var(--ease-quick);
+	}
+	.direct a:hover,
+	.direct a:focus-visible {
+		color: var(--accent);
+	}
+
+	@media (min-width: 50em) {
+		.layout {
+			display: grid;
+			grid-template-columns: 7fr 5fr;
+			gap: 4rem;
+			align-items: start;
+		}
+	}
+</style>
