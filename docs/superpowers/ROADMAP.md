@@ -15,8 +15,8 @@ this project reads this file first. It holds the whole picture and the current s
 | Phase 2 plan | `docs/superpowers/plans/2026-05-16-phase-2-redesign.md` |
 | Phase 2 state | **COMPLETE** — 18 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
 | Phase 3 plan | `docs/superpowers/plans/2026-05-16-phase-3-features.md` |
-| Phase 3 state | **IN PROGRESS** — plan written (18 tasks), execution starting at Task 1 |
-| Next action | Execute Phase 3 Task 1 — install Resend, confirm green baseline |
+| Phase 3 state | **COMPLETE** — 18 tasks done, final code review passed, verification green (astro check 0 errors/0 warnings, 32 tests, build OK) |
+| Next action | Phase 4 (content) — blocked on material from Rodrigo |
 | Working branch | `redesign` (active; `phase1-upgrade` merged in) |
 | Last updated | 2026-05-18 |
 
@@ -45,7 +45,7 @@ references real interfaces from the finished phase rather than guesses.
 |---|---|---|---|
 | **1 — Foundation** | Astro 4→6, Vercel adapter, Tailwind 3→4, Content Layer API, i18n refactor (kill `es/` duplication), token infrastructure. No visual redesign. | `plans/2026-05-15-phase-1-foundation.md` | COMPLETE |
 | **2 — Redesign** | Rebuild every page/component in the "Sleight of hand" identity: layouts, Nav, Footer, Hero, Skills, project pages, About, 404, the `Reveal` motion wrapper, dark/light themes, editorial grid. | `plans/2026-05-16-phase-2-redesign.md` | COMPLETE |
-| **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | `plans/2026-05-16-phase-3-features.md` | IN PROGRESS |
+| **3 — Features** | Work tag-filtering island, contact form (Astro Actions + Resend), blog collection + `/blog` pages. | `plans/2026-05-16-phase-3-features.md` | COMPLETE |
 | **4 — Content** | Add new projects, rewritten bio/About, update existing 8 projects. Depends on Rodrigo supplying material. | _not yet written_ | BLOCKED on Phase 3 + content from Rodrigo |
 
 ---
@@ -106,24 +106,24 @@ references real interfaces from the finished phase rather than guesses.
 - [x] Task 18 — Final verification and roadmap update `(haiku)`
 
 ### Phase 3 — Features
-- [ ] Task 1 — Phase 3 kickoff: install Resend, confirm baseline `(haiku)`
-- [ ] Task 2 — Register the blog collection, contact env schema, and routes `(haiku)`
-- [ ] Task 3 — Add Phase 3 i18n keys `(haiku)`
-- [ ] Task 4 — Add placeholder blog posts `(haiku)`
-- [ ] Task 5 — Project tag utilities `(sonnet)`
-- [ ] Task 6 — Blog collection helpers `(sonnet)`
-- [ ] Task 7 — Contact form server action `(sonnet)`
-- [ ] Task 8 — ContactForm component `(sonnet)`
-- [ ] Task 9 — WorkFilter tag-filtering island `(sonnet)`
-- [ ] Task 10 — BlogCard component `(sonnet)`
-- [ ] Task 11 — Contact page content `(sonnet)`
-- [ ] Task 12 — Blog index content `(sonnet)`
-- [ ] Task 13 — Blog post content `(sonnet)`
-- [ ] Task 14 — Wire tag filtering into the work index `(sonnet)`
-- [ ] Task 15 — Add a blog teaser to the home page `(sonnet)`
-- [ ] Task 16 — Add Blog and Contact links to the nav `(haiku)`
-- [ ] Task 17 — Blog and contact route pages `(haiku)`
-- [ ] Task 18 — Final verification and roadmap update `(haiku)`
+- [x] Task 1 — Phase 3 kickoff: install Resend, confirm baseline `(haiku)`
+- [x] Task 2 — Register the blog collection, contact env schema, and routes `(haiku)`
+- [x] Task 3 — Add Phase 3 i18n keys `(haiku)`
+- [x] Task 4 — Add placeholder blog posts `(haiku)`
+- [x] Task 5 — Project tag utilities `(sonnet)`
+- [x] Task 6 — Blog collection helpers `(sonnet)`
+- [x] Task 7 — Contact form server action `(sonnet)`
+- [x] Task 8 — ContactForm component `(sonnet)`
+- [x] Task 9 — WorkFilter tag-filtering island `(sonnet)`
+- [x] Task 10 — BlogCard component `(sonnet)`
+- [x] Task 11 — Contact page content `(sonnet)`
+- [x] Task 12 — Blog index content `(sonnet)`
+- [x] Task 13 — Blog post content `(sonnet)`
+- [x] Task 14 — Wire tag filtering into the work index `(sonnet)`
+- [x] Task 15 — Add a blog teaser to the home page `(sonnet)`
+- [x] Task 16 — Add Blog and Contact links to the nav `(haiku)`
+- [x] Task 17 — Blog and contact route pages `(haiku)`
+- [x] Task 18 — Final verification and roadmap update `(haiku)`
 
 _Phase 4 task log is appended here when its plan is written._
 
@@ -154,3 +154,7 @@ Append-only record of choices that shape the project. Newest last.
 - **2026-05-16** — Default theme: dark, always, on first visit (the designed canvas). `:root` holds the dark tokens; `.theme-light` is the opt-in override, reached via the toggle and persisted in `localStorage`. Inverts Phase 1's `.theme-dark`-on-light-default scheme.
 - **2026-05-16** — Canvas: flat near-black (`#0a0a0b`) plus a faint CSS film-grain overlay. The stock template's background-image system (curve SVGs, gradient JPGs, lazy-loaded subtle backgrounds) is removed entirely.
 - **2026-05-18** — 12 new bilingual project case studies committed ahead of Phase 4 (generated 2026-05-15, backup in `docs/portfolio-case-studies-generated.md`). Asset folders are `.gitkeep` placeholders — screenshots still pending, so thumbnails 404 until images land. Several entries flagged incomplete; `BlukiStudio` flagged "hold". Phase 3 execution proceeds in parallel.
+- **2026-05-16** — Contact form: Astro Actions + Resend, configured via `astro:env`. Spam defence is a hidden honeypot field plus a 30s in-memory per-IP throttle. `RESEND_API_KEY` is a Vercel/`.env` secret; `CONTACT_TO_EMAIL` and `CONTACT_FROM_EMAIL` have defaults.
+- **2026-05-16** — `ContactCTA` keeps its direct WhatsApp link; the new `/contact` page is reached via the nav, not via the CTA (Rodrigo's choice).
+- **2026-05-16** — Work tag filtering: server-side `?tag=` filtering plus a vanilla custom-element progressive enhancement (`<work-filter>`). No UI framework was added — consistent with the `menu-button`/`Reveal` pattern.
+- **2026-05-16** — Blog: a single `blog` content collection with `en/` and `es/` subfolders (ids carry the locale prefix). Phase 3 ships placeholder posts; Phase 4 replaces them with real writing.
