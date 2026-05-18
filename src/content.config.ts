@@ -23,4 +23,18 @@ const proyectos = defineCollection({
   schema: projectSchema,
 });
 
-export const collections = { work, proyectos };
+// Blog posts live in src/content/blog/en/ and src/content/blog/es/ —
+// the glob ids carry the locale prefix (e.g. "en/welcome").
+const blog = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.coerce.date(),
+    tags: z.array(z.string()),
+    img: z.string().optional(),
+    img_alt: z.string().optional(),
+  }),
+});
+
+export const collections = { work, proyectos, blog };
