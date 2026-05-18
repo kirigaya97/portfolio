@@ -7,6 +7,12 @@ const projectSchema = z.object({
   description: z.string(),
   publishDate: z.coerce.date(),
   tags: z.array(z.string()),
+  technologies: z.array(
+    z.object({
+      name: z.string(),
+      note: z.string(),
+    }),
+  ),
   img: z.string(),
   img_alt: z.string().optional(),
   screenshots: z.array(z.string()).optional(),
