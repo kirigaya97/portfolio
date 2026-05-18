@@ -13,7 +13,9 @@ const t = useTranslations(lang);
 const textLinks: { label: string; href: string }[] = [
 	{ label: t('nav.home'), href: getRoutePath('home', lang) },
 	{ label: t('nav.work'), href: getRoutePath('work', lang) },
+	{ label: t('nav.blog'), href: getRoutePath('blog', lang) },
 	{ label: t('nav.about'), href: getRoutePath('about', lang) },
+	{ label: t('nav.contact'), href: getRoutePath('contact', lang) },
 ];
 
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
