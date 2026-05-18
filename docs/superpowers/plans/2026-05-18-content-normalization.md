@@ -147,12 +147,12 @@ The `>` blockquote block and its `###` separators are deleted; `##### Objectives
 
 **Model:** haiku — **orchestrator runs this directly.**
 
-- [ ] **Step 1: Confirm the branch**
+- [x] **Step 1: Confirm the branch**
 
 Run: `git branch --show-current`
 Expected: `redesign`. If not, `git checkout redesign`.
 
-- [ ] **Step 2: Confirm a green baseline**
+- [x] **Step 2: Confirm a green baseline**
 
 Run: `pnpm astro check && pnpm test && pnpm build`
 Expected: 0 errors, 32 tests pass, build succeeds. If anything fails, stop — this plan assumes a green tree.
@@ -168,7 +168,7 @@ Expected: 0 errors, 32 tests pass, build succeeds. If anything fails, stop — t
 
 **Context:** A labeled badge strip. Each badge shows a technology name; its `note` is a CSS-only tooltip shown on **hover and focus**. The note element is always in the accessibility tree (hidden with `opacity` only, never `display:none`/`visibility:hidden`) and linked via `aria-describedby` + `role="tooltip"`, so screen readers announce it and a keyboard/touch tap reveals it. No JavaScript.
 
-- [ ] **Step 1: Create `src/components/TechBadges.astro`**
+- [x] **Step 1: Create `src/components/TechBadges.astro`**
 
 ```astro
 ---
@@ -279,7 +279,7 @@ const { technologies, heading } = Astro.props;
 </style>
 ```
 
-- [ ] **Step 2: Commit** (orchestrator, after the wave)
+- [x] **Step 2: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/components/TechBadges.astro
@@ -298,7 +298,7 @@ git commit -m "feat: add TechBadges component"
 
 **Context:** One new key in each dictionary. `en.ts` is the `UIKey` source of truth; `es.ts` is typed `Record<UIKey, string>`, so both must gain the key or the build fails. Insert it immediately after the existing `'project.back'` key in each file.
 
-- [ ] **Step 1: In `src/i18n/en.ts`, replace this line**
+- [x] **Step 1: In `src/i18n/en.ts`, replace this line**
 
 ```ts
   'project.back': 'Work',
@@ -311,7 +311,7 @@ with:
   'project.tech.heading': 'Technologies',
 ```
 
-- [ ] **Step 2: In `src/i18n/es.ts`, replace this line**
+- [x] **Step 2: In `src/i18n/es.ts`, replace this line**
 
 ```ts
   'project.back': 'Proyectos',
@@ -324,7 +324,7 @@ with:
   'project.tech.heading': 'Tecnologías',
 ```
 
-- [ ] **Step 3: Commit** (orchestrator, after the wave)
+- [x] **Step 3: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/i18n/en.ts src/i18n/es.ts
@@ -350,11 +350,11 @@ git commit -m "feat: add project.tech.heading i18n key"
 - **RobertoMansilla** (EN + ES) — all headings are `###` and bold-wrapped; fix levels (rule 1) and unbold (rule 2).
 - **SDI** (EN + ES) — mixed heading levels and blank lines between bullets (rule 4 removes them). "Technologies Used" uses `><b>Name:</b>` blockquotes with `###` separators.
 
-- [ ] **Step 1: Normalize the 4 `work/` (EN) files** — apply the Normalization Rules to `CAPFA.md`, `Lena.md`, `RobertoMansilla.md`, `SDI.md` in `src/content/work/`. English `note` text.
+- [x] **Step 1: Normalize the 4 `work/` (EN) files** — apply the Normalization Rules to `CAPFA.md`, `Lena.md`, `RobertoMansilla.md`, `SDI.md` in `src/content/work/`. English `note` text.
 
-- [ ] **Step 2: Normalize the 4 `proyectos/` (ES) files** — apply the Normalization Rules to the same four filenames in `src/content/proyectos/`. Spanish headings (see the section table) and Spanish `note` text.
+- [x] **Step 2: Normalize the 4 `proyectos/` (ES) files** — apply the Normalization Rules to the same four filenames in `src/content/proyectos/`. Spanish headings (see the section table) and Spanish `note` text.
 
-- [ ] **Step 3: Commit** (orchestrator, after the wave)
+- [x] **Step 3: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/content/work/CAPFA.md src/content/work/Lena.md src/content/work/RobertoMansilla.md src/content/work/SDI.md src/content/proyectos/CAPFA.md src/content/proyectos/Lena.md src/content/proyectos/RobertoMansilla.md src/content/proyectos/SDI.md
@@ -380,11 +380,11 @@ git commit -m "content: normalize structure of CAPFA, Lena, RobertoMansilla, SDI
 - **Portfolio** (EN + ES) — every heading is `###`; Overview stays `###`, the other three become `####` (rule 1).
 - **Santiago** (EN + ES) — Overview `###` + subsections `####` already; plain `- **Name**: desc` technology bullets; has a `video` frontmatter field — keep it (last, per canonical order). `screenshots` is an inline array with a trailing comma — rewrite as a clean block list.
 
-- [ ] **Step 1: Normalize the 4 `work/` (EN) files** — `Larry.md`, `Michel.md`, `Portfolio.md`, `Santiago.md` in `src/content/work/`.
+- [x] **Step 1: Normalize the 4 `work/` (EN) files** — `Larry.md`, `Michel.md`, `Portfolio.md`, `Santiago.md` in `src/content/work/`.
 
-- [ ] **Step 2: Normalize the 4 `proyectos/` (ES) files** — same four filenames in `src/content/proyectos/`.
+- [x] **Step 2: Normalize the 4 `proyectos/` (ES) files** — same four filenames in `src/content/proyectos/`.
 
-- [ ] **Step 3: Commit** (orchestrator, after the wave)
+- [x] **Step 3: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/content/work/Larry.md src/content/work/Michel.md src/content/work/Portfolio.md src/content/work/Santiago.md src/content/proyectos/Larry.md src/content/proyectos/Michel.md src/content/proyectos/Portfolio.md src/content/proyectos/Santiago.md
@@ -405,11 +405,11 @@ git commit -m "content: normalize structure of Larry, Michel, Portfolio, Santiag
 
 **Context:** Apply the **Normalization Rules**. These "new" files share one shape: Overview `###` + subsections `#####` (→ `####`), `- <b>Label:</b> text` bullets (→ `- **Label** — text`), and a "Technologies Used" section of `>Name: desc` blockquotes separated by standalone `###` lines (→ extract to `technologies`, delete the block). Notes are often verbose multi-clause sentences — trim each to one concise clause per the extraction rules.
 
-- [ ] **Step 1: Normalize the 4 `work/` (EN) files** in `src/content/work/`.
+- [x] **Step 1: Normalize the 4 `work/` (EN) files** in `src/content/work/`.
 
-- [ ] **Step 2: Normalize the 4 `proyectos/` (ES) files** in `src/content/proyectos/`.
+- [x] **Step 2: Normalize the 4 `proyectos/` (ES) files** in `src/content/proyectos/`.
 
-- [ ] **Step 3: Commit** (orchestrator, after the wave)
+- [x] **Step 3: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/content/work/BlukiStudio.md src/content/work/ChapMagic.md src/content/work/EcoLanding.md src/content/work/Gaudiano.md src/content/proyectos/BlukiStudio.md src/content/proyectos/ChapMagic.md src/content/proyectos/EcoLanding.md src/content/proyectos/Gaudiano.md
@@ -430,11 +430,11 @@ git commit -m "content: normalize structure of BlukiStudio, ChapMagic, EcoLandin
 
 **Context:** Same "new" file shape as Task 6 — Overview `###` + subsections `#####` (→ `####`), `<b>` bullets (→ `**`), `>Name: desc` technology blockquotes with `###` separators (→ extract, delete). Apply the Normalization Rules; trim verbose notes.
 
-- [ ] **Step 1: Normalize the 4 `work/` (EN) files** in `src/content/work/`.
+- [x] **Step 1: Normalize the 4 `work/` (EN) files** in `src/content/work/`.
 
-- [ ] **Step 2: Normalize the 4 `proyectos/` (ES) files** in `src/content/proyectos/`.
+- [x] **Step 2: Normalize the 4 `proyectos/` (ES) files** in `src/content/proyectos/`.
 
-- [ ] **Step 3: Commit** (orchestrator, after the wave)
+- [x] **Step 3: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/content/work/Hubbard.md src/content/work/Ilusionista.md src/content/work/Logistica.md src/content/work/MagiaYBurbujas.md src/content/proyectos/Hubbard.md src/content/proyectos/Ilusionista.md src/content/proyectos/Logistica.md src/content/proyectos/MagiaYBurbujas.md
@@ -455,11 +455,11 @@ git commit -m "content: normalize structure of Hubbard, Ilusionista, Logistica, 
 
 **Context:** Same "new" file shape as Task 6. Apply the Normalization Rules; trim verbose notes.
 
-- [ ] **Step 1: Normalize the 4 `work/` (EN) files** in `src/content/work/`.
+- [x] **Step 1: Normalize the 4 `work/` (EN) files** in `src/content/work/`.
 
-- [ ] **Step 2: Normalize the 4 `proyectos/` (ES) files** in `src/content/proyectos/`.
+- [x] **Step 2: Normalize the 4 `proyectos/` (ES) files** in `src/content/proyectos/`.
 
-- [ ] **Step 3: Commit** (orchestrator, after the wave)
+- [x] **Step 3: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/content/work/Nub3.md src/content/work/Producciones8888.md src/content/work/SADA.md src/content/work/Vazquez.md src/content/proyectos/Nub3.md src/content/proyectos/Producciones8888.md src/content/proyectos/SADA.md src/content/proyectos/Vazquez.md
@@ -477,7 +477,7 @@ git commit -m "content: normalize structure of Nub3, Producciones8888, SADA, Vaz
 
 **Context:** `projectSchema` gains a required `technologies` array. This runs **after** Tasks 4–8, so every `.md` file already carries the field — making it required keeps the build green. (Run before the content is migrated and the build would fail.)
 
-- [ ] **Step 1: In `src/content.config.ts`, replace this block**
+- [x] **Step 1: In `src/content.config.ts`, replace this block**
 
 ```ts
 const projectSchema = z.object({
@@ -513,7 +513,7 @@ const projectSchema = z.object({
 });
 ```
 
-- [ ] **Step 2: Commit** (orchestrator, after the wave)
+- [x] **Step 2: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/content.config.ts
@@ -531,7 +531,7 @@ git commit -m "feat: add technologies field to the project schema"
 
 **Context:** Import `TechBadges` and render it as the first block inside `.project-main`, below the header and above the lead image. It is wrapped in `Reveal` for motion consistency, and only renders when the project has technologies.
 
-- [ ] **Step 1: Add the import** — in `src/components/pages/ProjectDetailContent.astro`, replace this line
+- [x] **Step 1: Add the import** — in `src/components/pages/ProjectDetailContent.astro`, replace this line
 
 ```astro
 import Reveal from '../Reveal.astro';
@@ -544,7 +544,7 @@ import Reveal from '../Reveal.astro';
 import TechBadges from '../TechBadges.astro';
 ```
 
-- [ ] **Step 2: Render the badge strip** — in the same file, replace this block
+- [x] **Step 2: Render the badge strip** — in the same file, replace this block
 
 ```astro
 	<main class="wrapper project-main">
@@ -581,7 +581,7 @@ with:
 		}
 ```
 
-- [ ] **Step 3: Commit** (orchestrator, after the wave)
+- [x] **Step 3: Commit** (orchestrator, after the wave)
 
 ```bash
 git add src/components/pages/ProjectDetailContent.astro
@@ -597,7 +597,7 @@ git commit -m "feat: render the technology badge strip on project pages"
 **Files:**
 - Modify: `docs/superpowers/ROADMAP.md`
 
-- [ ] **Step 1: Static verification**
+- [x] **Step 1: Static verification**
 
 Run: `pnpm astro check`
 Expected: 0 errors, 0 warnings.
@@ -608,7 +608,7 @@ Expected: 32 tests pass (no test logic changed).
 Run: `pnpm build`
 Expected: build succeeds — all 40 project detail pages render against the new schema.
 
-- [ ] **Step 2: Sanity greps**
+- [x] **Step 2: Sanity greps**
 
 Run: `grep -rL "technologies:" src/content/work src/content/proyectos`
 Expected: **no output** — every file has the field.
@@ -622,7 +622,7 @@ Expected: **no output** — the body section is gone everywhere.
 Run: `grep -rn "^>" src/content/work src/content/proyectos`
 Expected: **no output** — no blockquote technology lists remain.
 
-- [ ] **Step 3: Append a Decision-log entry to `docs/superpowers/ROADMAP.md`**
+- [x] **Step 3: Append a Decision-log entry to `docs/superpowers/ROADMAP.md`**
 
 Add this line to the end of the **Decision log** section (newest last):
 
@@ -630,7 +630,7 @@ Add this line to the end of the **Decision log** section (newest last):
 - **2026-05-18** — Project content normalized: all 40 case-study `.md` files unified to one Markdown-native structure (4 body sections, `###`/`####` levels, `**bold**`, em-dash bullets). Technologies moved from body prose into a `technologies: [{name, note}]` frontmatter field, rendered as an accessible badge strip (`TechBadges.astro`) on project detail pages. Spec: `docs/superpowers/specs/2026-05-18-content-normalization-design.md`.
 ```
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add docs/superpowers/ROADMAP.md
