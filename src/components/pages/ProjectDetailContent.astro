@@ -8,6 +8,7 @@ import Hero from '../Hero.astro';
 import Icon from '../Icon.astro';
 import Pill from '../Pill.astro';
 import Reveal from '../Reveal.astro';
+import TechBadges from '../TechBadges.astro';
 
 interface Props {
 	lang: Lang;
@@ -38,6 +39,17 @@ const year = entry.data.publishDate.getFullYear();
 	</header>
 
 	<main class="wrapper project-main">
+		{
+			entry.data.technologies.length > 0 && (
+				<Reveal>
+					<TechBadges
+						technologies={entry.data.technologies}
+						heading={t('project.tech.heading')}
+					/>
+				</Reveal>
+			)
+		}
+
 		{
 			entry.data.img && (
 				<Reveal>
