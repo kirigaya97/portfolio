@@ -6,6 +6,8 @@ export const es: Record<UIKey, string> = {
   'nav.work': 'Proyectos',
   'nav.about': 'Sobre mí',
   'nav.menu': 'Menú',
+  'nav.blog': 'Blog',
+  'nav.contact': 'Contacto',
 
   // Footer (audit §2 Footer.astro)
   'footer.creditPrefix': 'Diseñado y Desarrollado en Buenos Aires con ',
@@ -43,6 +45,12 @@ export const es: Record<UIKey, string> = {
     'Descubre algunos de mis proyectos destacados realizados para clientes en los últimos años.',
   'home.work.viewAll': 'Ver Todo',
 
+  // Home page — blog teaser (Phase 3)
+  'home.blog.heading': 'Del Blog',
+  'home.blog.body':
+    'Notas ocasionales sobre desarrollo web, diseño y el oficio detrás del trabajo.',
+  'home.blog.viewAll': 'Todos los artículos',
+
   // About page (audit §2 es/about.astro)
   'about.meta.title': 'Sobre mí | Rodrigo Camino',
   'about.meta.description': 'Sobre Rodrigo Camino: Desarrollo experiencias web únicas.',
@@ -76,8 +84,52 @@ export const es: Record<UIKey, string> = {
   'work.hero.tagline':
     'Mira mis proyectos recientes para darte una idea de mi experiencia.',
 
+  // Work index — tag filter (Phase 3)
+  'work.filter.label': 'Filtrar proyectos por etiqueta',
+  'work.filter.all': 'Todos',
+  'work.filter.empty': 'Aún no hay proyectos con esta etiqueta.',
+
   // Project detail back-link (audit §2 es/proyectos/[...slug].astro)
   'project.back': 'Proyectos',
+
+  // Blog (Phase 3)
+  'blog.meta.title': 'Blog | Rodrigo Camino',
+  'blog.meta.description': 'Artículos sobre desarrollo web, diseño y oficio, por Rodrigo Camino.',
+  'blog.hero.kicker': 'Artículos',
+  'blog.hero.title': 'Notas y Artículos',
+  'blog.hero.tagline':
+    'Artículos ocasionales sobre desarrollo web, diseño y el oficio detrás del trabajo.',
+  'blog.empty': 'Aún no hay artículos — vuelve pronto.',
+  'blog.readMore': 'Leer artículo',
+  'blog.back': 'Blog',
+
+  // Contact page (Phase 3)
+  'contact.meta.title': 'Contacto | Rodrigo Camino',
+  'contact.meta.description':
+    'Ponte en contacto con Rodrigo Camino sobre proyectos de desarrollo web y colaboraciones.',
+  'contact.hero.kicker': 'Conversemos',
+  'contact.hero.title': 'Ponte en contacto',
+  'contact.hero.tagline':
+    '¿Tienes un proyecto en mente o solo quieres saludar? Envía un mensaje y te responderé.',
+  'contact.aside.heading': 'Otras formas de contactarme',
+  'contact.aside.body': '¿Prefieres algo más rápido? Escríbeme directamente.',
+  'contact.aside.whatsapp': 'Escribir por WhatsApp',
+  'contact.aside.email': 'Enviar un correo',
+
+  // Contact form (Phase 3)
+  'contact.form.name': 'Nombre',
+  'contact.form.email': 'Correo electrónico',
+  'contact.form.message': 'Mensaje',
+  'contact.form.submit': 'Enviar mensaje',
+  'contact.form.sending': 'Enviando…',
+  'contact.form.success': 'Gracias — tu mensaje está en camino. Te responderé pronto.',
+  'contact.form.error':
+    'Algo salió mal al enviar tu mensaje. Inténtalo de nuevo o escríbeme por WhatsApp.',
+  'contact.form.errorRate':
+    'Acabas de enviar un mensaje — espera un momento antes de enviar otro.',
+  'contact.form.errorName': 'Por favor, ingresa tu nombre.',
+  'contact.form.errorEmail': 'Por favor, ingresa un correo electrónico válido.',
+  'contact.form.errorMessage': 'Por favor, escribe un mensaje de al menos 10 caracteres.',
 
   // 404 page (audit §2 NotFoundContent.astro)
   'notFound.title': 'Página no encontrada',

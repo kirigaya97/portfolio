@@ -4,6 +4,8 @@ export const en = {
   'nav.work': 'Work',
   'nav.about': 'About',
   'nav.menu': 'Menu',
+  'nav.blog': 'Blog',
+  'nav.contact': 'Contact',
 
   // Footer (audit §2 Footer.astro)
   'footer.creditPrefix': 'Designed & Developed in Buenos Aires with ',
@@ -41,6 +43,11 @@ export const en = {
     'Take a look below at some of my featured work for clients from the past few years.',
   'home.work.viewAll': 'View All',
 
+  // Home page — blog teaser (Phase 3)
+  'home.blog.heading': 'From the Blog',
+  'home.blog.body': 'Occasional notes on web development, design, and the craft behind the work.',
+  'home.blog.viewAll': 'All posts',
+
   // About page (audit §2 about.astro)
   'about.meta.title': 'About | Rodrigo Camino',
   'about.meta.description': 'About Rodrigo Camino: I develop unique Web experiences.',
@@ -73,8 +80,52 @@ export const en = {
   'work.hero.tagline':
     'See my most recent projects below to get an idea of my past experience.',
 
+  // Work index — tag filter (Phase 3)
+  'work.filter.label': 'Filter projects by tag',
+  'work.filter.all': 'All',
+  'work.filter.empty': 'No projects match this tag yet.',
+
   // Project detail back-link (audit §2 work/[...slug].astro)
   'project.back': 'Work',
+
+  // Blog (Phase 3)
+  'blog.meta.title': 'Blog | Rodrigo Camino',
+  'blog.meta.description': 'Writing on web development, design, and craft by Rodrigo Camino.',
+  'blog.hero.kicker': 'Writing',
+  'blog.hero.title': 'Notes & Articles',
+  'blog.hero.tagline':
+    'Occasional writing on web development, design, and the craft behind the work.',
+  'blog.empty': 'No posts yet — check back soon.',
+  'blog.readMore': 'Read post',
+  'blog.back': 'Blog',
+
+  // Contact page (Phase 3)
+  'contact.meta.title': 'Contact | Rodrigo Camino',
+  'contact.meta.description':
+    'Get in touch with Rodrigo Camino about web development work and collaborations.',
+  'contact.hero.kicker': "Let's talk",
+  'contact.hero.title': 'Get in touch',
+  'contact.hero.tagline':
+    'Have a project in mind, or just want to say hello? Send a message and I will get back to you.',
+  'contact.aside.heading': 'Other ways to reach me',
+  'contact.aside.body': 'Prefer something quicker? Reach out directly.',
+  'contact.aside.whatsapp': 'Message on WhatsApp',
+  'contact.aside.email': 'Send an email',
+
+  // Contact form (Phase 3)
+  'contact.form.name': 'Name',
+  'contact.form.email': 'Email',
+  'contact.form.message': 'Message',
+  'contact.form.submit': 'Send message',
+  'contact.form.sending': 'Sending…',
+  'contact.form.success': 'Thanks — your message is on its way. I will reply soon.',
+  'contact.form.error':
+    'Something went wrong sending your message. Please try again, or reach me on WhatsApp.',
+  'contact.form.errorRate':
+    'You just sent a message — please wait a moment before sending another.',
+  'contact.form.errorName': 'Please enter your name.',
+  'contact.form.errorEmail': 'Please enter a valid email address.',
+  'contact.form.errorMessage': 'Please enter a message of at least 10 characters.',
 
   // 404 page (audit §2 NotFoundContent.astro)
   'notFound.title': 'Page Not Found',
