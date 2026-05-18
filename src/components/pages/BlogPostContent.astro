@@ -1,0 +1,188 @@
+---
+import { type CollectionEntry, render } from 'astro:content';
+import type { Lang } from '../../i18n/ui';
+import { useTranslations, getRoutePath } from '../../i18n/utils';
+
+import ContactCTA from '../ContactCTA.astro';
+import Hero from '../Hero.astro';
+import Icon from '../Icon.astro';
+import Pill from '../Pill.astro';
+import Reveal from '../Reveal.astro';
+
+interface Props {
+	lang: Lang;
+	entry: CollectionEntry<'blog'>;
+}
+
+const { lang, entry } = Astro.props;
+const t = useTranslations(lang);
+const { Content } = await render(entry);
+const date = entry.data.publishDate.toLocaleDateString(lang, {
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+});
+---
+
+<div class="post stack">
+	<header class="wrapper post-header">
+		<a class="back-link" href={`${getRoutePath('blog', lang)}/`}>
+			<Icon icon="arrow-left" size="1em" /> {t('blog.back')}
+		</a>
+		<Reveal>
+			<Hero kicker={date} title={entry.data.title}>
+				<div class="details">
+					{
+						entry.data.tags.length > 0 && (
+							<div class="tags">
+								{entry.data.tags.map((tag) => (
+									<Pill>{tag}</Pill>
+								))}
+							</div>
+						)
+					}
+					<p class="description">{entry.data.description}</p>
+				</div>
+			</Hero>
+		</Reveal>
+	</header>
+
+	<main class="wrapper post-main">
+		{
+			entry.data.img && (
+				<Reveal>
+					<img class="lead" src={entry.data.img} alt={entry.data.img_alt || ''} />
+				</Reveal>
+			)
+		}
+
+		<Reveal class="article">
+			<Content />
+		</Reveal>
+	</main>
+
+	<Reveal as="section">
+		<ContactCTA lang={lang} />
+	</Reveal>
+</div>
+
+<style>
+	.post {
+		gap: clamp(4rem, 3rem + 6vw, 7rem);
+		padding-top: clamp(2rem, 1rem + 3vw, 4rem);
+	}
+
+	.post-header {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		padding-bottom: 3rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		color: var(--text-dim);
+		text-decoration: none;
+	}
+	.back-link:hover {
+		color: var(--accent);
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-top: 0.5rem;
+	}
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	.description {
+		max-width: var(--measure);
+		font-size: var(--text-lg);
+		color: var(--text-dim);
+	}
+
+	.post-main {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.lead {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+	}
+
+	/* ---------- Rendered markdown article ---------- */
+	.article {
+		max-width: var(--measure);
+		margin-inline: auto;
+		color: var(--text);
+	}
+
+	.article :global(> * + *) {
+		margin-top: 1.15rem;
+	}
+
+	.article :global(h1),
+	.article :global(h2),
+	.article :global(h3) {
+		margin-top: 2.5rem;
+		font-size: var(--text-xl);
+	}
+	.article :global(h4),
+	.article :global(h5) {
+		margin-top: 2rem;
+		font-size: var(--text-md);
+		color: var(--accent);
+	}
+
+	.article :global(b),
+	.article :global(strong) {
+		color: var(--text-strong);
+		font-weight: 600;
+	}
+
+	.article :global(a) {
+		color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
+	.article :global(ul),
+	.article :global(ol) {
+		padding-left: 1.25rem;
+	}
+	.article :global(li) {
+		margin-top: 0.4rem;
+	}
+
+	.article :global(img) {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+	}
+
+	.article :global(code) {
+		font-family: var(--font-mono);
+		font-size: 0.9em;
+		padding: 0.1em 0.35em;
+		background: var(--surface-2);
+		border-radius: var(--radius-sm);
+	}
+
+	.article :global(blockquote) {
+		margin-top: 1.5rem;
+		padding: 0.25rem 0 0.25rem 1.5rem;
+		border-left: 2px solid var(--accent);
+		color: var(--text-strong);
+		font-size: var(--text-md);
+	}
+</style>
