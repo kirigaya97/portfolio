@@ -9,36 +9,41 @@ tags:
   - Design
   - Dev
   - Marketing
-screenshots: [
-  /assets/mansilla/2.png,
-  /assets/mansilla/3.png,
-  /assets/mansilla/4.png,
-  /assets/mansilla/5.png
-]
+technologies:
+  - name: WordPress
+    note: Gestión de contenido flexible y fácil de usar.
+  - name: DIVI Builder
+    note: Diseño modular adecuado para mostrar los servicios de Roberto.
+  - name: HTML/CSS/JS
+    note: Animaciones para una UX atractiva sin afectar los tiempos de carga.
+screenshots:
+  - /assets/mansilla/2.png
+  - /assets/mansilla/3.png
+  - /assets/mansilla/4.png
+  - /assets/mansilla/5.png
 ---
 
 ### Resumen del Proyecto
+
 Roberto Mansilla requería un sitio que mostrara sus shows y facilitara conversiones desde redes sociales, con un diseño que presenta una navegación "tipo plato" y animaciones atractivas que capturan la esencia de su estilo de actuación.
 
-### Objetivos
-- **Autoridad de Marca**: Posicionar a Roberto como un mentalista líder con un sitio visualmente memorable.
-- **Embudo de Participación del Usuario**: Facilitar la transición de visitantes de redes sociales al sitio, enfocándose en la conversión de reservas.
-- **Diseño UX Interactivo**: Integrar animaciones que mejoren la experiencia y reflejen el misticismo de las actuaciones de Roberto.
-- **Capacidad de Autogestión**: Permitir que Roberto actualice de manera independiente shows y testimonios.
+#### Objetivos
 
-### Flujo de Trabajo del Proyecto
-1. **Descubrimiento y Estrategia**: Definición de la marca digital de Roberto con un diseño único que refuerza su presencia escénica.
-2. **Diseño UI/UX**: Creación de una interfaz interactiva con navegación "tipo plato" para shows, testimonios y un tráiler en video.
-3. **Estrategia de Contenido**: Organización de contenido para resaltar categorías principales de shows y testimonios del público.
-4. **Elementos Interactivos**: Incorporación de animaciones en JavaScript que aportan intriga y mejoran la participación sin afectar el rendimiento del sitio.
-5. **Pruebas y Optimización**: Optimización para SEO y reducción de tiempos de carga para asegurar que el sitio funcione eficazmente como una landing page enfocada en la conversión.
+- **Autoridad de Marca** — Posicionar a Roberto como un mentalista líder con un sitio visualmente memorable.
+- **Embudo de Participación del Usuario** — Facilitar la transición de visitantes de redes sociales al sitio, enfocándose en la conversión de reservas.
+- **Diseño UX Interactivo** — Integrar animaciones que mejoren la experiencia y reflejen el misticismo de las actuaciones de Roberto.
+- **Capacidad de Autogestión** — Permitir que Roberto actualice de manera independiente shows y testimonios.
 
-### Tecnologías Utilizadas
-- **WordPress**: Seleccionado por su gestión de contenido flexible y fácil de usar.
-- **DIVI Builder**: Permite un diseño modular adecuado para mostrar los servicios de Roberto.
-- **HTML/CSS/JS**: Animaciones elaboradas para una UX atractiva sin afectar los tiempos de carga.
+#### Flujo de Trabajo del Proyecto
 
-### Resultados e Impacto
-- **Mayor Participación y Conversión**: La landing page estructurada aumenta las reservas desde redes sociales.
-- **Mejora en la Presencia de Marca**: Un diseño pulido y dinámico establece la autoridad de Roberto en el campo del mentalismo.
-- **Facilidad de Gestión**: Roberto ahora puede gestionar el contenido de forma independiente, manteniendo su sitio actualizado con shows y testimonios recientes.
+- **Descubrimiento y Estrategia** — Definición de la marca digital de Roberto con un diseño único que refuerza su presencia escénica.
+- **Diseño UI/UX** — Creación de una interfaz interactiva con navegación "tipo plato" para shows, testimonios y un tráiler en video.
+- **Estrategia de Contenido** — Organización de contenido para resaltar categorías principales de shows y testimonios del público.
+- **Elementos Interactivos** — Incorporación de animaciones en JavaScript que aportan intriga y mejoran la participación sin afectar el rendimiento del sitio.
+- **Pruebas y Optimización** — Optimización para SEO y reducción de tiempos de carga para asegurar que el sitio funcione eficazmente como una landing page enfocada en la conversión.
+
+#### Resultados e Impacto
+
+- **Mayor Participación y Conversión** — La landing page estructurada aumenta las reservas desde redes sociales.
+- **Mejora en la Presencia de Marca** — Un diseño pulido y dinámico establece la autoridad de Roberto en el campo del mentalismo.
+- **Facilidad de Gestión** — Roberto ahora puede gestionar el contenido de forma independiente, manteniendo su sitio actualizado con shows y testimonios recientes.
