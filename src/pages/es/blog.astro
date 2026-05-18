@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogIndexContent from '../../components/pages/BlogIndexContent.astro';
+import { useTranslations } from '../../i18n/utils';
+const t = useTranslations('es');
+---
+<BaseLayout title={t('blog.meta.title')} description={t('blog.meta.description')}>
+  <BlogIndexContent lang="es" />
+</BaseLayout>
