@@ -186,14 +186,17 @@ const year = entry.data.publishDate.getFullYear();
 	.article :global(h1),
 	.article :global(h2),
 	.article :global(h3) {
-		margin-top: 2.5rem;
+		margin-top: 3rem;
 		font-size: var(--text-xl);
 	}
 	.article :global(h4),
 	.article :global(h5) {
-		margin-top: 2rem;
+		width: fit-content;
+		margin-top: 3.25rem;
+		padding-bottom: 0.35rem;
 		font-size: var(--text-md);
 		color: var(--accent);
+		border-bottom: 2px solid var(--accent);
 	}
 
 	.article :global(b),
@@ -209,10 +212,15 @@ const year = entry.data.publishDate.getFullYear();
 
 	.article :global(ul),
 	.article :global(ol) {
-		padding-left: 1.25rem;
+		margin-left: 0.1rem;
+		padding-left: 1.6rem;
+		border-left: 2px solid var(--accent-line);
 	}
 	.article :global(li) {
-		margin-top: 0.4rem;
+		margin-top: 0.6rem;
+	}
+	.article :global(li)::marker {
+		color: var(--accent);
 	}
 
 	.article :global(img) {
