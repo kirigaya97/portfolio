@@ -9,7 +9,7 @@ this project reads this file first. It holds the whole picture and the current s
 
 | Field | Value |
 |---|---|
-| Current phase | **Phase 3 complete** — content-normalization side track is next |
+| Current phase | **Phases 1–3 + content-normalization complete** — Phase 4 (content) is next, blocked on Rodrigo |
 | Phase 1 plan | `docs/superpowers/plans/2026-05-15-phase-1-foundation.md` |
 | Phase 1 state | **COMPLETE** — 16 tasks done, code-reviewed, verification green (astro check 0 errors, 14 tests, build OK) |
 | Phase 2 plan | `docs/superpowers/plans/2026-05-16-phase-2-redesign.md` |
@@ -17,10 +17,10 @@ this project reads this file first. It holds the whole picture and the current s
 | Phase 3 plan | `docs/superpowers/plans/2026-05-16-phase-3-features.md` |
 | Phase 3 state | **COMPLETE** — 18 tasks done, final code review passed, verification green (astro check 0 errors/0 warnings, 32 tests, build OK) |
 | Content normalization | plan `docs/superpowers/plans/2026-05-18-content-normalization.md` · spec `docs/superpowers/specs/2026-05-18-content-normalization-design.md` |
-| Content normalization state | **PLANNED** — 11 tasks, ready to execute (inline) via `docs/prompts/content-normalization-execution-prompt.txt` |
-| Next action | Execute the content-normalization plan — 11 tasks, ready (not blocked). Phase 4 proper stays blocked on material from Rodrigo. |
+| Content normalization state | **COMPLETE** — all 11 tasks shipped (commits `c6f9080`…`a7d34ad`): `TechBadges`, `technologies` schema field, 40 files normalized, badge strip rendering. |
+| Next action | Phase 4 (content) — **blocked on Rodrigo** supplying material. Meanwhile, **12 projects still 404 on their thumbnail** (image folders are placeholders): BlukiStudio, ChapMagic, EcoLanding, Gaudiano, Hubbard, Ilusionista, Logistica, MagiaYBurbujas, Nub3, Producciones8888, SADA, Vazquez. |
 | Working branch | `redesign` (active; `phase1-upgrade` merged in) |
-| Last updated | 2026-05-18 |
+| Last updated | 2026-06-05 |
 
 > Orchestrator: update this table and the Task progress log below after **every** task.
 
@@ -143,18 +143,18 @@ Status: **PLANNED**, ready to execute. Independent of Phase 4.
 - [x] Task 17 — Blog and contact route pages `(haiku)`
 - [x] Task 18 — Final verification and roadmap update `(haiku)`
 
-### Content normalization (side track)
-- [ ] Task 1 — Kickoff: confirm a green baseline `(haiku)`
-- [ ] Task 2 — Create the `TechBadges` component `(haiku)`
-- [ ] Task 3 — Add the `project.tech.heading` i18n key `(haiku)`
-- [ ] Task 4 — Content batch A: CAPFA, Lena, RobertoMansilla, SDI `(sonnet)`
-- [ ] Task 5 — Content batch B: Larry, Michel, Portfolio, Santiago `(sonnet)`
-- [ ] Task 6 — Content batch C: BlukiStudio, ChapMagic, EcoLanding, Gaudiano `(sonnet)`
-- [ ] Task 7 — Content batch D: Hubbard, Ilusionista, Logistica, MagiaYBurbujas `(sonnet)`
-- [ ] Task 8 — Content batch E: Nub3, Producciones8888, SADA, Vazquez `(sonnet)`
-- [ ] Task 9 — Add `technologies` to the project schema `(haiku)`
-- [ ] Task 10 — Render `TechBadges` on the project detail page `(haiku)`
-- [ ] Task 11 — Final verification and roadmap note `(haiku)`
+### Content normalization (side track) — COMPLETE
+- [x] Task 1 — Kickoff: confirm a green baseline `(haiku)`
+- [x] Task 2 — Create the `TechBadges` component `(haiku)`
+- [x] Task 3 — Add the `project.tech.heading` i18n key `(haiku)`
+- [x] Task 4 — Content batch A: CAPFA, Lena, RobertoMansilla, SDI `(sonnet)`
+- [x] Task 5 — Content batch B: Larry, Michel, Portfolio, Santiago `(sonnet)`
+- [x] Task 6 — Content batch C: BlukiStudio, ChapMagic, EcoLanding, Gaudiano `(sonnet)`
+- [x] Task 7 — Content batch D: Hubbard, Ilusionista, Logistica, MagiaYBurbujas `(sonnet)`
+- [x] Task 8 — Content batch E: Nub3, Producciones8888, SADA, Vazquez `(sonnet)`
+- [x] Task 9 — Add `technologies` to the project schema `(haiku)`
+- [x] Task 10 — Render `TechBadges` on the project detail page `(haiku)`
+- [x] Task 11 — Final verification and roadmap note `(haiku)`
 
 _Phase 4 task log is appended here when its plan is written._
 
