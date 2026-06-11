@@ -1,7 +1,7 @@
 ---
 title: Bluki Studio — 3D Creative Agency Portfolio
 publishDate: 2026-03-20 00:00:00
-img: /assets/blukistudio/1.png
+img: /assets/blukistudio/1.webp
 img_alt: Screenshot of Bluki Studio 3D portfolio — abstract core model rotating on a dark background.
 description: |
   A scroll-driven 3D portfolio for a creative digital agency, built with React Three Fiber and Lenis smooth scroll.
@@ -25,10 +25,12 @@ technologies:
   - name: Tailwind CSS v4
     note: Utility-first styles for the minimal DOM overlay.
 screenshots:
-  - /assets/blukistudio/2.png
-  - /assets/blukistudio/3.png
-  - /assets/blukistudio/4.png
-  - /assets/blukistudio/5.png
+  - /assets/blukistudio/2.webp
+  - /assets/blukistudio/3.webp
+  - /assets/blukistudio/4.webp
+  - /assets/blukistudio/5.webp
+  - /assets/blukistudio/6.webp
+  - /assets/blukistudio/7.webp
 ---
 
 ### Project Overview

@@ -1,7 +1,7 @@
 ---
 title: Magia y Burbujas — Sitio de Landing para Mago de Calle Argentino
 publishDate: 2026-05-06 00:00:00
-img: /assets/magiayburbujas/1.png
+img: /assets/magiayburbujas/1.webp
 img_alt: Captura del sitio Magia y Burbujas — fondo negro profundo con tipografía dorada y una sección hero con burbujas animadas.
 description: |
   Una landing de scroll único, con animaciones cinematográficas, para Gonza Martini — mago y artista de burbujas argentino radicado en Barcelona.
@@ -27,10 +27,12 @@ technologies:
   - name: Vitest + jsdom
     note: Tests unitarios para toda la lógica de animación en el cliente sin necesidad de un browser.
 screenshots:
-  - /assets/magiayburbujas/2.png
-  - /assets/magiayburbujas/3.png
-  - /assets/magiayburbujas/4.png
-  - /assets/magiayburbujas/5.png
+  - /assets/magiayburbujas/2.webp
+  - /assets/magiayburbujas/3.webp
+  - /assets/magiayburbujas/4.webp
+  - /assets/magiayburbujas/5.webp
+  - /assets/magiayburbujas/6.webp
+  - /assets/magiayburbujas/7.webp
 ---
 
 ### Resumen del Proyecto

@@ -1,7 +1,7 @@
 ---
 title: Desarrollo de Landing Page para Nub3
 publishDate: 2026-04-14 00:00:00
-img: /assets/nub3/1.png
+img: /assets/nub3/1.webp
 img_alt: Captura del hero de la landing page de Nub3 con el grafo de nodos animado.
 description: |
   Una landing page orientada a la conversión para Nub3, un estudio de ingeniería de software argentino especializado en IA, análisis de datos, automatización e integraciones.
@@ -21,10 +21,12 @@ technologies:
   - name: Google Fonts (Fraunces, JetBrains Mono, Inter Tight)
     note: Equilibra títulos editoriales en serif con cuerpo de texto limpio y etiquetas monoespaciadas.
 screenshots:
-  - /assets/nub3/2.png
-  - /assets/nub3/3.png
-  - /assets/nub3/4.png
-  - /assets/nub3/5.png
+  - /assets/nub3/2.webp
+  - /assets/nub3/3.webp
+  - /assets/nub3/4.webp
+  - /assets/nub3/5.webp
+  - /assets/nub3/6.webp
+  - /assets/nub3/7.webp
 ---
 
 ### Resumen del Proyecto

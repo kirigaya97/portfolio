@@ -1,7 +1,7 @@
 ---
 title: HCA Argentina — Professional Training Website
 publishDate: 2026-05-14 00:00:00
-img: /assets/hubbard/1.png
+img: /assets/hubbard/1.webp
 img_alt: Screenshot of the HCA Argentina demo website homepage.
 description: |
   A full-featured demo site built to pitch a complete digital remake for HCA Argentina — a Hubbard-methodology business training institute.
@@ -21,10 +21,13 @@ technologies:
   - name: Vercel (with @astrojs/vercel adapter)
     note: "Deployment target with custom vercel.json for security headers and immutable asset cache."
 screenshots:
-  - /assets/hubbard/2.png
-  - /assets/hubbard/3.png
-  - /assets/hubbard/4.png
-  - /assets/hubbard/5.png
+  - /assets/hubbard/2.webp
+  - /assets/hubbard/3.webp
+  - /assets/hubbard/4.webp
+  - /assets/hubbard/5.webp
+  - /assets/hubbard/6.webp
+  - /assets/hubbard/7.webp
+  - /assets/hubbard/8.webp
 ---
 
 ### Project Overview

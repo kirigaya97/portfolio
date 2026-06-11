@@ -1,7 +1,7 @@
 ---
 title: ChapMagic — Landing Page de Mago y Mentalista
 publishDate: 2026-02-11 00:00:00
-img: /assets/chapmagic/1.png
+img: /assets/chapmagic/1.webp
 img_alt: Captura de pantalla de la sección hero de la landing page de ChapMagic.
 description: |
   Una landing page bilingüe premium y de alto rendimiento para ChapMagic — mago y mentalista — construida con animaciones cinematográficas, un formulario de contacto listo para producción y un sistema de diseño en oro y obsidiana.
@@ -25,10 +25,12 @@ technologies:
   - name: TypeScript
     note: Props de componentes, handlers de API y configuración del sitio con tipado seguro.
 screenshots:
-  - /assets/chapmagic/2.png
-  - /assets/chapmagic/3.png
-  - /assets/chapmagic/4.png
-  - /assets/chapmagic/5.png
+  - /assets/chapmagic/2.webp
+  - /assets/chapmagic/3.webp
+  - /assets/chapmagic/4.webp
+  - /assets/chapmagic/5.webp
+  - /assets/chapmagic/6.webp
+  - /assets/chapmagic/7.webp
 ---
 
 ### Resumen del Proyecto

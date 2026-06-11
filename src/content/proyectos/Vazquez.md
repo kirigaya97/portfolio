@@ -1,7 +1,7 @@
 ---
 title: Vázquez Ilusionista — Desarrollo de Landing Page
 publishDate: 2026-02-11 00:00:00
-img: /assets/vazquez/1.png
+img: /assets/vazquez/1.webp
 img_alt: Captura de pantalla de la sección hero del sitio Vázquez Ilusionista.
 description: |
   Una landing page cinematográfica premium para Fernando Vázquez, mago y mentalista argentino, diseñada para convertir tráfico de redes en reservas de shows.
@@ -23,10 +23,11 @@ technologies:
   - name: Sharp
     note: Pipeline de optimización de imágenes de Astro para servir assets en WebP con el tamaño correcto.
 screenshots:
-  - /assets/vazquez/2.png
-  - /assets/vazquez/3.png
-  - /assets/vazquez/4.png
-  - /assets/vazquez/5.png
+  - /assets/vazquez/2.webp
+  - /assets/vazquez/3.webp
+  - /assets/vazquez/4.webp
+  - /assets/vazquez/5.webp
+  - /assets/vazquez/6.webp
 ---
 
 ### Resumen del Proyecto

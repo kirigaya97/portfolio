@@ -1,7 +1,7 @@
 ---
 title: SADA — Political Electoral Registry Web App
 publishDate: 2026-03-26 00:00:00
-img: /assets/sada/1.png
+img: /assets/sada/1.webp
 img_alt: Screenshot of the SADA electoral registry dashboard.
 description: |
   A full-stack internal web application for managing the political-electoral registry of a party in San Antonio de Areco, Argentina — built on Next.js 14 with Google Sheets as the sole backend.
@@ -27,10 +27,11 @@ technologies:
   - name: ExcelJS + @react-pdf/renderer
     note: Generates XLSX and PDF exports for registry, birthdays, addresses, member profiles, and analytics reports.
 screenshots:
-  - /assets/sada/2.png
-  - /assets/sada/3.png
-  - /assets/sada/4.png
-  - /assets/sada/5.png
+  - /assets/sada/2.webp
+  - /assets/sada/3.webp
+  - /assets/sada/4.webp
+  - /assets/sada/5.webp
+  - /assets/sada/6.webp
 ---
 
 ### Project Overview

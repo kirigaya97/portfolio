@@ -1,7 +1,7 @@
 ---
 title: 8888 Producciones Landing Page
 publishDate: 2026-05-05 00:00:00
-img: /assets/producciones8888/1.png
+img: /assets/producciones8888/1.webp
 img_alt: Screenshot of 8888 Producciones landing page featuring the acid green brutalist design.
 description: |
   A high-impact single-page landing built for an audiovisual production company, recording studio, and artist management house in Buenos Aires — fusing Multimodal Brutalism with Future-Pop aesthetics.
@@ -19,10 +19,11 @@ technologies:
   - name: Lenis
     note: Smooth-scroll library providing momentum scrolling synchronized with the header progress indicator.
 screenshots:
-  - /assets/producciones8888/2.png
-  - /assets/producciones8888/3.png
-  - /assets/producciones8888/4.png
-  - /assets/producciones8888/5.png
+  - /assets/producciones8888/2.webp
+  - /assets/producciones8888/3.webp
+  - /assets/producciones8888/4.webp
+  - /assets/producciones8888/5.webp
+  - /assets/producciones8888/6.webp
 ---
 
 ### Project Overview

@@ -1,7 +1,7 @@
 ---
 title: Romina Gaudiano — Trading Mind Landing Page
 publishDate: 2026-03-18 00:00:00
-img: /assets/gaudiano/1.png
+img: /assets/gaudiano/1.webp
 img_alt: Screenshot of Romina Gaudiano's Trading Mind landing page.
 description: |
   A high-polish conversion landing page for a mental reprogramming mentor targeting traders and high-risk investors.
@@ -23,10 +23,12 @@ technologies:
   - name: Resend (inactive fallback)
     note: Serverless endpoint preserved in the codebase, ready to activate after DNS migration.
 screenshots:
-  - /assets/gaudiano/2.png
-  - /assets/gaudiano/3.png
-  - /assets/gaudiano/4.png
-  - /assets/gaudiano/5.png
+  - /assets/gaudiano/2.webp
+  - /assets/gaudiano/3.webp
+  - /assets/gaudiano/4.webp
+  - /assets/gaudiano/5.webp
+  - /assets/gaudiano/6.webp
+  - /assets/gaudiano/7.webp
 ---
 
 ### Project Overview

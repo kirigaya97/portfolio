@@ -1,7 +1,7 @@
 ---
 title: Magia y Burbujas — Landing Site for Argentine Street Magician
 publishDate: 2026-05-06 00:00:00
-img: /assets/magiayburbujas/1.png
+img: /assets/magiayburbujas/1.webp
 img_alt: Screenshot of Magia y Burbujas website — dark background with gold typography and a bubble-driven hero section.
 description: |
   A heavily animated single-scroll landing for Gonza Martini, an Argentine street magician performing in Barcelona — built to feel like a living magic poster.
@@ -27,10 +27,12 @@ technologies:
   - name: Vitest + jsdom
     note: Unit testing for all client-side animation logic without a browser.
 screenshots:
-  - /assets/magiayburbujas/2.png
-  - /assets/magiayburbujas/3.png
-  - /assets/magiayburbujas/4.png
-  - /assets/magiayburbujas/5.png
+  - /assets/magiayburbujas/2.webp
+  - /assets/magiayburbujas/3.webp
+  - /assets/magiayburbujas/4.webp
+  - /assets/magiayburbujas/5.webp
+  - /assets/magiayburbujas/6.webp
+  - /assets/magiayburbujas/7.webp
 ---
 
 ### Project Overview

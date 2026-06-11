@@ -1,7 +1,7 @@
 ---
 title: SADA — Aplicación Web de Gestión del Padrón Electoral
 publishDate: 2026-03-26 00:00:00
-img: /assets/sada/1.png
+img: /assets/sada/1.webp
 img_alt: Captura del dashboard principal del sistema electoral SADA.
 description: |
   Una aplicación web interna full-stack para gestionar el padrón político-electoral de un partido en San Antonio de Areco — construida con Next.js 14 y Google Sheets como único backend.
@@ -27,10 +27,11 @@ technologies:
   - name: ExcelJS + @react-pdf/renderer
     note: Genera exportaciones XLSX y PDF del padrón, cumpleaños, domicilios, fichas individuales e informes de analíticas.
 screenshots:
-  - /assets/sada/2.png
-  - /assets/sada/3.png
-  - /assets/sada/4.png
-  - /assets/sada/5.png
+  - /assets/sada/2.webp
+  - /assets/sada/3.webp
+  - /assets/sada/4.webp
+  - /assets/sada/5.webp
+  - /assets/sada/6.webp
 ---
 
 ### Resumen del Proyecto

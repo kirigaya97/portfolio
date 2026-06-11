@@ -1,7 +1,7 @@
 ---
 title: HCA Argentina — Sitio Web de Formación Profesional
 publishDate: 2026-05-14 00:00:00
-img: /assets/hubbard/1.png
+img: /assets/hubbard/1.webp
 img_alt: Captura de pantalla de la página de inicio del sitio demo de HCA Argentina.
 description: |
   Un sitio demo completo construido para presentar la renovación digital de HCA Argentina, un instituto de formación empresarial basado en la metodología Hubbard.
@@ -21,10 +21,13 @@ technologies:
   - name: Vercel (con adaptador @astrojs/vercel)
     note: "Destino de despliegue con vercel.json personalizado para cabeceras de seguridad y caché inmutable de assets."
 screenshots:
-  - /assets/hubbard/2.png
-  - /assets/hubbard/3.png
-  - /assets/hubbard/4.png
-  - /assets/hubbard/5.png
+  - /assets/hubbard/2.webp
+  - /assets/hubbard/3.webp
+  - /assets/hubbard/4.webp
+  - /assets/hubbard/5.webp
+  - /assets/hubbard/6.webp
+  - /assets/hubbard/7.webp
+  - /assets/hubbard/8.webp
 ---
 
 ### Resumen del Proyecto

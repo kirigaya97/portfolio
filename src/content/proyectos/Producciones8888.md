@@ -1,7 +1,7 @@
 ---
 title: Landing Page de 8888 Producciones
 publishDate: 2026-05-05 00:00:00
-img: /assets/producciones8888/1.png
+img: /assets/producciones8888/1.webp
 img_alt: Captura de pantalla de la landing page de 8888 Producciones con el diseño brutalista en verde ácido.
 description: |
   Una landing de alto impacto construida para una productora audiovisual, estudio de grabación y casa de management de artistas en Buenos Aires — fusionando Brutalismo Multimodal con estética Future-Pop.
@@ -19,10 +19,11 @@ technologies:
   - name: Lenis
     note: Librería de smooth-scroll con inercia sincronizada con el indicador de progreso del header.
 screenshots:
-  - /assets/producciones8888/2.png
-  - /assets/producciones8888/3.png
-  - /assets/producciones8888/4.png
-  - /assets/producciones8888/5.png
+  - /assets/producciones8888/2.webp
+  - /assets/producciones8888/3.webp
+  - /assets/producciones8888/4.webp
+  - /assets/producciones8888/5.webp
+  - /assets/producciones8888/6.webp
 ---
 
 ### Resumen del Proyecto

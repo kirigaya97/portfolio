@@ -1,7 +1,7 @@
 ---
 title: ChapMagic — Magician & Mentalist Landing Page
 publishDate: 2026-02-11 00:00:00
-img: /assets/chapmagic/1.png
+img: /assets/chapmagic/1.webp
 img_alt: Screenshot of the ChapMagic landing page hero section.
 description: |
   A premium, high-performance bilingual landing page for ChapMagic — magician and mentalist — built with cinematic animations, a production-ready contact form, and a gold-and-obsidian design system.
@@ -25,10 +25,12 @@ technologies:
   - name: TypeScript
     note: Type-safe component props, API handlers, and site config throughout.
 screenshots:
-  - /assets/chapmagic/2.png
-  - /assets/chapmagic/3.png
-  - /assets/chapmagic/4.png
-  - /assets/chapmagic/5.png
+  - /assets/chapmagic/2.webp
+  - /assets/chapmagic/3.webp
+  - /assets/chapmagic/4.webp
+  - /assets/chapmagic/5.webp
+  - /assets/chapmagic/6.webp
+  - /assets/chapmagic/7.webp
 ---
 
 ### Project Overview

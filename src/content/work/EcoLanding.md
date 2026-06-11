@@ -1,7 +1,7 @@
 ---
 title: EcoExport Landing Page
 publishDate: 2026-05-11 00:00:00
-img: /assets/ecolanding/1.png
+img: /assets/ecolanding/1.webp
 img_alt: Screenshot of the EcoExport landing page showing the hero section with a green-toned design and scrap metal export messaging.
 description: |
   A conversion-focused landing page for an Argentine scrap metal export company, built with Astro and Tailwind CSS v4.
@@ -21,10 +21,11 @@ technologies:
   - name: Vercel
     note: Static hosting with automatic preview deployments on every push.
 screenshots:
-  - /assets/ecolanding/2.png
-  - /assets/ecolanding/3.png
-  - /assets/ecolanding/4.png
-  - /assets/ecolanding/5.png
+  - /assets/ecolanding/2.webp
+  - /assets/ecolanding/3.webp
+  - /assets/ecolanding/4.webp
+  - /assets/ecolanding/5.webp
+  - /assets/ecolanding/6.webp
 ---
 
 ### Project Overview

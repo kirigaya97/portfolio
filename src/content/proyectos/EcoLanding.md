@@ -1,7 +1,7 @@
 ---
 title: Landing Page EcoExport
 publishDate: 2026-05-11 00:00:00
-img: /assets/ecolanding/1.png
+img: /assets/ecolanding/1.webp
 img_alt: Captura de pantalla de la landing page de EcoExport mostrando la sección hero con diseño en tonos verdes y mensajes sobre exportación de chatarra metálica.
 description: |
   Una landing page orientada a la conversión para una empresa argentina de compra y exportación de chatarra metálica, construida con Astro y Tailwind CSS v4.
@@ -21,10 +21,11 @@ technologies:
   - name: Vercel
     note: Hosting estático con previews automáticos en cada push.
 screenshots:
-  - /assets/ecolanding/2.png
-  - /assets/ecolanding/3.png
-  - /assets/ecolanding/4.png
-  - /assets/ecolanding/5.png
+  - /assets/ecolanding/2.webp
+  - /assets/ecolanding/3.webp
+  - /assets/ecolanding/4.webp
+  - /assets/ecolanding/5.webp
+  - /assets/ecolanding/6.webp
 ---
 
 ### Resumen del Proyecto
