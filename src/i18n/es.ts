@@ -14,10 +14,10 @@ export const es: Record<UIKey, string> = {
 
   // Skills (audit §2 Skills.astro — 3 cards, h2 + p each)
   'skills.card1.title': 'Desarrollo Wordpress',
-  'skills.card1.body': 'Con más de 3 años de experiencia, desarrollo experiencias Web únicas',
+  'skills.card1.body': 'Desde 2020 desarrollando experiencias Web únicas.',
   'skills.card2.title': 'Marketing y Diseño',
   'skills.card2.body':
-    'Con un ojo audáz para el diseño y pensamiento tangencial para Marketing, he hecho triunfar muchos de mis proyectos.',
+    'Con un ojo audaz para el diseño y pensamiento tangencial para Marketing, he hecho triunfar muchos de mis proyectos.',
   'skills.card3.title': 'Enfoque Estratégico',
   'skills.card3.body':
     'Guiado por una visión estratégica, sobresalgo en alinear acciones a corto plazo con objetivos a largo plazo...',
@@ -30,7 +30,7 @@ export const es: Record<UIKey, string> = {
   // Default meta (audit §2 MainHead.astro)
   'meta.defaultTitle': 'Rodrigo Camino: Desarrollador web',
   'meta.defaultDescription':
-    '3+ Años de experiencia en el desarrollo de la Web. Desarrollador web creativo.',
+    'Desarrollando la Web desde 2020. Desarrollador web creativo.',
 
   // Home page (audit §2 es/index.astro)
   'home.hero.title': '¡Hola! Mi nombre es Rodrigo Camino :)',
@@ -42,7 +42,7 @@ export const es: Record<UIKey, string> = {
   'home.portrait.alt': 'Rodrigo Camino sonriendo con un fondo degradado celeste y púrpura.',
   'home.work.heading': 'Trabajos Seleccionados',
   'home.work.body':
-    'Descubre algunos de mis proyectos destacados realizados para clientes en los últimos años.',
+    'Descubrí algunos de mis proyectos destacados realizados para clientes en los últimos años.',
   'home.work.viewAll': 'Ver Todo',
 
   // Home page — blog teaser (Phase 3)
@@ -54,14 +54,14 @@ export const es: Record<UIKey, string> = {
   // About page (audit §2 es/about.astro)
   'about.meta.title': 'Sobre mí | Rodrigo Camino',
   'about.meta.description': 'Sobre Rodrigo Camino: Desarrollo experiencias web únicas.',
-  'about.hero.title': 'Sobre mi',
+  'about.hero.title': 'Sobre mí',
   'about.hero.tagline':
     'Gracias por pasar por acá. Pasá, ponete cómodo y veamos un poco de mis experiencias pasadas.',
   'about.background.heading': 'Background',
   'about.background.p1':
-    'Rodrigo Camino es un experimentado diseñador y desarrollador web especializado en la creación de sitios web y plataformas digitales visualmente impactantes y centradas en el usuario. Con experiencia en branding, estrategias de marketing digital y diseño UX/UI, Rodrigo combina un enfoque creativo con análisis de datos para ofrecer experiencias digitales funcionales y atractivas.',
+    'Soy Rodrigo, desarrollador web creativo con base en Buenos Aires. Desde 2020 que diseño y construyo sitios donde el diseño, el marketing y el código tiran para el mismo lado. Me gusta meterme en el problema real del cliente, entender qué necesita de verdad, y entregar algo que funcione tan bien como se ve.',
   'about.background.p2':
-    'Su experiencia abarca diversos sectores, brindando soluciones personalizadas que se alinean con las necesidades y objetivos comerciales de los clientes. Rodrigo también tiene experiencia en estrategia empresarial, especialmente en consultoría para bares, y posee un sólido dominio tecnológico tanto en diseño como en procesos de backend.',
+    'Pasé por rubros muy distintos, así que estoy acostumbrado a adaptar cada proyecto a lo que el negocio necesita —no al revés. Combino una mirada creativa con análisis de datos, y me muevo cómodo tanto en branding, marketing digital y UX/UI como en la parte de backend. También tengo experiencia en estrategia de negocio (incluida la consultoría para bares), algo que me ayuda a pensar cada sitio como una herramienta que tiene que dar resultados, no solo quedar lindo.',
   'about.education.heading': 'Educación',
   'about.education.item1': 'Especialista en Análisis de Sistemas - ORT Argentina (2023 - presente)',
   'about.education.item2': 'Desarrollo en WordPress - Udemy (2021 - 2022)',
@@ -77,12 +77,19 @@ export const es: Record<UIKey, string> = {
   'about.skills.item5':
     'Habilidades Blandas - Proactividad, Trabajo en Equipo, Adaptabilidad, Orientación al Cliente',
 
+  // About page — redesign additions
+  'about.portrait.caption': 'El gato y yo, en pleno debug',
+  'about.stats.sinceLabel': 'Desarrollando desde',
+  'about.stats.locationLabel': 'Con base en',
+  'about.stats.locationValue': 'Buenos Aires, AR',
+  'about.stats.projectsLabel': 'Proyectos entregados',
+
   // Work index page (audit §2 es/proyectos.astro)
   'work.meta.title': 'Mi Trabajo | Rodrigo Camino',
   'work.meta.description': 'Mis proyectos más recientes.',
   'work.hero.title': 'Mi Trabajo',
   'work.hero.tagline':
-    'Mira mis proyectos recientes para darte una idea de mi experiencia.',
+    'Mirá mis proyectos recientes para darte una idea de mi experiencia.',
 
   // Work index — tag filter (Phase 3)
   'work.filter.label': 'Filtrar proyectos por etiqueta',
@@ -100,20 +107,20 @@ export const es: Record<UIKey, string> = {
   'blog.hero.title': 'Notas y Artículos',
   'blog.hero.tagline':
     'Artículos ocasionales sobre desarrollo web, diseño y el oficio detrás del trabajo.',
-  'blog.empty': 'Aún no hay artículos — vuelve pronto.',
+  'blog.empty': 'Aún no hay artículos — volvé pronto.',
   'blog.readMore': 'Leer artículo',
   'blog.back': 'Blog',
 
   // Contact page (Phase 3)
   'contact.meta.title': 'Contacto | Rodrigo Camino',
   'contact.meta.description':
-    'Ponte en contacto con Rodrigo Camino sobre proyectos de desarrollo web y colaboraciones.',
+    'Ponete en contacto con Rodrigo Camino sobre proyectos de desarrollo web y colaboraciones.',
   'contact.hero.kicker': 'Conversemos',
-  'contact.hero.title': 'Ponte en contacto',
+  'contact.hero.title': 'Ponete en contacto',
   'contact.hero.tagline':
-    '¿Tienes un proyecto en mente o solo quieres saludar? Envía un mensaje y te responderé.',
+    '¿Tenés un proyecto en mente o solo querés saludar? Mandá un mensaje y te respondo.',
   'contact.aside.heading': 'Otras formas de contactarme',
-  'contact.aside.body': '¿Prefieres algo más rápido? Escríbeme directamente.',
+  'contact.aside.body': '¿Preferís algo más rápido? Escribime directamente.',
   'contact.aside.whatsapp': 'Escribir por WhatsApp',
   'contact.aside.email': 'Enviar un correo',
 
@@ -123,14 +130,14 @@ export const es: Record<UIKey, string> = {
   'contact.form.message': 'Mensaje',
   'contact.form.submit': 'Enviar mensaje',
   'contact.form.sending': 'Enviando…',
-  'contact.form.success': 'Gracias — tu mensaje está en camino. Te responderé pronto.',
+  'contact.form.success': 'Gracias — tu mensaje está en camino. Te respondo pronto.',
   'contact.form.error':
-    'Algo salió mal al enviar tu mensaje. Inténtalo de nuevo o escríbeme por WhatsApp.',
+    'Algo salió mal al enviar tu mensaje. Probá de nuevo o escribime por WhatsApp.',
   'contact.form.errorRate':
-    'Acabas de enviar un mensaje — espera un momento antes de enviar otro.',
-  'contact.form.errorName': 'Por favor, ingresa tu nombre.',
-  'contact.form.errorEmail': 'Por favor, ingresa un correo electrónico válido.',
-  'contact.form.errorMessage': 'Por favor, escribe un mensaje de al menos 10 caracteres.',
+    'Acabás de enviar un mensaje — esperá un momento antes de enviar otro.',
+  'contact.form.errorName': 'Por favor, ingresá tu nombre.',
+  'contact.form.errorEmail': 'Por favor, ingresá un correo electrónico válido.',
+  'contact.form.errorMessage': 'Por favor, escribí un mensaje de al menos 10 caracteres.',
 
   // 404 page (audit §2 NotFoundContent.astro)
   'notFound.title': 'Página no encontrada',

@@ -12,7 +12,7 @@ export const en = {
 
   // Skills (audit §2 Skills.astro — 3 cards, h2 + p each)
   'skills.card1.title': 'Wordpress development',
-  'skills.card1.body': 'With 3+ years of experience, I develop unique Wordpress online experiences.',
+  'skills.card1.body': 'Building for the web since 2020, I craft unique WordPress online experiences.',
   'skills.card2.title': 'Design and Marketing',
   'skills.card2.body':
     'Having a keen eye for desing and out of the box marketing strategies have led many of my projects to success.',
@@ -28,7 +28,7 @@ export const en = {
   // Default meta (audit §2 MainHead.astro)
   'meta.defaultTitle': 'Rodrigo Camino: Web developer',
   'meta.defaultDescription':
-    '3+ years of experience in web design and development. I develop unique Web experiences.',
+    'Designing and developing for the web since 2020. I build unique web experiences.',
 
   // Home page (audit §2 index.astro)
   'home.hero.title': 'Hello! my name is Rodrigo Camino :)',
@@ -53,15 +53,15 @@ export const en = {
   'about.meta.description': 'About Rodrigo Camino: I develop unique Web experiences.',
   'about.hero.title': 'About',
   'about.hero.tagline':
-    'Thanks for stopping by. Read below to learn more about myself and my background.',
+    'Thanks for stopping by — pull up a chair and take a look at where I’ve been.',
   'about.background.heading': 'Background',
   'about.background.p1':
-    'Rodrigo Camino is a seasoned web designer and developer specializing in creating visually impactful, user-centered websites and digital platforms. With expertise in branding, digital marketing strategies, and UX/UI design, Rodrigo combines a creative approach with data-driven insights to deliver functional, engaging digital experiences.',
+    'I’m Rodrigo, a creative web developer based in Buenos Aires. Since 2020 I’ve been designing and building sites where design, marketing, and code all pull in the same direction. I like getting into the client’s real problem, figuring out what they actually need, and shipping something that works as well as it looks.',
   'about.background.p2':
-    'His background spans a range of sectors, providing tailored solutions that align with client needs and business goals. Rodrigo is also experienced in business strategy, especially for bar consulting, and has a strong command of technology in both design and backend processes.',
+    'I’ve worked across very different industries, so I’m used to shaping each project around what the business actually needs — not the other way around. I pair a creative eye with data-driven insight, and I’m just as comfortable in branding, digital marketing, and UX/UI as I am in the backend. I also bring experience in business strategy (including bar consulting), which helps me treat every site as a tool that has to deliver results, not just look good.',
   'about.education.heading': 'Education',
-  'about.education.item1': 'System analist specialist - ORT Argentina (2023 - present)',
-  'about.education.item2': 'Wordpress development - Udemy (2021 - 2022)',
+  'about.education.item1': 'Systems Analysis Specialist - ORT Argentina (2023 - present)',
+  'about.education.item2': 'WordPress Development - Udemy (2021 - 2022)',
   'about.education.item3': 'Back-end developer - CoderHouse (2020 - 2021)',
   'about.education.item4': 'Front-end developer - EducacionIT (2019 - 2020)',
   'about.skills.heading': 'Skills',
@@ -72,6 +72,13 @@ export const en = {
   'about.skills.item4':
     'Project Management - Business Strategy, Client Collaboration, Process Automation',
   'about.skills.item5': 'Soft Skills - Proactive, Teamwork, Adaptable, Client-Oriented',
+
+  // About page — redesign additions
+  'about.portrait.caption': 'Me & the cat, mid-debug',
+  'about.stats.sinceLabel': 'Building since',
+  'about.stats.locationLabel': 'Based in',
+  'about.stats.locationValue': 'Buenos Aires, AR',
+  'about.stats.projectsLabel': 'Projects shipped',
 
   // Work index page (audit §2 work.astro)
   'work.meta.title': 'My Work | Rodrigo Camino',
