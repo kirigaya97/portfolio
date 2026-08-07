@@ -1,5 +1,5 @@
 ---
-title: Vázquez Ilusionista — Landing Page Development
+title: "Vázquez Ilusionista: Landing Page Development"
 publishDate: 2026-02-11 00:00:00
 img: /assets/vazquez/1.webp
 img_alt: Screenshot of Vázquez Ilusionista website hero section.
@@ -36,22 +36,22 @@ Vázquez Ilusionista is the official promotional site for Fernando Vázquez, a p
 
 #### Objectives
 
-- **Brand Experience** — Deliver a premium, cinematic digital presence that mirrors the atmosphere of Fernando's live shows.
-- **Conversion Focus** — Drive inquiries and bookings across three distinct show formats — close-up magic, private events, and corporate engagements.
-- **Performance Architecture** — Build with Astro's static generation to achieve fast load times while supporting serverless contact-form delivery.
-- **Mobile-First Engagement** — Provide a tailored mobile experience with TikTok-style vertical video snap-scroll separate from the desktop triptych layout.
+- **Brand Experience** - Deliver a premium, cinematic digital presence that mirrors the atmosphere of Fernando's live shows.
+- **Conversion Focus** - Drive inquiries and bookings across three distinct show formats: close-up magic, private events, and corporate engagements.
+- **Performance Architecture** - Build with Astro's static generation to achieve fast load times while supporting serverless contact-form delivery.
+- **Mobile-First Engagement** - Provide a tailored mobile experience with TikTok-style vertical video snap-scroll separate from the desktop triptych layout.
 
 #### Project Workflow
 
-- **Discovery & Brand Alignment** — Established a dark, refined design system with a deep purple accent palette (`#9582D9`), Playfair Display headings, and Inter body type, all grounded in the existing brand identity.
-- **Component Architecture** — Built a flat single-page layout with independently animated sections — Hero, Shows, VideoTriptych, JuryFeedback, JuryVIP Reviews, AboutMe, and Contact — each driven by GSAP ScrollTrigger.
-- **Cinematic Animations** — Implemented a GSAP-powered hero with a 105-image crossfade grid, procedural SVG noise background, 3D-orbiting magic-star element, and a session-persisted intro reveal overlay with audio unlock.
-- **Responsive Video Experience** — Desktop renders an interactive three-column triptych with B&W-to-color hover transitions and spatial audio unmuting; mobile delivers a snap-scrolling vertical reel feed with a social-overlay UI.
-- **Serverless Contact** — Integrated the Resend API via an Astro server endpoint (`/api/send-email`) for reliable form delivery without a backend.
+- **Discovery & Brand Alignment** - Established a dark, refined design system with a deep purple accent palette (`#9582D9`), Playfair Display headings, and Inter body type, all grounded in the existing brand identity.
+- **Component Architecture** - Built a flat single-page layout with independently animated sections (Hero, Shows, VideoTriptych, JuryFeedback, JuryVIP Reviews, AboutMe, and Contact), each driven by GSAP ScrollTrigger.
+- **Cinematic Animations** - Implemented a GSAP-powered hero with a 105-image crossfade grid, procedural SVG noise background, 3D-orbiting magic-star element, and a session-persisted intro reveal overlay with audio unlock.
+- **Responsive Video Experience** - Desktop renders an interactive three-column triptych with B&W-to-color hover transitions and spatial audio unmuting; mobile delivers a snap-scrolling vertical reel feed with a social-overlay UI.
+- **Serverless Contact** - Integrated the Resend API via an Astro server endpoint (`/api/send-email`) for reliable form delivery without a backend.
 
 #### Results and Impact
 
-- **Cinematic Delivery** — The site ships with a fully animated, production-ready experience — intro overlay, hero crossfade grid, scroll-pinned reviews, and adaptive video reels — with zero third-party CMS dependencies.
-- **Segment Coverage** — All three booking segments (close-up reception, private events, corporate marketing) are represented with dedicated show cards and optimized copy in Argentine Spanish.
-- **Vercel Deployment** — The project is deployed and live at `vazquez-v2.vercel.app`, taking advantage of Astro's Vercel adapter for edge-optimized delivery.
-- **Maintainable Content** — All site copy, show data, colors, and navigation labels are centralized in a single `site-config.json`, making future content updates straightforward without touching component code.
+- **Cinematic Delivery** - The site ships with a fully animated, production-ready experience (intro overlay, hero crossfade grid, scroll-pinned reviews, and adaptive video reels) with zero third-party CMS dependencies.
+- **Segment Coverage** - All three booking segments (close-up reception, private events, corporate marketing) are represented with dedicated show cards and optimized copy in Argentine Spanish.
+- **Vercel Deployment** - The project is deployed and live at `vazquez-v2.vercel.app`, taking advantage of Astro's Vercel adapter for edge-optimized delivery.
+- **Maintainable Content** - All site copy, show data, colors, and navigation labels are centralized in a single `site-config.json`, making future content updates straightforward without touching component code.

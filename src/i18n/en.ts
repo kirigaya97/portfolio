@@ -53,25 +53,28 @@ export const en = {
   'about.meta.description': 'About Rodrigo Camino: I develop unique Web experiences.',
   'about.hero.title': 'About',
   'about.hero.tagline':
-    'Thanks for stopping by — pull up a chair and take a look at where I’ve been.',
+    'Thanks for stopping by. Pull up a chair and take a look at where I’ve been.',
   'about.background.heading': 'Background',
   'about.background.p1':
     'I’m Rodrigo, a creative web developer based in Buenos Aires. Since 2020 I’ve been designing and building sites where design, marketing, and code all pull in the same direction. I like getting into the client’s real problem, figuring out what they actually need, and shipping something that works as well as it looks.',
   'about.background.p2':
-    'I’ve worked across very different industries, so I’m used to shaping each project around what the business actually needs — not the other way around. I pair a creative eye with data-driven insight, and I’m just as comfortable in branding, digital marketing, and UX/UI as I am in the backend. I also bring experience in business strategy (including bar consulting), which helps me treat every site as a tool that has to deliver results, not just look good.',
+    'I’ve worked across very different industries, so I’m used to shaping each project around what the business actually needs, not the other way around. I pair a creative eye with data-driven insight, and I’m just as comfortable in branding, digital marketing, and UX/UI as I am in the backend. I also bring experience in business strategy (including bar consulting), which helps me treat every site as a tool that has to deliver results, not just look good.',
   'about.education.heading': 'Education',
   'about.education.item1': 'Systems Analysis Specialist - ORT Argentina (2023 - present)',
   'about.education.item2': 'WordPress Development - Udemy (2021 - 2022)',
   'about.education.item3': 'Back-end developer - CoderHouse (2020 - 2021)',
   'about.education.item4': 'Front-end developer - EducacionIT (2019 - 2020)',
   'about.skills.heading': 'Skills',
-  'about.skills.item1': 'Web Development - WordPress, HTML, CSS, JavaScript, PHP',
+  'about.skills.item1':
+    'AI & Automation - RAG agents (Python, LangChain), agentic workflows, n8n, Flowise, prompt engineering, LLM APIs, live WhatsApp chatbots',
   'about.skills.item2':
-    'Design - Photoshop (Advanced), Adobe Premiere (Intermediate), Illustrator (Basic)',
-  'about.skills.item3': 'Marketing - Email Marketing (MailChimp), Social Media Strategies, SEO',
+    'Web Development - JavaScript, TypeScript, Python, PHP, Node.js, Astro, Next.js, WordPress (Elementor, Divi, ACF, WooCommerce), PrestaShop',
+  'about.skills.item3':
+    'Integrations & Infrastructure - REST APIs, webhooks, SQL, Cloudflare, cPanel/WHM, WP-CLI, hosting, SSL and backups across 10+ live properties',
   'about.skills.item4':
-    'Project Management - Business Strategy, Client Collaboration, Process Automation',
-  'about.skills.item5': 'Soft Skills - Proactive, Teamwork, Adaptable, Client-Oriented',
+    'Analytics, SEO & Marketing - GA4, Google Tag Manager, Core Web Vitals, on-page SEO, AEO/GEO/LLMO, email marketing (Mailchimp)',
+  'about.skills.item5':
+    'Design & Strategy - Figma, Photoshop (Advanced), Premiere (Intermediate), Illustrator (Basic), brand direction, business strategy, client collaboration',
 
   // About page — redesign additions
   'about.portrait.caption': 'Me & the cat, mid-debug',
@@ -103,7 +106,7 @@ export const en = {
   'blog.hero.title': 'Notes & Articles',
   'blog.hero.tagline':
     'Occasional writing on web development, design, and the craft behind the work.',
-  'blog.empty': 'No posts yet — check back soon.',
+  'blog.empty': 'No posts yet. Check back soon.',
   'blog.readMore': 'Read post',
   'blog.back': 'Blog',
 
@@ -126,11 +129,11 @@ export const en = {
   'contact.form.message': 'Message',
   'contact.form.submit': 'Send message',
   'contact.form.sending': 'Sending…',
-  'contact.form.success': 'Thanks — your message is on its way. I will reply soon.',
+  'contact.form.success': 'Thanks! Your message is on its way. I will reply soon.',
   'contact.form.error':
     'Something went wrong sending your message. Please try again, or reach me on WhatsApp.',
   'contact.form.errorRate':
-    'You just sent a message — please wait a moment before sending another.',
+    'You just sent a message. Please wait a moment before sending another.',
   'contact.form.errorName': 'Please enter your name.',
   'contact.form.errorEmail': 'Please enter a valid email address.',
   'contact.form.errorMessage': 'Please enter a message of at least 10 characters.',

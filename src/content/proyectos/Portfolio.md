@@ -32,21 +32,21 @@ Este sitio de portafolio es mi vitrina profesional, fusionando mis habilidades e
 
 #### Objetivos
 
-- **Presencia Digital** — Establecer un sitio pulido y moderno que refleje mis fortalezas técnicas y creativas.
-- **Interacción del Usuario** — Proporcionar una experiencia interactiva que muestre mis proyectos de manera efectiva.
-- **Rendimiento** — Lograr un sitio optimizado y de carga rápida aprovechando Astro y Tailwind CSS.
-- **Mantenibilidad** — Asegurarme de que puedo actualizar fácilmente el sitio con nuevos proyectos y contenido a medida que se desarrollen.
+- **Presencia Digital** - Establecer un sitio pulido y moderno que refleje mis fortalezas técnicas y creativas.
+- **Interacción del Usuario** - Proporcionar una experiencia interactiva que muestre mis proyectos de manera efectiva.
+- **Rendimiento** - Lograr un sitio optimizado y de carga rápida aprovechando Astro y Tailwind CSS.
+- **Mantenibilidad** - Asegurarme de que puedo actualizar fácilmente el sitio con nuevos proyectos y contenido a medida que se desarrollen.
 
 #### Flujo de Trabajo del Proyecto
 
-- **Planificación y Descubrimiento** — Centrado en definir mi marca, asegurando que el flujo de usuarios sea acogedor y práctico.
-- **Diseño UI/UX** — Construí un diseño minimalista y limpio con navegación intuitiva.
-- **Estructura Basada en Componentes** — Utilicé Astro y Tailwind CSS para crear componentes modulares, mejorando los tiempos de carga y la capacidad de respuesta.
-- **Estructuración del Contenido** — Organicé secciones como "Acerca de", "Trabajo" y "Contacto" para mostrar experiencia y proyectos de manera eficiente.
-- **Pruebas y Optimización** — Realicé pruebas de rendimiento, asegurando una carga suave y compatibilidad entre dispositivos.
+- **Planificación y Descubrimiento** - Centrado en definir mi marca, asegurando que el flujo de usuarios sea acogedor y práctico.
+- **Diseño UI/UX** - Construí un diseño minimalista y limpio con navegación intuitiva.
+- **Estructura Basada en Componentes** - Utilicé Astro y Tailwind CSS para crear componentes modulares, mejorando los tiempos de carga y la capacidad de respuesta.
+- **Estructuración del Contenido** - Organicé secciones como "Acerca de", "Trabajo" y "Contacto" para mostrar experiencia y proyectos de manera eficiente.
+- **Pruebas y Optimización** - Realicé pruebas de rendimiento, asegurando una carga suave y compatibilidad entre dispositivos.
 
 #### Resultados e Impacto
 
-- **Imagen de Marca Mejorada** — Creé un diseño profesional y elegante que destaca mi combinación única de habilidades técnicas y creativas.
-- **Mayor Participación** — El diseño interactivo anima a los visitantes a explorar mis proyectos y habilidades, aumentando la participación.
-- **Empoderamiento del Cliente** — Con una estructura fácilmente mantenible, puedo mantener mi sitio actualizado y reflejar mi trabajo más reciente.
+- **Imagen de Marca Mejorada** - Creé un diseño profesional y elegante que destaca mi combinación única de habilidades técnicas y creativas.
+- **Mayor Participación** - El diseño interactivo anima a los visitantes a explorar mis proyectos y habilidades, aumentando la participación.
+- **Empoderamiento del Cliente** - Con una estructura fácilmente mantenible, puedo mantener mi sitio actualizado y reflejar mi trabajo más reciente.

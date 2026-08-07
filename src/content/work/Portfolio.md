@@ -32,21 +32,21 @@ This portfolio site serves as my professional showcase, merging my skills in web
 
 #### Objectives
 
-- **Digital Presence** — Establish a polished, modern site that reflects my technical and creative strengths.
-- **User Engagement** — Provide an interactive experience that showcases my projects effectively.
-- **Performance** — Achieve a fast-loading, optimized site by leveraging Astro and Tailwind CSS.
-- **Maintainability** — Ensure I can easily update the site with new projects and content as they develop.
+- **Digital Presence** - Establish a polished, modern site that reflects my technical and creative strengths.
+- **User Engagement** - Provide an interactive experience that showcases my projects effectively.
+- **Performance** - Achieve a fast-loading, optimized site by leveraging Astro and Tailwind CSS.
+- **Maintainability** - Ensure I can easily update the site with new projects and content as they develop.
 
 #### Project Workflow
 
-- **Planning & Discovery** — Focused on defining my brand, ensuring that user flow was both inviting and practical.
-- **UI/UX Design** — Built a minimalist, clean design with intuitive navigation.
-- **Component-Driven Structure** — Used Astro and Tailwind CSS to create modular components, enhancing load times and responsiveness.
-- **Content Structuring** — Organized sections such as "About," "Work," and "Contact" to display expertise and projects efficiently.
-- **Testing & Optimization** — Conducted performance testing, ensuring smooth loading and cross-device compatibility.
+- **Planning & Discovery** - Focused on defining my brand, ensuring that user flow was both inviting and practical.
+- **UI/UX Design** - Built a minimalist, clean design with intuitive navigation.
+- **Component-Driven Structure** - Used Astro and Tailwind CSS to create modular components, enhancing load times and responsiveness.
+- **Content Structuring** - Organized sections such as "About," "Work," and "Contact" to display expertise and projects efficiently.
+- **Testing & Optimization** - Conducted performance testing, ensuring smooth loading and cross-device compatibility.
 
 #### Results and Impact
 
-- **Enhanced Brand Image** — Created a professional, sleek design that highlights my unique blend of technical and creative skills.
-- **Increased Engagement** — The interactive layout encourages visitors to explore my projects and skills, increasing engagement.
-- **Client Empowerment** — With an easily maintainable structure, I can keep my site up to date and reflective of my latest work.
+- **Enhanced Brand Image** - Created a professional, sleek design that highlights my unique blend of technical and creative skills.
+- **Increased Engagement** - The interactive layout encourages visitors to explore my projects and skills, increasing engagement.
+- **Client Empowerment** - With an easily maintainable structure, I can keep my site up to date and reflective of my latest work.

@@ -14,6 +14,8 @@ technologies:
     note: Facilita las actualizaciones del cliente y la gestión de contenido.
   - name: DIVI
     note: Modularidad y capacidades nativas de SEO.
+  - name: ACF
+    note: Campos personalizados estructurados que sostienen el contenido repetible del sitio.
   - name: PHP, JavaScript, HTML, CSS
     note: Funcionalidades personalizadas, estilos y optimización de interactividad sin plugins adicionales.
 screenshots:
@@ -30,23 +32,23 @@ Nuestros objetivos eran mejorar la velocidad, optimizar el SEO, modernizar la UX
 
 #### Objetivos
 
-- **Rendimiento y Accesibilidad** — Elevar los puntajes de Google Lighthouse.
-- **Usabilidad e Interacción** — Rediseñar la UX/UI para reflejar la identidad de CAPFA.
-- **Facilidad de Actualización** — Permitir que CAPFA actualice el sitio regularmente mediante WordPress y DIVI.
-- **Presencia Digital** — Aumentar la interacción a través de la integración de redes sociales y un diseño centrado en el usuario.
+- **Rendimiento y Accesibilidad** - Elevar los puntajes de Google Lighthouse.
+- **Usabilidad e Interacción** - Rediseñar la UX/UI para reflejar la identidad de CAPFA.
+- **Facilidad de Actualización** - Permitir que CAPFA actualice el sitio regularmente mediante WordPress y DIVI.
+- **Presencia Digital** - Aumentar la interacción a través de la integración de redes sociales y un diseño centrado en el usuario.
 
 #### Flujo de Trabajo del Proyecto
 
-- **Descubrimiento y Planificación** — Establecimos la identidad de marca de CAPFA con una paleta de colores personalizada, tipografía y wireframes para aumentar la interacción.
-- **Estructuración de Páginas** — Desarrollamos plantillas para secciones como "Contacto", "Nosotros" y "Proyectos".
-- **SEO y Accesibilidad** — Usamos herramientas nativas de DIVI para una SEO y accesibilidad optimizados.
-- **Estructura Basada en Componentes** — Incorporamos funciones PHP personalizadas y herramientas modulares de DIVI para mejorar la gestión del backend.
-- **Funcionalidades Dinámicas** — Implementamos un botón de WhatsApp interactivo con JavaScript, evitando plugins que afecten el rendimiento.
-- **Pruebas y Optimización** — Logramos una puntuación del 94% en Google Lighthouse y validamos con Google Analytics y otras herramientas de pruebas.
-- **Cronograma de Ejecución** — Seguimos una planificación semanal estructurada para asegurar la finalización del proyecto a tiempo.
+- **Descubrimiento y Planificación** - Establecimos la identidad de marca de CAPFA con una paleta de colores personalizada, tipografía y wireframes para aumentar la interacción.
+- **Estructuración de Páginas** - Desarrollamos plantillas para secciones como "Contacto", "Nosotros" y "Proyectos".
+- **SEO y Accesibilidad** - Usamos herramientas nativas de DIVI para una SEO y accesibilidad optimizados.
+- **Estructura Basada en Componentes** - Incorporamos funciones PHP personalizadas y herramientas modulares de DIVI para mejorar la gestión del backend.
+- **Funcionalidades Dinámicas** - Implementamos un botón de WhatsApp interactivo con JavaScript, evitando plugins que afecten el rendimiento.
+- **Pruebas y Optimización** - Logramos una puntuación del 94% en Google Lighthouse y validamos con Google Analytics y otras herramientas de pruebas.
+- **Cronograma de Ejecución** - Seguimos una planificación semanal estructurada para asegurar la finalización del proyecto a tiempo.
 
 #### Resultados e Impacto
 
-- **Rendimiento** — Mejoramos la puntuación de Lighthouse del 45% al 94%, logrando tiempos de carga más rápidos y una mayor retención de usuarios.
-- **Usabilidad e Interacción** — Mejoramos la interacción y accesibilidad, facilitando la conexión entre las redes sociales y el sitio web de CAPFA.
-- **Empoderamiento del Cliente** — CAPFA ahora gestiona actualizaciones de contenido de forma independiente, fortaleciendo su presencia digital y estrategia de interacción.
+- **Rendimiento** - Mejoramos la puntuación de Lighthouse del 45% al 94%, logrando tiempos de carga más rápidos y una mayor retención de usuarios.
+- **Usabilidad e Interacción** - Mejoramos la interacción y accesibilidad, facilitando la conexión entre las redes sociales y el sitio web de CAPFA.
+- **Empoderamiento del Cliente** - CAPFA ahora gestiona actualizaciones de contenido de forma independiente, fortaleciendo su presencia digital y estrategia de interacción.

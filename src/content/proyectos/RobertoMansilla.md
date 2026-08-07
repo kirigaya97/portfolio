@@ -29,21 +29,21 @@ Roberto Mansilla requería un sitio que mostrara sus shows y facilitara conversi
 
 #### Objetivos
 
-- **Autoridad de Marca** — Posicionar a Roberto como un mentalista líder con un sitio visualmente memorable.
-- **Embudo de Participación del Usuario** — Facilitar la transición de visitantes de redes sociales al sitio, enfocándose en la conversión de reservas.
-- **Diseño UX Interactivo** — Integrar animaciones que mejoren la experiencia y reflejen el misticismo de las actuaciones de Roberto.
-- **Capacidad de Autogestión** — Permitir que Roberto actualice de manera independiente shows y testimonios.
+- **Autoridad de Marca** - Posicionar a Roberto como un mentalista líder con un sitio visualmente memorable.
+- **Embudo de Participación del Usuario** - Facilitar la transición de visitantes de redes sociales al sitio, enfocándose en la conversión de reservas.
+- **Diseño UX Interactivo** - Integrar animaciones que mejoren la experiencia y reflejen el misticismo de las actuaciones de Roberto.
+- **Capacidad de Autogestión** - Permitir que Roberto actualice de manera independiente shows y testimonios.
 
 #### Flujo de Trabajo del Proyecto
 
-- **Descubrimiento y Estrategia** — Definición de la marca digital de Roberto con un diseño único que refuerza su presencia escénica.
-- **Diseño UI/UX** — Creación de una interfaz interactiva con navegación "tipo plato" para shows, testimonios y un tráiler en video.
-- **Estrategia de Contenido** — Organización de contenido para resaltar categorías principales de shows y testimonios del público.
-- **Elementos Interactivos** — Incorporación de animaciones en JavaScript que aportan intriga y mejoran la participación sin afectar el rendimiento del sitio.
-- **Pruebas y Optimización** — Optimización para SEO y reducción de tiempos de carga para asegurar que el sitio funcione eficazmente como una landing page enfocada en la conversión.
+- **Descubrimiento y Estrategia** - Definición de la marca digital de Roberto con un diseño único que refuerza su presencia escénica.
+- **Diseño UI/UX** - Creación de una interfaz interactiva con navegación "tipo plato" para shows, testimonios y un tráiler en video.
+- **Estrategia de Contenido** - Organización de contenido para resaltar categorías principales de shows y testimonios del público.
+- **Elementos Interactivos** - Incorporación de animaciones en JavaScript que aportan intriga y mejoran la participación sin afectar el rendimiento del sitio.
+- **Pruebas y Optimización** - Optimización para SEO y reducción de tiempos de carga para asegurar que el sitio funcione eficazmente como una landing page enfocada en la conversión.
 
 #### Resultados e Impacto
 
-- **Mayor Participación y Conversión** — La landing page estructurada aumenta las reservas desde redes sociales.
-- **Mejora en la Presencia de Marca** — Un diseño pulido y dinámico establece la autoridad de Roberto en el campo del mentalismo.
-- **Facilidad de Gestión** — Roberto ahora puede gestionar el contenido de forma independiente, manteniendo su sitio actualizado con shows y testimonios recientes.
+- **Mayor Participación y Conversión** - La landing page estructurada aumenta las reservas desde redes sociales.
+- **Mejora en la Presencia de Marca** - Un diseño pulido y dinámico establece la autoridad de Roberto en el campo del mentalismo.
+- **Facilidad de Gestión** - Roberto ahora puede gestionar el contenido de forma independiente, manteniendo su sitio actualizado con shows y testimonios recientes.

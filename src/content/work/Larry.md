@@ -28,20 +28,20 @@ As an interactive e-commerce platform, it prioritizes customer satisfaction, pre
 
 #### Objectives
 
-- **E-Commerce Optimization** — Develop a user-friendly store emphasizing Larry Props' dedication to quality and uniqueness.
-- **Conversion Funnel** — Create a landing page that efficiently converts social media visitors into customers.
-- **SEO & Performance** — Enhance search visibility and reduce loading times for a smooth user experience.
-- **Client Independence** — Empower Larry Props to update content and manage inventory with ease.
+- **E-Commerce Optimization** - Develop a user-friendly store emphasizing Larry Props' dedication to quality and uniqueness.
+- **Conversion Funnel** - Create a landing page that efficiently converts social media visitors into customers.
+- **SEO & Performance** - Enhance search visibility and reduce loading times for a smooth user experience.
+- **Client Independence** - Empower Larry Props to update content and manage inventory with ease.
 
 #### Project Workflow
 
-- **Planning** — Established a distinct brand identity focusing on quality and streamlined navigation.
-- **Design & Development** — Designed an intuitive UI with essential sections like "Shop," "About," and "Contact" for a seamless experience.
-- **Dynamic Components** — Employed DIVI's modular design and custom code to present product descriptions, media, and customer testimonials.
-- **Testing & Optimization** — Conducted performance evaluations, achieving fast load times and smooth interactions for better user experience.
+- **Planning** - Established a distinct brand identity focusing on quality and streamlined navigation.
+- **Design & Development** - Designed an intuitive UI with essential sections like "Shop," "About," and "Contact" for a seamless experience.
+- **Dynamic Components** - Employed DIVI's modular design and custom code to present product descriptions, media, and customer testimonials.
+- **Testing & Optimization** - Conducted performance evaluations, achieving fast load times and smooth interactions for better user experience.
 
 #### Results and Impact
 
-- **Conversion Increase** — Optimized landing page led to higher user engagement and increased sales conversions.
-- **Brand Growth** — Enhanced credibility and recognition as a premium provider in the mentalism community.
-- **Client Flexibility** — Larry Props now easily manages product listings and inventory, supporting a dynamic and evolving product lineup.
+- **Conversion Increase** - Optimized landing page led to higher user engagement and increased sales conversions.
+- **Brand Growth** - Enhanced credibility and recognition as a premium provider in the mentalism community.
+- **Client Flexibility** - Larry Props now easily manages product listings and inventory, supporting a dynamic and evolving product lineup.

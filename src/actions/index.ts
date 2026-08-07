@@ -34,7 +34,7 @@ export const server = {
         from: CONTACT_FROM_EMAIL,
         to: CONTACT_TO_EMAIL,
         replyTo: input.email,
-        subject: `Portfolio contact — ${input.name}`,
+        subject: `Portfolio contact from ${input.name}`,
         text: `From: ${input.name} <${input.email}>\n\n${input.message}`,
       });
 

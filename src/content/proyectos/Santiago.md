@@ -32,21 +32,21 @@ El sitio web de Santiago Fernández es una landing page dinámica diseñada para
 
 #### Objetivos
 
-- **Presencia Digital** — Posicionar a Santiago como un mago de primer nivel en Argentina y España.
-- **Optimización de Conversión** — Crear una landing page optimizada para convertir el tráfico de redes sociales y aumentar las reservas de eventos.
-- **Rendimiento y Accesibilidad** — Asegurar tiempos de carga rápidos y una interfaz accesible y fácil de usar.
-- **Flexibilidad de Contenido** — Permitir que Santiago actualice fácilmente eventos recientes y testimonios para mantenerse al día con sus actuaciones.
+- **Presencia Digital** - Posicionar a Santiago como un mago de primer nivel en Argentina y España.
+- **Optimización de Conversión** - Crear una landing page optimizada para convertir el tráfico de redes sociales y aumentar las reservas de eventos.
+- **Rendimiento y Accesibilidad** - Asegurar tiempos de carga rápidos y una interfaz accesible y fácil de usar.
+- **Flexibilidad de Contenido** - Permitir que Santiago actualice fácilmente eventos recientes y testimonios para mantenerse al día con sus actuaciones.
 
 #### Flujo de Trabajo del Proyecto
 
-- **Descubrimiento y Planificación** — Se estableció un sitio centrado en la marca con un enfoque de diseño moderno e interactivo.
-- **Diseño UX/UI** — Se estructuró el contenido en secciones claras para servicios, galerías y testimonios para construir confianza y participación de los visitantes.
-- **Estrategia de Contenido** — Se centró en la experiencia única de Santiago y los comentarios reales de los clientes para cautivar y convertir a los visitantes del sitio.
-- **Elementos Interactivos** — Se integró una galería de medios, varias categorías de eventos y funciones de redes sociales para una mayor participación.
-- **Pruebas y Optimización** — Se realizaron pruebas de usabilidad y velocidad para garantizar un rendimiento óptimo como landing page para redes sociales.
+- **Descubrimiento y Planificación** - Se estableció un sitio centrado en la marca con un enfoque de diseño moderno e interactivo.
+- **Diseño UX/UI** - Se estructuró el contenido en secciones claras para servicios, galerías y testimonios para construir confianza y participación de los visitantes.
+- **Estrategia de Contenido** - Se centró en la experiencia única de Santiago y los comentarios reales de los clientes para cautivar y convertir a los visitantes del sitio.
+- **Elementos Interactivos** - Se integró una galería de medios, varias categorías de eventos y funciones de redes sociales para una mayor participación.
+- **Pruebas y Optimización** - Se realizaron pruebas de usabilidad y velocidad para garantizar un rendimiento óptimo como landing page para redes sociales.
 
 #### Resultados e Impacto
 
-- **Aumento de Reservas** — La landing page optimizada impulsa efectivamente la participación, convirtiendo a los visitantes de redes sociales en clientes.
-- **Fortalecimiento de la Autoridad de Marca** — El sitio pulido y profesional refuerza la posición de Santiago como un mago líder.
-- **Empoderamiento del Cliente** — Santiago puede actualizar su sitio de manera independiente para reflejar eventos recientes y añadir testimonios, manteniendo el interés de los usuarios.
+- **Aumento de Reservas** - La landing page optimizada impulsa efectivamente la participación, convirtiendo a los visitantes de redes sociales en clientes.
+- **Fortalecimiento de la Autoridad de Marca** - El sitio pulido y profesional refuerza la posición de Santiago como un mago líder.
+- **Empoderamiento del Cliente** - Santiago puede actualizar su sitio de manera independiente para reflejar eventos recientes y añadir testimonios, manteniendo el interés de los usuarios.

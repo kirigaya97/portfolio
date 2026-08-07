@@ -31,21 +31,21 @@ Estudio Lena's website serves as both a legal resource and contact hub for accid
 
 #### Objectives
 
-- **Digital Presence** — Reinforce Estudio Lena's reputation in personal injury and accident law.
-- **User Conversion Funnel** — Engage social media-driven traffic and simplify the client intake process through an automated "pre-case" form.
-- **Streamlined Management System** — Enhance internal workflows with a tailored content management structure for team collaboration.
-- **Accessibility & SEO** — Optimize for accessibility, ensuring wide reach and easy usability.
+- **Digital Presence** - Reinforce Estudio Lena's reputation in personal injury and accident law.
+- **User Conversion Funnel** - Engage social media-driven traffic and simplify the client intake process through an automated "pre-case" form.
+- **Streamlined Management System** - Enhance internal workflows with a tailored content management structure for team collaboration.
+- **Accessibility & SEO** - Optimize for accessibility, ensuring wide reach and easy usability.
 
 #### Project Workflow
 
-- **Discovery & Planning** — Established a brand message and designed a legal-focused UX/UI to inspire trust and professionalism.
-- **UX/UI Design** — Structured the site with clear navigation across pages like "About," "Practice Areas," and "Contact," emphasizing user-friendly layout and smooth navigation.
-- **Content Strategy** — Organized content around primary legal services, spotlighting areas like "Accidents" and "Free Consultations" to align with user search intent.
-- **Automated Pre-Case Form** — Added a form that lets users initiate cases online, reducing intake times and enhancing client tracking for the legal team.
-- **Testing & Optimization** — Performed usability and performance testing to verify site speed, SEO, and user experience.
+- **Discovery & Planning** - Established a brand message and designed a legal-focused UX/UI to inspire trust and professionalism.
+- **UX/UI Design** - Structured the site with clear navigation across pages like "About," "Practice Areas," and "Contact," emphasizing user-friendly layout and smooth navigation.
+- **Content Strategy** - Organized content around primary legal services, spotlighting areas like "Accidents" and "Free Consultations" to align with user search intent.
+- **Automated Pre-Case Form** - Added a form that lets users initiate cases online, reducing intake times and enhancing client tracking for the legal team.
+- **Testing & Optimization** - Performed usability and performance testing to verify site speed, SEO, and user experience.
 
 #### Results and Impact
 
-- **Improved Conversion Rate** — Social media-optimized landing page design increased client inquiries and conversions.
-- **Enhanced Workflow** — Automated "pre-case" initiation system improved intake efficiency and team collaboration.
-- **Brand Authority** — A professional and functional website establishes Estudio Lena as a leader in personal injury law, providing both credibility and convenience.
+- **Improved Conversion Rate** - Social media-optimized landing page design increased client inquiries and conversions.
+- **Enhanced Workflow** - Automated "pre-case" initiation system improved intake efficiency and team collaboration.
+- **Brand Authority** - A professional and functional website establishes Estudio Lena as a leader in personal injury law, providing both credibility and convenience.

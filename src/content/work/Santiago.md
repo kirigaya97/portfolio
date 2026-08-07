@@ -28,25 +28,25 @@ video: /assets/santi/1.mp4
 
 ### Project Overview
 
-The Santiago Fernández website is a dynamic landing page crafted to showcase Santiago, a leading magician, and draw audiences for various events—corporate, private, and theater. Built as a high-conversion platform, the site leverages social media funnels to engage visitors and drive booking inquiries.
+The Santiago Fernández website is a dynamic landing page crafted to showcase Santiago, a leading magician, and draw audiences for various events: corporate, private, and theater. Built as a high-conversion platform, the site leverages social media funnels to engage visitors and drive booking inquiries.
 
 #### Objectives
 
-- **Digital Presence** — Position Santiago as a top-tier magician across Argentina and Spain.
-- **Conversion Optimization** — Build a landing page optimized to convert social media traffic, boosting event bookings.
-- **Performance & Accessibility** — Ensure fast load times and an accessible, user-friendly interface.
-- **Content Flexibility** — Allow Santiago to easily update recent events and testimonials to stay current with his performances.
+- **Digital Presence** - Position Santiago as a top-tier magician across Argentina and Spain.
+- **Conversion Optimization** - Build a landing page optimized to convert social media traffic, boosting event bookings.
+- **Performance & Accessibility** - Ensure fast load times and an accessible, user-friendly interface.
+- **Content Flexibility** - Allow Santiago to easily update recent events and testimonials to stay current with his performances.
 
 #### Project Workflow
 
-- **Discovery & Planning** — Established a brand-centric site with a modern, interactive design approach.
-- **UX/UI Design** — Structured content in clear sections for services, galleries, and testimonials to build visitor trust and engagement.
-- **Content Strategy** — Focused on Santiago's unique expertise and real-life client feedback to captivate and convert site visitors.
-- **Interactive Elements** — Integrated a media gallery, various event categories, and social media features for higher engagement.
-- **Testing & Optimization** — Ran usability and speed tests to ensure optimal performance as a social media landing page.
+- **Discovery & Planning** - Established a brand-centric site with a modern, interactive design approach.
+- **UX/UI Design** - Structured content in clear sections for services, galleries, and testimonials to build visitor trust and engagement.
+- **Content Strategy** - Focused on Santiago's unique expertise and real-life client feedback to captivate and convert site visitors.
+- **Interactive Elements** - Integrated a media gallery, various event categories, and social media features for higher engagement.
+- **Testing & Optimization** - Ran usability and speed tests to ensure optimal performance as a social media landing page.
 
 #### Results and Impact
 
-- **Increased Bookings** — The optimized landing page effectively drives engagement, converting social media visitors into clients.
-- **Strengthened Brand Authority** — The polished, professional site reinforces Santiago's position as a leading magician.
-- **Empowered Client** — Santiago can independently update his site to reflect recent events and add testimonials, keeping user interest high.
+- **Increased Bookings** - The optimized landing page effectively drives engagement, converting social media visitors into clients.
+- **Strengthened Brand Authority** - The polished, professional site reinforces Santiago's position as a leading magician.
+- **Empowered Client** - Santiago can independently update his site to reflect recent events and add testimonials, keeping user interest high.

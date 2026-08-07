@@ -61,21 +61,23 @@ export const es: Record<UIKey, string> = {
   'about.background.p1':
     'Soy Rodrigo, desarrollador web creativo con base en Buenos Aires. Desde 2020 que diseño y construyo sitios donde el diseño, el marketing y el código tiran para el mismo lado. Me gusta meterme en el problema real del cliente, entender qué necesita de verdad, y entregar algo que funcione tan bien como se ve.',
   'about.background.p2':
-    'Pasé por rubros muy distintos, así que estoy acostumbrado a adaptar cada proyecto a lo que el negocio necesita —no al revés. Combino una mirada creativa con análisis de datos, y me muevo cómodo tanto en branding, marketing digital y UX/UI como en la parte de backend. También tengo experiencia en estrategia de negocio (incluida la consultoría para bares), algo que me ayuda a pensar cada sitio como una herramienta que tiene que dar resultados, no solo quedar lindo.',
+    'Pasé por rubros muy distintos, así que estoy acostumbrado a adaptar cada proyecto a lo que el negocio necesita, no al revés. Combino una mirada creativa con análisis de datos, y me muevo cómodo tanto en branding, marketing digital y UX/UI como en la parte de backend. También tengo experiencia en estrategia de negocio (incluida la consultoría para bares), algo que me ayuda a pensar cada sitio como una herramienta que tiene que dar resultados, no solo quedar lindo.',
   'about.education.heading': 'Educación',
   'about.education.item1': 'Especialista en Análisis de Sistemas - ORT Argentina (2023 - presente)',
   'about.education.item2': 'Desarrollo en WordPress - Udemy (2021 - 2022)',
   'about.education.item3': 'Desarrollador Backend - CoderHouse (2020 - 2021)',
   'about.education.item4': 'Desarrollador Frontend - EducacionIT (2019 - 2020)',
   'about.skills.heading': 'Habilidades',
-  'about.skills.item1': 'Desarrollo Web - WordPress, HTML, CSS, JavaScript, PHP',
+  'about.skills.item1':
+    'IA y Automatización - Agentes RAG (Python, LangChain), flujos agénticos, n8n, Flowise, prompt engineering, APIs de LLM, chatbots de WhatsApp en producción',
   'about.skills.item2':
-    'Diseño - Photoshop (Avanzado), Adobe Premiere (Intermedio), Illustrator (Básico)',
-  'about.skills.item3': 'Marketing - Email Marketing (MailChimp), Estrategias en Redes Sociales, SEO',
+    'Desarrollo Web - JavaScript, TypeScript, Python, PHP, Node.js, Astro, Next.js, WordPress (Elementor, Divi, ACF, WooCommerce), PrestaShop',
+  'about.skills.item3':
+    'Integraciones e Infraestructura - APIs REST, webhooks, SQL, Cloudflare, cPanel/WHM, WP-CLI, hosting, SSL y backups en más de 10 sitios en producción',
   'about.skills.item4':
-    'Gestión de Proyectos - Estrategia Empresarial, Colaboración con Clientes, Automatización de Procesos',
+    'Analítica, SEO y Marketing - GA4, Google Tag Manager, Core Web Vitals, SEO on-page, AEO/GEO/LLMO, email marketing (Mailchimp)',
   'about.skills.item5':
-    'Habilidades Blandas - Proactividad, Trabajo en Equipo, Adaptabilidad, Orientación al Cliente',
+    'Diseño y Estrategia - Figma, Photoshop (Avanzado), Premiere (Intermedio), Illustrator (Básico), dirección de marca, estrategia de negocio, colaboración con clientes',
 
   // About page — redesign additions
   'about.portrait.caption': 'El gato y yo, en pleno debug',
@@ -107,7 +109,7 @@ export const es: Record<UIKey, string> = {
   'blog.hero.title': 'Notas y Artículos',
   'blog.hero.tagline':
     'Artículos ocasionales sobre desarrollo web, diseño y el oficio detrás del trabajo.',
-  'blog.empty': 'Aún no hay artículos — volvé pronto.',
+  'blog.empty': 'Aún no hay artículos. Volvé pronto.',
   'blog.readMore': 'Leer artículo',
   'blog.back': 'Blog',
 
@@ -130,11 +132,11 @@ export const es: Record<UIKey, string> = {
   'contact.form.message': 'Mensaje',
   'contact.form.submit': 'Enviar mensaje',
   'contact.form.sending': 'Enviando…',
-  'contact.form.success': 'Gracias — tu mensaje está en camino. Te respondo pronto.',
+  'contact.form.success': '¡Gracias! Tu mensaje está en camino. Te respondo pronto.',
   'contact.form.error':
     'Algo salió mal al enviar tu mensaje. Probá de nuevo o escribime por WhatsApp.',
   'contact.form.errorRate':
-    'Acabás de enviar un mensaje — esperá un momento antes de enviar otro.',
+    'Acabás de enviar un mensaje. Esperá un momento antes de enviar otro.',
   'contact.form.errorName': 'Por favor, ingresá tu nombre.',
   'contact.form.errorEmail': 'Por favor, ingresá un correo electrónico válido.',
   'contact.form.errorMessage': 'Por favor, escribí un mensaje de al menos 10 caracteres.',
