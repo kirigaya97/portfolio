@@ -233,6 +233,174 @@ a {
 	}
 }
 
+/* ---------- Longform: the article prose layer ----------
+   Shared by blog posts and project case studies. Lives here rather than in a
+   component so Astro's style scoping can't strand it: `.longform` is often applied
+   to an element rendered by a child component (Reveal), which scoped rules in
+   the parent never reach.
+
+   The essays are built on bold lead-ins that carry the argument. Skimming just
+   those should give you the piece, so they get the display face and the left
+   rail marks them. Everything else stays quiet.
+   ---------------------------------------------------------- */
+
+.longform {
+	max-width: 68ch;
+	/* Left-aligned, not centred: the article shares the page's left spine with
+	   the header above it, so the eye never jumps inward to start reading. */
+	margin-inline: 0;
+	color: var(--text);
+	font-size: 1.0625rem;
+	line-height: 1.75;
+	text-wrap: pretty;
+}
+
+.longform > * + * {
+	margin-top: 1.5em;
+}
+
+/* Section break: a beat, not a full rule. */
+.longform h2,
+.longform h3 {
+	margin-top: 3.5rem;
+	font-size: clamp(1.35rem, 1.15rem + 0.7vw, 1.65rem);
+	line-height: 1.2;
+	letter-spacing: -0.015em;
+}
+
+.longform h2::before,
+.longform h3::before {
+	content: '';
+	display: block;
+	width: 2.5rem;
+	height: 2px;
+	margin-bottom: 1.15rem;
+	background: var(--accent);
+}
+
+/* A heading belongs to what follows it, not to what came before. */
+.longform h2 + *,
+.longform h3 + *,
+.longform h4 + *,
+.longform h5 + * {
+	margin-top: 0.85em;
+}
+
+.longform h4,
+.longform h5 {
+	width: fit-content;
+	margin-top: 3rem;
+	padding-bottom: 0.35rem;
+	font-size: var(--text-md);
+	color: var(--accent);
+	border-bottom: 2px solid var(--accent);
+}
+
+.longform strong,
+.longform b {
+	color: var(--text-strong);
+	font-weight: 600;
+}
+
+/* The spine: a bold lead-in opening a paragraph or a list item. */
+.longform p > strong:first-child,
+.longform li > strong:first-child {
+	font-family: var(--font-display);
+	letter-spacing: -0.01em;
+}
+
+/* Lists: a hairline tick instead of a bullet, to match the rule language. */
+.longform ul,
+.longform ol {
+	padding-left: 0;
+	list-style: none;
+}
+.longform ol {
+	counter-reset: prose-item;
+}
+.longform li {
+	position: relative;
+	padding-left: 1.75rem;
+}
+.longform li + li {
+	margin-top: 0.75em;
+}
+.longform ul > li::before {
+	content: '';
+	position: absolute;
+	top: 0.85em;
+	left: 0;
+	width: 0.75rem;
+	height: 1px;
+	background: var(--accent-line);
+}
+.longform ol > li::before {
+	counter-increment: prose-item;
+	content: counter(prose-item);
+	position: absolute;
+	top: 0.15em;
+	left: 0;
+	font-family: var(--font-mono);
+	font-size: var(--text-xs);
+	color: var(--accent);
+}
+
+.longform a {
+	color: var(--accent);
+	text-decoration-color: var(--accent-line);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.22em;
+	transition: text-decoration-color var(--dur-quick) var(--ease-quick);
+}
+.longform a:hover {
+	text-decoration-color: var(--accent);
+}
+
+.longform blockquote {
+	padding-left: 1.5rem;
+	border-left: 2px solid var(--accent-line);
+	font-family: var(--font-display);
+	font-size: var(--text-md);
+	line-height: 1.5;
+	color: var(--text-strong);
+}
+.longform blockquote > * + * {
+	margin-top: 0.75em;
+}
+
+.longform code {
+	font-family: var(--font-mono);
+	font-size: 0.875em;
+	padding: 0.15em 0.4em;
+	background: var(--surface-2);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+}
+
+.longform pre {
+	padding: 1.25rem;
+	overflow-x: auto;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+}
+.longform pre code {
+	padding: 0;
+	background: none;
+	border: 0;
+}
+
+.longform img {
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+}
+
+.longform hr {
+	margin-block: 3rem;
+	border: 0;
+	border-top: 1px solid var(--border);
+}
+
 /* ---------- Mono eyebrow / kicker ---------- */
 
 .kicker {

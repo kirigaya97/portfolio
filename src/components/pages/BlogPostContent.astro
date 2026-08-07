@@ -56,8 +56,10 @@ const date = entry.data.publishDate.toLocaleDateString(lang, {
 			)
 		}
 
-		<Reveal class="article">
-			<Content />
+		<Reveal>
+			<div class="longform">
+				<Content />
+			</div>
 		</Reveal>
 	</main>
 
@@ -122,67 +124,4 @@ const date = entry.data.publishDate.toLocaleDateString(lang, {
 		border-radius: var(--radius-lg);
 	}
 
-	/* ---------- Rendered markdown article ---------- */
-	.article {
-		max-width: var(--measure);
-		margin-inline: auto;
-		color: var(--text);
-	}
-
-	.article :global(> * + *) {
-		margin-top: 1.15rem;
-	}
-
-	.article :global(h1),
-	.article :global(h2),
-	.article :global(h3) {
-		margin-top: 2.5rem;
-		font-size: var(--text-xl);
-	}
-	.article :global(h4),
-	.article :global(h5) {
-		margin-top: 2rem;
-		font-size: var(--text-md);
-		color: var(--accent);
-	}
-
-	.article :global(b),
-	.article :global(strong) {
-		color: var(--text-strong);
-		font-weight: 600;
-	}
-
-	.article :global(a) {
-		color: var(--accent);
-		text-underline-offset: 0.2em;
-	}
-
-	.article :global(ul),
-	.article :global(ol) {
-		padding-left: 1.25rem;
-	}
-	.article :global(li) {
-		margin-top: 0.4rem;
-	}
-
-	.article :global(img) {
-		border: 1px solid var(--border);
-		border-radius: var(--radius);
-	}
-
-	.article :global(code) {
-		font-family: var(--font-mono);
-		font-size: 0.9em;
-		padding: 0.1em 0.35em;
-		background: var(--surface-2);
-		border-radius: var(--radius-sm);
-	}
-
-	.article :global(blockquote) {
-		margin-top: 1.5rem;
-		padding: 0.25rem 0 0.25rem 1.5rem;
-		border-left: 2px solid var(--accent);
-		color: var(--text-strong);
-		font-size: var(--text-md);
-	}
 </style>
