@@ -7,7 +7,7 @@ Fuentes de verdad: `~/CV/MASTER_PROFILE.md` y las entradas de `src/content/work/
 
 ## Suplentes
 
-### 1. Atmósfera con presupuesto de performance
+### 1. ~~Atmósfera con presupuesto de performance~~ → **ESCRITO** (2026-08-28)
 **Proyecto:** Ilusionista (`src/content/work/Ilusionista.md`)
 **Tesis:** lo visual no tiene por qué costar velocidad.
 **Material:** LCP < 2,5 s, CLS < 0,1 y menos de 100 KB de JS en la primera carga, con una dirección de arte de cuatro mundos (gótico, western, teatral, art nouveau). Motor de scroll propio en TypeScript en lugar de GSAP. Transiciones solo en opacidad y transform, sobre el compositor. Respeta `prefers-reduced-motion`.
