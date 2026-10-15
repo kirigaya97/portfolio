@@ -1,6 +1,7 @@
 ---
 title: 8888 Producciones Landing Page
 publishDate: 2026-05-05 00:00:00
+url: https://www.8888producciones.com
 img: /assets/producciones8888/1.webp
 img_alt: Screenshot of 8888 Producciones landing page featuring the acid green brutalist design.
 description: |

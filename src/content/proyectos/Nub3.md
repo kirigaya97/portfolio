@@ -1,6 +1,7 @@
 ---
 title: Desarrollo de Landing Page para Nub3
 publishDate: 2026-04-14 00:00:00
+url: https://www.nub3.com.ar
 img: /assets/nub3/1.webp
 img_alt: Captura del hero de la landing page de Nub3 con el grafo de nodos animado.
 description: |

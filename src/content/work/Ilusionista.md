@@ -1,8 +1,8 @@
 ---
 title: "Guillermo Flores: Ilusionista Website Redesign"
 publishDate: 2026-04-27 00:00:00
-img: /assets/ilusionista/1.png
-img_alt: Screenshot of the Guillermo Flores Ilusionista landing page.
+img: /assets/ilusionista/1.webp
+img_alt: Guillermo Flores landing hero, his name set in a large serif over a dark, warm-toned stage backdrop.
 description: |
   A full-bleed, single-scroll landing page crafted to feel like a theatrical object: atmosphere-first, template-free.
 tags:
@@ -23,10 +23,10 @@ technologies:
   - name: Vercel adapter
     note: Zero-config edge deployment via `@astrojs/vercel`.
 screenshots:
-  - /assets/ilusionista/2.png
-  - /assets/ilusionista/3.png
-  - /assets/ilusionista/4.png
-  - /assets/ilusionista/5.png
+  - /assets/ilusionista/2.webp
+  - /assets/ilusionista/3.webp
+  - /assets/ilusionista/4.webp
+  - /assets/ilusionista/5.webp
 ---
 
 ### Project Overview

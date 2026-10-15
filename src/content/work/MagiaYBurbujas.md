@@ -1,6 +1,7 @@
 ---
 title: "Magia y Burbujas: Landing Site for Argentine Street Magician"
 publishDate: 2026-05-06 00:00:00
+url: https://www.magiayburbujas.com
 img: /assets/magiayburbujas/1.webp
 img_alt: Screenshot of Magia y Burbujas website, with a dark background, gold typography, and a bubble-driven hero section.
 description: |

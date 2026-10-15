@@ -1,6 +1,7 @@
 ---
 title: "SADA: Political Electoral Registry Web App"
 publishDate: 2026-03-26 00:00:00
+url: https://www.pj-sada.com.ar
 img: /assets/sada/1.webp
 img_alt: Screenshot of the SADA electoral registry dashboard.
 description: |

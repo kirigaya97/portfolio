@@ -1,6 +1,7 @@
 ---
 title: Rodrigo Camino Sitio Web de Portafolio
 publishDate: 2024-10-29 00:00:00
+url: https://dev.rodrigocamino.com
 img: /assets/portfolio/1.png
 img_alt: Screenshot del sitio web de Rodrigo
 description: |

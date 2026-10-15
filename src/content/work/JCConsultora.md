@@ -1,6 +1,7 @@
 ---
 title: "JC Consultora: Real Estate Site with Custom PHP Filtering"
 publishDate: 2025-06-01 00:00:00
+url: https://jcconsultora.com.ar
 img: /assets/jcconsultora/1.webp
 img_alt: JC Consultora homepage with the custom city and neighbourhood property filter over the hero.
 description: |

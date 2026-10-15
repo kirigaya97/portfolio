@@ -1,8 +1,8 @@
 ---
 title: "Guillermo Flores: Ilusionista, Rediseño Web"
 publishDate: 2026-04-27 00:00:00
-img: /assets/ilusionista/1.png
-img_alt: Captura de pantalla del sitio de Guillermo Flores, ilusionista.
+img: /assets/ilusionista/1.webp
+img_alt: Hero de la landing de Guillermo Flores, su nombre en una serif grande sobre un fondo de escenario oscuro y cálido.
 description: |
   Una landing de scroll único pensada para sentirse como un objeto teatral: atmósfera primero, sin plantillas genéricas.
 tags:
@@ -23,10 +23,10 @@ technologies:
   - name: Adapter de Vercel
     note: Deploy en edge sin configuración via `@astrojs/vercel`.
 screenshots:
-  - /assets/ilusionista/2.png
-  - /assets/ilusionista/3.png
-  - /assets/ilusionista/4.png
-  - /assets/ilusionista/5.png
+  - /assets/ilusionista/2.webp
+  - /assets/ilusionista/3.webp
+  - /assets/ilusionista/4.webp
+  - /assets/ilusionista/5.webp
 ---
 
 ### Resumen del Proyecto

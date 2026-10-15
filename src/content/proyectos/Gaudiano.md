@@ -1,6 +1,7 @@
 ---
 title: "Romina Gaudiano: Landing Page Trading Mind"
 publishDate: 2026-03-18 00:00:00
+url: https://mentoria.rominagaudiano.com
 img: /assets/gaudiano/1.webp
 img_alt: Screenshot de la landing page Trading Mind de Romina Gaudiano.
 description: |

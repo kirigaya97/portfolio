@@ -33,6 +33,13 @@ const year = entry.data.publishDate.getFullYear();
 						{entry.data.tags.map((tag) => <Pill>{tag}</Pill>)}
 					</div>
 					<p class="description">{entry.data.description}</p>
+					{
+						entry.data.url && (
+							<a class="visit-link" href={entry.data.url} target="_blank" rel="noopener">
+								{t('project.visit')} <Icon icon="arrow-right" size="1em" />
+							</a>
+						)
+					}
 				</div>
 			</Hero>
 		</Reveal>
@@ -138,6 +145,20 @@ const year = entry.data.publishDate.getFullYear();
 		max-width: var(--measure);
 		font-size: var(--text-lg);
 		color: var(--text-dim);
+	}
+
+	.visit-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		align-self: flex-start;
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		color: var(--accent);
+		text-decoration: none;
+	}
+	.visit-link:hover {
+		text-decoration: underline;
 	}
 
 	.project-main {

@@ -1,6 +1,7 @@
 ---
 title: "Magia y Burbujas: Sitio de Landing para Mago de Calle Argentino"
 publishDate: 2026-05-06 00:00:00
+url: https://www.magiayburbujas.com
 img: /assets/magiayburbujas/1.webp
 img_alt: Captura del sitio Magia y Burbujas, con fondo negro profundo, tipografía dorada y una sección hero con burbujas animadas.
 description: |

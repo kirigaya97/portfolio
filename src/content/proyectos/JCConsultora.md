@@ -1,6 +1,7 @@
 ---
 title: "JC Consultora: Sitio Inmobiliario con Filtrado PHP a Medida"
 publishDate: 2025-06-01 00:00:00
+url: https://jcconsultora.com.ar
 img: /assets/jcconsultora/1.webp
 img_alt: Home de JC Consultora con el filtro de propiedades por ciudad y barrio sobre el hero.
 description: |

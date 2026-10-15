@@ -1,6 +1,7 @@
 ---
 title: "ChapMagic: Magician & Mentalist Landing Page"
 publishDate: 2026-02-11 00:00:00
+url: https://www.chapmagic.com
 img: /assets/chapmagic/1.webp
 img_alt: Screenshot of the ChapMagic landing page hero section.
 description: |

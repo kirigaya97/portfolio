@@ -6,6 +6,7 @@ const projectSchema = z.object({
   title: z.string(),
   description: z.string(),
   publishDate: z.coerce.date(),
+  url: z.string().url().optional(),
   tags: z.array(z.string()),
   technologies: z.array(
     z.object({

@@ -1,6 +1,7 @@
 ---
 title: "SADA: Aplicación Web de Gestión del Padrón Electoral"
 publishDate: 2026-03-26 00:00:00
+url: https://www.pj-sada.com.ar
 img: /assets/sada/1.webp
 img_alt: Captura del dashboard principal del sistema electoral SADA.
 description: |

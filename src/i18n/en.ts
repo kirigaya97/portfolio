@@ -98,6 +98,7 @@ export const en = {
   // Project detail back-link (audit §2 work/[...slug].astro)
   'project.back': 'Work',
   'project.tech.heading': 'Technologies',
+  'project.visit': 'Visit site',
 
   // Blog (Phase 3)
   'blog.meta.title': 'Blog | Rodrigo Camino',
